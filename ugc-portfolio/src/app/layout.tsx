@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+// Placeholders até recebermos os arquivos das fontes reais:
+// Tan Mon Cheri (títulos) e TT Commons Pro (texto). Trocar para
+// next/font/local apontando pros arquivos assim que chegarem.
+const displayFont = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+const bodyFont = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Rafa UGC Creator | Saúde, Bem-estar e Beleza",
+  title: "Rafa Nunes | UGC Creator, Videomaker e Influenciadora",
   description:
-    "Portfólio de UGC Creator especializada em conteúdo orgânico e para anúncios nos nichos de saúde, bem-estar e beleza.",
+    "Vídeos que conectam e vendem — UGC, conteúdo de influenciadora e produção audiovisual para marcas de Goiânia e de todo o Brasil.",
 };
 
 export default function RootLayout({
@@ -16,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.variable}>
+    <html lang="pt-BR" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

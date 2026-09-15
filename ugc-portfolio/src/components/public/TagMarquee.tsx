@@ -1,12 +1,10 @@
-import { MARQUEE_TAGS } from "@/lib/data/placeholders";
-
-export function TagMarquee() {
-  const tags = [...MARQUEE_TAGS, ...MARQUEE_TAGS];
+export function TagMarquee({ tags }: { tags: string[] }) {
+  const doubled = [...tags, ...tags];
 
   return (
     <div className="overflow-hidden border-y border-wine-800 bg-wine-600 py-3">
       <div className="marquee-track flex w-max items-center gap-8 text-sm font-semibold uppercase tracking-wide text-white">
-        {tags.map((tag, index) => (
+        {doubled.map((tag, index) => (
           <span key={`${tag}-${index}`} className="flex items-center gap-8">
             {tag}
             <span className="text-blush-200">•</span>

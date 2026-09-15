@@ -1,16 +1,17 @@
 import { BRAND_LOGOS } from "@/lib/data/placeholders";
+import type { Translations } from "@/lib/i18n/translations";
 
-export function BrandLogos() {
+export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
   return (
     <section className="mx-auto max-w-6xl px-5 py-14">
       <p className="text-center text-xs font-semibold uppercase tracking-wide text-wine-700">
-        Marcas atendidas
+        {t.eyebrow}
       </p>
       <h2 className="mt-2 text-center text-2xl font-bold text-ink-900 md:text-3xl">
-        Marcas que já confiaram
+        {t.title}
       </h2>
       <p className="mx-auto mt-2 max-w-xl text-center text-sm text-ink-700/70">
-        Logos de exemplo — em breve com os logos reais das marcas parceiras.
+        {t.subtitle}
       </p>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

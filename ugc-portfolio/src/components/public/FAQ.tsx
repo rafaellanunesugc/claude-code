@@ -1,18 +1,18 @@
-import { FAQ_ITEMS } from "@/lib/data/placeholders";
+import type { Translations } from "@/lib/i18n/translations";
 
-export function FAQ() {
+export function FAQ({ t }: { t: Translations["faq"] }) {
   return (
     <section id="faq" className="bg-cream py-16">
       <div className="mx-auto max-w-3xl px-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-          Dúvidas frequentes
+          {t.eyebrow}
         </p>
         <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
-          Perguntas frequentes
+          {t.title}
         </h2>
 
         <div className="mt-6 space-y-3">
-          {FAQ_ITEMS.map((item) => (
+          {t.items.map((item) => (
             <details
               key={item.question}
               className="group rounded-2xl border border-ink-900/10 bg-white p-5 shadow-soft open:shadow-md"

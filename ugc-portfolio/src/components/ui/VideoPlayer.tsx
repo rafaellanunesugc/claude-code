@@ -1,11 +1,15 @@
 import { cn } from "@/lib/utils";
-import { CATEGORY_LABELS, type PortfolioVideo } from "@/lib/data/placeholders";
+import type { PortfolioVideo } from "@/lib/data/placeholders";
 
 export function VideoPlayer({
   video,
+  title,
+  categoryLabel,
   className,
 }: {
   video: PortfolioVideo;
+  title: string;
+  categoryLabel: string;
   className?: string;
 }) {
   return (
@@ -32,11 +36,11 @@ export function VideoPlayer({
       </video>
       <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-3">
         <span className="rounded-full bg-black/40 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
-          {CATEGORY_LABELS[video.category]}
+          {categoryLabel}
         </span>
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-        <p className="text-sm font-medium text-white">{video.title}</p>
+        <p className="text-sm font-medium text-white">{title}</p>
       </div>
     </div>
   );

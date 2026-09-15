@@ -1,23 +1,19 @@
-import { CONTENT_FORMATS } from "@/lib/data/placeholders";
+import type { Translations } from "@/lib/i18n/translations";
 
-export function UGCSection() {
+export function UGCSection({ t }: { t: Translations["ugc"] }) {
   return (
     <section id="ugc" className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-          Como UGC Creator
+          {t.eyebrow}
         </p>
         <h2 className="mt-2 max-w-2xl text-2xl font-bold text-ink-900 md:text-3xl">
-          Conteúdo feito pra vender, gravado com cara de gente real.
+          {t.title}
         </h2>
-        <p className="mt-3 max-w-2xl text-ink-700">
-          Gosto de explorar diferentes formatos e ângulos, desde tutoriais e
-          demonstrações até storytelling, reviews, conteúdos de rotina e
-          criativos para anúncios.
-        </p>
+        <p className="mt-3 max-w-2xl text-ink-700">{t.subtitle}</p>
 
         <div className="mt-6 flex flex-wrap gap-2">
-          {CONTENT_FORMATS.map((format) => (
+          {t.formats.map((format) => (
             <span
               key={format}
               className="rounded-full border border-brand-200 bg-white px-4 py-2 text-sm font-medium text-brand-700"

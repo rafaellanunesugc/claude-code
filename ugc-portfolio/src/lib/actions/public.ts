@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
-  message?: string;
+  reason?: "validation" | "submit";
 };
 
 export async function logFormOpened() {
@@ -24,10 +24,7 @@ export async function submitContactForm(
   const message = String(formData.get("message") || "").trim();
 
   if (!name || !email || !message) {
-    return {
-      status: "error",
-      message: "Preencha ao menos nome, email e mensagem.",
-    };
+    return { status: "error", reason: "validation" };
   }
 
   const supabase = await createClient();
@@ -42,13 +39,10 @@ export async function submitContactForm(
   });
 
   if (error) {
-    return {
-      status: "error",
-      message: "Não foi possível enviar agora. Tente novamente em instantes.",
-    };
+    return { status: "error", reason: "submit" };
   }
 
   await supabase.from("contact_events").insert({ event_type: "form_submitted" });
 
-  return { status: "success", message: "Recebi sua mensagem! Retorno em breve." };
+  return { status: "success" };
 }
