@@ -1,5 +1,22 @@
 import type { Translations } from "@/lib/i18n/translations";
 
+function RichText({ text }: { text: string }) {
+  const parts = text.split("**");
+  return (
+    <>
+      {parts.map((part, index) =>
+        index % 2 === 1 ? (
+          <strong key={index} className="font-bold text-wine-700">
+            {part}
+          </strong>
+        ) : (
+          <span key={index}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
 export function AboutMe({ t }: { t: Translations["about"] }) {
   return (
     <section id="sobre" className="mx-auto max-w-4xl px-5 py-16">
@@ -13,10 +30,14 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
       <div className="mt-6 space-y-4 text-ink-700">
         {t.paragraphs.map((paragraph, index) => (
           <p key={index} className="leading-relaxed">
-            {paragraph}
+            <RichText text={paragraph} />
           </p>
         ))}
       </div>
+
+      <p className="mt-6 border-l-2 border-wine-600 pl-4 text-xl italic leading-relaxed text-wine-700">
+        {t.commitment}
+      </p>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-3">
         {t.chips.map((chip) => (

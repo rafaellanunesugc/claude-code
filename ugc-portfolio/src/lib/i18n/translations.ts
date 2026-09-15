@@ -30,6 +30,7 @@ export type Translations = {
     eyebrow: string;
     title: string;
     paragraphs: string[];
+    commitment: string;
     chips: string[];
   };
   influencer: {
@@ -39,6 +40,27 @@ export type Translations = {
     followersSuffix: string;
     profileTopicsTitle: string;
     topics: string[];
+    metrics: {
+      periodLabel: string;
+      genderLabel: string;
+      ageLabel: string;
+      locationLabel: string;
+      citiesLabel: string;
+      instagram: {
+        heading: string;
+        stats: { label: string; value: string }[];
+        topFormats: string;
+        gender: { label: string; value: number }[];
+        age: { label: string; value: number }[];
+        location: { brazil: number; cities: string[] };
+      };
+      tiktok: {
+        heading: string;
+        stats: { label: string; value: string }[];
+        gender: { label: string; value: number }[];
+        age: { label: string; value: number }[];
+      };
+    };
   };
   ugc: {
     eyebrow: string;
@@ -68,6 +90,7 @@ export type Translations = {
     subtitle: string;
     resultLabel: string;
     testimonialLabel: string;
+    verifiedLabel: string;
     items: { caption: string; footnote: string }[];
   };
   faq: {
@@ -142,12 +165,13 @@ export const translations: Record<Locale, Translations> = {
       title: "Muito além de uma creator.",
       paragraphs: [
         "Sou Rafa Nunes, tenho 25 anos, estou me formando em Marketing pela Universidade Católica de Brasília e moro em Goiânia.",
-        "Antes de criar conteúdo, passei 5 anos no mercado corporativo, incluindo uma passagem pela Amcham Brasil, fui líder das áreas de eventos, onde saí como sênior da área comercial. Fui maquiadora por mais de 10 anos. Sempre fui a pessoa que enxerga estratégia em tudo: num evento bem planejado, numa campanha de marca, num vídeo que vende sem parecer que está vendendo. Foi esse olhar que me trouxe pra criação de conteúdo.",
-        "Hoje transformei isso em profissão. Já criei conteúdo sobre produtos da Nivea com mais de 435 mil visualizações no orgânico, conteúdo educativo para a E-lens com 337 mil visualizações, conteúdo orgânico para a L'Oréal Paris com 243 mil visualizações, e um criativo de tráfego pago para a Peça Rara alcançando quase 92 mil contas. Atuo principalmente nos nichos de beleza e saúde e bem-estar.",
-        "Não penso só no vídeo bonito. Penso em roteiro pensado pra conversão, edição alinhada com o algoritmo e estratégia de marca por trás de cada entrega. A faculdade me deu a base, os 5 anos de corporativo me deram visão comercial, e a prática me deu o repertório.",
-        "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
+        "Antes de criar conteúdo, passei 5 anos no mercado corporativo, incluindo uma passagem pela Amcham Brasil, fui líder das áreas de eventos, onde saí como sênior da área comercial. Fui maquiadora por mais de 10 anos. **Sempre fui a pessoa que enxerga estratégia em tudo**: num evento bem planejado, numa campanha de marca, num vídeo que vende sem parecer que está vendendo. Foi esse olhar que me trouxe pra criação de conteúdo.",
+        "**Hoje transformei isso em profissão**. Já criei conteúdo sobre produtos da Nivea com mais de **435 mil visualizações no orgânico**, **conteúdo educativo para a E-lens com 337 mil visualizações**, conteúdo orgânico para a **L'Oréal Paris com 243 mil visualizações**, e um **criativo de tráfego pago para a Peça Rara alcançando quase 92 mil contas**. Atuo principalmente nos nichos de beleza e saúde e bem-estar.",
+        "Não penso só no vídeo bonito. **Penso em roteiro pensado pra conversão, edição alinhada com o algoritmo e estratégia de marca por trás de cada entrega.** A faculdade me deu a base, os 5 anos de corporativo me deram visão comercial, e a prática me deu o repertório.",
       ],
-      chips: ["Videomaker", "UGC Creator", "Influenciadora"],
+      commitment:
+        "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
+      chips: ["UGC Creator", "Influenciadora", "Videomaker"],
     },
     influencer: {
       eyebrow: "Como influenciadora",
@@ -169,6 +193,54 @@ export const translations: Record<Locale, Translations> = {
         "UGC",
         "Criação de conteúdo",
       ],
+      metrics: {
+        periodLabel: "Últimos 60 dias",
+        genderLabel: "Gênero",
+        ageLabel: "Faixa etária",
+        locationLabel: "Localização",
+        citiesLabel: "Principais cidades",
+        instagram: {
+          heading: "Instagram",
+          stats: [
+            { label: "Visualizações", value: "+480.344" },
+            { label: "Seguidores líquidos", value: "+620" },
+            { label: "Interações", value: "+34.518" },
+            { label: "Visitas ao perfil", value: "4.478" },
+            { label: "Seguidores totais", value: "6.330" },
+          ],
+          topFormats: "Os formatos que mais performam são Reels e Stories.",
+          gender: [
+            { label: "Mulheres", value: 72 },
+            { label: "Homens", value: 28 },
+          ],
+          age: [
+            { label: "18–24", value: 13.2 },
+            { label: "25–34", value: 49.3 },
+            { label: "35–44", value: 22.3 },
+          ],
+          location: {
+            brazil: 96.2,
+            cities: ["Jataí", "Goiânia", "Campo Grande", "São Paulo"],
+          },
+        },
+        tiktok: {
+          heading: "TikTok",
+          stats: [
+            { label: "Seguidores", value: "17,5K" },
+            { label: "Visualizações", value: "301 mil" },
+            { label: "Visitas ao perfil", value: "5,2 mil" },
+          ],
+          gender: [
+            { label: "Mulheres", value: 80 },
+            { label: "Homens", value: 20 },
+          ],
+          age: [
+            { label: "18–24", value: 35.1 },
+            { label: "25–34", value: 47.3 },
+            { label: "35–44", value: 12.1 },
+          ],
+        },
+      },
     },
     ugc: {
       eyebrow: "Como UGC Creator",
@@ -219,7 +291,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Visitas presenciais",
           description:
-            "Para empresas de Goiânia e Jataí: conhecer o espaço, os serviços e fazer visitas mensais de acompanhamento.",
+            "Visita em loja para divulgação do espaço e dos produtos, com conteúdo publicado nos stories e no feed. Para empresas de Goiânia e Jataí.",
         },
         {
           title: "Provador",
@@ -268,22 +340,24 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Feedbacks",
       title: "O que estão falando do meu trabalho",
       subtitle:
-        "Espaço reservado para prints de resultado e depoimentos de marcas. (Placeholders — em breve com casos reais.)",
+        "Feedbacks verdadeiros de marcas que já trabalharam comigo. (Prints de resultado reais em breve.)",
       resultLabel: "Print de resultado",
       testimonialLabel: "Depoimento",
+      verifiedLabel: "Feedback real",
       items: [
         {
           caption: "Aqui entra um print de views/engajamento de uma campanha real.",
           footnote: "Print de resultado (exemplo)",
         },
         {
-          caption: "Aqui entra um print de métricas de anúncio (Ads) real.",
-          footnote: "Print de resultado (exemplo)",
+          caption:
+            "“Oi Rafa, passando pra te parabenizar sobre sua entrega. Você é muito competente, ágil e criativa. No mês que vem te chamaremos para uma nova campanha. Parabéns.”",
+          footnote: "Cliente recorrente, nicho de beleza",
         },
         {
           caption:
-            "“Depoimento da marca sobre o resultado da parceria.” — Nome da Marca",
-          footnote: "Depoimento (exemplo)",
+            "“Rafa o vídeo que você produziu foi muito bom para nossas campanhas! Deu um ar menos propaganda e mais comunidade, eu sempre falo o que funciona no orgânico tende a funcionar no pago, vai ser um vídeo atemporal e ainda irei usar muito.” — Fernanda Carneiro, Gestora de Tráfego Pago do Peça Rara",
+          footnote: "Depoimento",
         },
       ],
     },
@@ -387,12 +461,13 @@ export const translations: Record<Locale, Translations> = {
       title: "Much more than a creator.",
       paragraphs: [
         "I'm Rafa Nunes, I'm 25 years old, finishing my Marketing degree at Universidade Católica de Brasília, and I live in Goiânia, Brazil.",
-        "Before creating content, I spent 5 years in the corporate world, including a stint at Amcham Brasil, where I led events teams and left as a senior commercial professional. I was also a makeup artist for over 10 years. I've always been the person who sees strategy in everything — in a well-planned event, in a brand campaign, in a video that sells without looking like it's selling. That perspective is what brought me into content creation.",
-        "Today I've turned that into a career. I've created content for Nivea with over 435,000 organic views, educational content for E-lens with 337,000 views, organic content for L'Oréal Paris with 243,000 views, and a paid traffic creative for Peça Rara that reached almost 92,000 accounts. I mainly work in the beauty and health & wellness niches.",
-        "I don't just think about a pretty video. I think about a script built for conversion, editing aligned with the algorithm, and brand strategy behind every delivery. College gave me the foundation, 5 years in corporate gave me business vision, and practice gave me the repertoire.",
-        "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
+        "Before creating content, I spent 5 years in the corporate world, including a stint at Amcham Brasil, where I led events teams and left as a senior commercial professional. I was also a makeup artist for over 10 years. **I've always been the person who sees strategy in everything** — in a well-planned event, in a brand campaign, in a video that sells without looking like it's selling. That perspective is what brought me into content creation.",
+        "**Today I've turned that into a career.** I've created content for Nivea with over **435,000 organic views**, **educational content for E-lens with 337,000 views**, organic content for **L'Oréal Paris with 243,000 views**, and a **paid traffic creative for Peça Rara that reached almost 92,000 accounts**. I mainly work in the beauty and health & wellness niches.",
+        "I don't just think about a pretty video. **I think about a script built for conversion, editing aligned with the algorithm, and brand strategy behind every delivery.** College gave me the foundation, 5 years in corporate gave me business vision, and practice gave me the repertoire.",
       ],
-      chips: ["Videomaker", "UGC Creator", "Influencer"],
+      commitment:
+        "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
+      chips: ["UGC Creator", "Influencer", "Videomaker"],
     },
     influencer: {
       eyebrow: "As an influencer",
@@ -414,6 +489,54 @@ export const translations: Record<Locale, Translations> = {
         "UGC",
         "Content creation",
       ],
+      metrics: {
+        periodLabel: "Last 60 days",
+        genderLabel: "Gender",
+        ageLabel: "Age range",
+        locationLabel: "Location",
+        citiesLabel: "Top cities",
+        instagram: {
+          heading: "Instagram",
+          stats: [
+            { label: "Views", value: "+480,344" },
+            { label: "Net followers", value: "+620" },
+            { label: "Interactions", value: "+34,518" },
+            { label: "Profile visits", value: "4,478" },
+            { label: "Total followers", value: "6,330" },
+          ],
+          topFormats: "The best-performing formats are Reels and Stories.",
+          gender: [
+            { label: "Women", value: 72 },
+            { label: "Men", value: 28 },
+          ],
+          age: [
+            { label: "18–24", value: 13.2 },
+            { label: "25–34", value: 49.3 },
+            { label: "35–44", value: 22.3 },
+          ],
+          location: {
+            brazil: 96.2,
+            cities: ["Jataí", "Goiânia", "Campo Grande", "São Paulo"],
+          },
+        },
+        tiktok: {
+          heading: "TikTok",
+          stats: [
+            { label: "Followers", value: "17.5K" },
+            { label: "Views", value: "301K" },
+            { label: "Profile visits", value: "5.2K" },
+          ],
+          gender: [
+            { label: "Women", value: 80 },
+            { label: "Men", value: 20 },
+          ],
+          age: [
+            { label: "18–24", value: 35.1 },
+            { label: "25–34", value: 47.3 },
+            { label: "35–44", value: 12.1 },
+          ],
+        },
+      },
     },
     ugc: {
       eyebrow: "As a UGC Creator",
@@ -464,7 +587,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "In-person visits",
           description:
-            "For companies in Goiânia and Jataí: getting to know the space, the services, and doing monthly follow-up visits.",
+            "In-store visits to promote the space and products, with content posted to stories and feed. For companies in Goiânia and Jataí.",
         },
         {
           title: "Fitting room",
@@ -513,22 +636,24 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Feedbacks",
       title: "What people are saying about my work",
       subtitle:
-        "Space reserved for result screenshots and brand testimonials. (Placeholders — real cases coming soon.)",
+        "Real feedback from brands I've worked with. (Real result screenshots coming soon.)",
       resultLabel: "Result screenshot",
       testimonialLabel: "Testimonial",
+      verifiedLabel: "Real feedback",
       items: [
         {
           caption: "A views/engagement screenshot from a real campaign goes here.",
           footnote: "Result screenshot (example)",
         },
         {
-          caption: "A real ad (Ads) metrics screenshot goes here.",
-          footnote: "Result screenshot (example)",
+          caption:
+            "“Hi Rafa, just wanted to congratulate you on your delivery. You're very competent, quick and creative. We'll bring you on for a new campaign next month. Congrats.”",
+          footnote: "Repeat client, beauty niche",
         },
         {
           caption:
-            "“The brand's testimonial about the partnership's result.” — Brand Name",
-          footnote: "Testimonial (example)",
+            "“Rafa, the video you produced was great for our campaigns! It felt less like an ad and more like community — what works organically tends to work paid too. It's a timeless video and I'll keep using it a lot.” — Fernanda Carneiro, Paid Traffic Manager at Peça Rara",
+          footnote: "Testimonial",
         },
       ],
     },

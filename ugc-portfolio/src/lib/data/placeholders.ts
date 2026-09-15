@@ -133,4 +133,4 @@ export const BUDGET_RANGES = [
   "A combinar",
 ];
 
-export const FEEDBACK_TYPES = ["resultado", "resultado", "depoimento"] as const;
+export const FEEDBACK_TYPES = ["resultado", "depoimento", "depoimento"] as const;

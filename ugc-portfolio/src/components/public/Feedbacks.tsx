@@ -21,16 +21,23 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
               key={index}
               className="flex h-56 flex-col justify-between rounded-2xl border border-dashed border-ink-900/20 bg-white p-5"
             >
-              <span
-                className={cn(
-                  "w-fit rounded-full px-3 py-1 text-xs font-semibold",
-                  type === "resultado"
-                    ? "bg-brand-100 text-brand-700"
-                    : "bg-ink-900/10 text-ink-800"
+              <div className="flex items-center gap-2">
+                <span
+                  className={cn(
+                    "w-fit rounded-full px-3 py-1 text-xs font-semibold",
+                    type === "resultado"
+                      ? "bg-brand-100 text-brand-700"
+                      : "bg-ink-900/10 text-ink-800"
+                  )}
+                >
+                  {type === "resultado" ? t.resultLabel : t.testimonialLabel}
+                </span>
+                {type === "depoimento" && (
+                  <span className="text-xs font-medium text-olive-700">
+                    ✓ {t.verifiedLabel}
+                  </span>
                 )}
-              >
-                {type === "resultado" ? t.resultLabel : t.testimonialLabel}
-              </span>
+              </div>
               <p className="text-sm text-ink-700">{item.caption}</p>
               <span className="text-xs text-ink-700/50">{item.footnote}</span>
             </div>

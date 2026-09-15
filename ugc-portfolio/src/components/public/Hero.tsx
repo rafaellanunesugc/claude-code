@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Translations } from "@/lib/i18n/translations";
 
 export function Hero({ t }: { t: Translations["hero"] }) {
@@ -5,9 +6,14 @@ export function Hero({ t }: { t: Translations["hero"] }) {
     <section id="topo" className="mx-auto max-w-6xl px-5 pt-12 md:pt-20">
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-wine-600 text-2xl font-bold text-white">
-            {/* Placeholder de foto — trocar por foto real */}
-            RN
+          <div className="mb-5 h-20 w-20 overflow-hidden rounded-full">
+            <Image
+              src="/images/ugc-eudora-box.jpg"
+              alt="Rafa Nunes"
+              width={160}
+              height={160}
+              className="h-full w-full object-cover"
+            />
           </div>
 
           <span className="inline-flex items-center gap-2 rounded-full bg-olive-50 px-3 py-1 text-xs font-semibold text-olive-800">
@@ -45,11 +51,15 @@ export function Hero({ t }: { t: Translations["hero"] }) {
           </div>
         </div>
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-blush-200 via-blush-300 to-wine-600 shadow-soft">
-          {/* Placeholder — "Foto de Capa" a ser enviada */}
-          <span className="absolute inset-x-0 bottom-4 mx-auto w-fit rounded-full bg-black/30 px-3 py-1 text-xs font-medium text-white">
-            {t.coverPlaceholder}
-          </span>
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
+          <Image
+            src="/images/ugc-hair-oil.jpg"
+            alt="Rafa Nunes"
+            fill
+            sizes="(max-width: 768px) 100vw, 40vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
