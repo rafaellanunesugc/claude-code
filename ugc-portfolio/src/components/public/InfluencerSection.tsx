@@ -5,7 +5,7 @@ export function InfluencerSection() {
 
   return (
     <section id="influenciadora" className="mx-auto max-w-6xl px-5 py-16">
-      <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+      <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
         Como influenciadora
       </p>
       <h2 className="mt-2 max-w-2xl text-2xl font-bold text-ink-900 md:text-3xl">
@@ -39,7 +39,7 @@ export function InfluencerSection() {
           {PROFILE_TOPICS.map((topic) => (
             <span
               key={topic}
-              className="rounded-full bg-ink-900/[0.04] px-3 py-1.5 text-sm text-ink-700"
+              className="rounded-full bg-olive-100 px-3 py-1.5 text-sm text-olive-800"
             >
               {topic}
             </span>

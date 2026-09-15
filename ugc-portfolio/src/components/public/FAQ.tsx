@@ -2,9 +2,9 @@ import { FAQ_ITEMS } from "@/lib/data/placeholders";
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-ink-900/[0.03] py-16">
+    <section id="faq" className="bg-cream py-16">
       <div className="mx-auto max-w-3xl px-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+        <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
           Dúvidas frequentes
         </p>
         <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">

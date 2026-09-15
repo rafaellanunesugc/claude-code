@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export function Feedbacks() {
   return (
     <section id="feedbacks" className="mx-auto max-w-6xl px-5 py-16">
-      <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+      <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
         Feedbacks
       </p>
       <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">

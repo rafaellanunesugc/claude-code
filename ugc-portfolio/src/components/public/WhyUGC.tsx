@@ -3,7 +3,7 @@ import { WHY_UGC } from "@/lib/data/placeholders";
 export function WhyUGC() {
   return (
     <section className="mx-auto max-w-4xl px-5 py-16">
-      <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+      <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
         {WHY_UGC.headline}
       </p>
       <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">

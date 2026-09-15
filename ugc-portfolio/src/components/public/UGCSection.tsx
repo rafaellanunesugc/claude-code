@@ -2,9 +2,9 @@ import { CONTENT_FORMATS } from "@/lib/data/placeholders";
 
 export function UGCSection() {
   return (
-    <section id="ugc" className="bg-ink-900/[0.03] py-16">
+    <section id="ugc" className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
+        <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
           Como UGC Creator
         </p>
         <h2 className="mt-2 max-w-2xl text-2xl font-bold text-ink-900 md:text-3xl">

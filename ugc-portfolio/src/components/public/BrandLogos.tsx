@@ -3,7 +3,7 @@ import { BRAND_LOGOS } from "@/lib/data/placeholders";
 export function BrandLogos() {
   return (
     <section className="mx-auto max-w-6xl px-5 py-14">
-      <p className="text-center text-xs font-semibold uppercase tracking-wide text-brand-600">
+      <p className="text-center text-xs font-semibold uppercase tracking-wide text-wine-700">
         Marcas atendidas
       </p>
       <h2 className="mt-2 text-center text-2xl font-bold text-ink-900 md:text-3xl">

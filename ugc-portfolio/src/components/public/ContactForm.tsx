@@ -55,7 +55,7 @@ export function ContactForm() {
             Conta o que sua marca precisa — eu volto com uma proposta.
           </p>
 
-          <div className="mt-6 aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-gradient-to-br from-brand-300 to-brand-600">
+          <div className="mt-6 aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl bg-gradient-to-br from-blush-300 to-wine-600">
             {/* Placeholder de foto — trocar por foto real */}
           </div>
 

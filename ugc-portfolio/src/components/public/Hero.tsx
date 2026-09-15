@@ -6,20 +6,20 @@ export function Hero() {
     <section id="topo" className="mx-auto max-w-6xl px-5 pt-12 md:pt-20">
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-brand-300 to-brand-600 text-2xl font-bold text-white">
+          <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-blush-300 to-wine-600 text-2xl font-bold text-white">
             {/* Placeholder de foto — trocar por foto real */}
             RN
           </div>
 
-          <span className="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-            <span className="h-2 w-2 rounded-full bg-green-500" />
+          <span className="inline-flex items-center gap-2 rounded-full bg-olive-50 px-3 py-1 text-xs font-semibold text-olive-800">
+            <span className="h-2 w-2 rounded-full bg-olive-500" />
             {AVAILABILITY_STATUS}
           </span>
 
           <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-5xl">
             Rafa Nunes
           </h1>
-          <p className="mt-2 text-lg font-medium text-brand-700">
+          <p className="mt-2 text-lg font-medium text-wine-700">
             vídeos que conectam e vendem
           </p>
 
