@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { NICHE_LABELS, type PortfolioVideo } from "@/lib/data/placeholders";
+import { CATEGORY_LABELS, type PortfolioVideo } from "@/lib/data/placeholders";
 
 export function VideoPlayer({
   video,
@@ -32,7 +32,7 @@ export function VideoPlayer({
       </video>
       <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-3">
         <span className="rounded-full bg-black/40 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
-          {NICHE_LABELS[video.niche]}
+          {CATEGORY_LABELS[video.category]}
         </span>
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3">

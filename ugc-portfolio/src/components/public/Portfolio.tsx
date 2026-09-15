@@ -4,22 +4,22 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
 import {
-  NICHE_LABELS,
+  CATEGORY_LABELS,
   PORTFOLIO_VIDEOS,
-  type Niche,
+  type ContentCategory,
 } from "@/lib/data/placeholders";
 
-const FILTERS: { key: Niche | "todos"; label: string }[] = [
+const FILTERS: { key: ContentCategory | "todos"; label: string }[] = [
   { key: "todos", label: "Todos" },
-  { key: "saude-bem-estar", label: NICHE_LABELS["saude-bem-estar"] },
-  { key: "beleza", label: NICHE_LABELS.beleza },
+  { key: "influenciadora", label: CATEGORY_LABELS.influenciadora },
+  { key: "ugc", label: CATEGORY_LABELS.ugc },
 ];
 
 export function Portfolio() {
-  const [filter, setFilter] = useState<Niche | "todos">("todos");
+  const [filter, setFilter] = useState<ContentCategory | "todos">("todos");
 
   const videos = PORTFOLIO_VIDEOS.filter(
-    (video) => filter === "todos" || video.niche === filter
+    (video) => filter === "todos" || video.category === filter
   );
 
   return (
@@ -29,8 +29,8 @@ export function Portfolio() {
           Portfólio
         </h2>
         <p className="mt-2 max-w-2xl text-ink-700">
-          Vídeos organizados por categoria. (Vídeos de exemplo — em breve
-          substituo pelos meus.)
+          Clique numa pasta pra filtrar · clique num vídeo pra assistir.
+          (Vídeos de exemplo — em breve substituo pelos meus.)
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">

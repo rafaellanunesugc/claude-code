@@ -1,6 +1,5 @@
-import { FEATURED_VIDEOS } from "@/lib/data/placeholders";
+import { AVAILABILITY_STATUS, FEATURED_VIDEOS, HERO_STATS } from "@/lib/data/placeholders";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
-import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   return (
@@ -9,22 +8,36 @@ export function Hero() {
         <div>
           <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-brand-300 to-brand-600 text-2xl font-bold text-white">
             {/* Placeholder de foto — trocar por foto real */}
-            RA
+            RN
           </div>
-          <Badge>Saúde &amp; Bem-estar · Beleza</Badge>
+
+          <span className="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
+            <span className="h-2 w-2 rounded-full bg-green-500" />
+            {AVAILABILITY_STATUS}
+          </span>
+
           <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-5xl">
-            Rafa, UGC Creator
+            Rafa Nunes
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-ink-700">
-            Crio conteúdo autêntico em vídeo para marcas de saúde, bem-estar e
-            beleza — do roteiro à edição, pronto para orgânico ou anúncio.
+          <p className="mt-2 text-lg font-medium text-brand-700">
+            vídeos que conectam e vendem
           </p>
+
+          <div className="mt-5 flex flex-wrap gap-6">
+            {HERO_STATS.map((stat) => (
+              <div key={stat.label}>
+                <p className="text-2xl font-extrabold text-ink-900">{stat.value}</p>
+                <p className="text-xs text-ink-700/70">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="#contato"
               className="rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-700"
             >
-              Quero fazer um orçamento
+              Solicitar proposta
             </a>
             <a
               href="#portfolio"
