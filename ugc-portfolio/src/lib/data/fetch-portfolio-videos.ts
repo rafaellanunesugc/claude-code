@@ -73,7 +73,31 @@ async function listCategory(
     .from(BUCKET_NAME)
     .list(folder, { sortBy: { column: "created_at", order: "desc" } });
 
-  if (error || !data) return [];
+  if (error || !data) {
+    return [
+      {
+        id: `debug-error-${category}`,
+        category,
+        videoUrl: "",
+        gradient: GRADIENTS[0],
+        title: `DEBUG erro (${folder}): ${error?.message ?? "sem dados"}`,
+        format: "debug",
+      },
+    ];
+  }
+
+  if (data.length === 0) {
+    return [
+      {
+        id: `debug-empty-${category}`,
+        category,
+        videoUrl: "",
+        gradient: GRADIENTS[0],
+        title: `DEBUG: pasta "${folder}" está vazia pro Supabase`,
+        format: "debug",
+      },
+    ];
+  }
 
   return data
     .filter((file) =>
@@ -109,7 +133,16 @@ export async function fetchPortfolioVideos(): Promise<PortfolioVideo[]> {
     );
     const combined = results.flat();
     return combined.length > 0 ? combined : PORTFOLIO_VIDEOS;
-  } catch {
-    return PORTFOLIO_VIDEOS;
+  } catch (err) {
+    return [
+      {
+        id: "debug-error-catch",
+        category: "ugc" as ContentCategory,
+        videoUrl: "",
+        gradient: GRADIENTS[0],
+        title: `DEBUG exceção: ${err instanceof Error ? err.message : String(err)}`,
+        format: "debug",
+      },
+    ];
   }
 }
