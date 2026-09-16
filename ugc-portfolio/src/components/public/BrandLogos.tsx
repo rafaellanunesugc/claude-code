@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BRAND_LOGOS } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 
@@ -17,10 +18,16 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
       <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
         {BRAND_LOGOS.map((brand) => (
           <div
-            key={brand}
-            className="flex h-20 w-20 items-center justify-center rounded-full border border-ink-900/10 bg-white text-center text-[11px] font-semibold text-ink-700/60 shadow-sm"
+            key={brand.name}
+            className="flex h-24 w-24 items-center justify-center rounded-full border border-ink-900/10 bg-white p-4 shadow-sm"
           >
-            {brand}
+            <Image
+              src={brand.src}
+              alt={brand.name}
+              width={80}
+              height={80}
+              className="h-full w-full object-contain"
+            />
           </div>
         ))}
       </div>

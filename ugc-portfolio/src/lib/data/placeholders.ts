@@ -21,16 +21,17 @@ export type PortfolioVideo = {
 const SAMPLE_VIDEO =
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
-// Marcas atendidas — placeholders até ela enviar os logos reais.
 export const BRAND_LOGOS = [
-  "Marca 01",
-  "Marca 02",
-  "Marca 03",
-  "Marca 04",
-  "Marca 05",
-  "Marca 06",
-  "Marca 07",
-  "Marca 08",
+  { name: "Dove", src: "/images/logos/dove.png" },
+  { name: "Pantene", src: "/images/logos/pantene.png" },
+  { name: "Eudora", src: "/images/logos/eudora.png" },
+  { name: "Herbéra", src: "/images/logos/herbera.webp" },
+  { name: "E-lens", src: "/images/logos/e-lens.png" },
+  { name: "Peça Rara", src: "/images/logos/peca-rara.png" },
+  { name: "Óticas Prevent", src: "/images/logos/oticas-prevent.jpg" },
+  { name: "Saint Germain", src: "/images/logos/saint-germain.png" },
+  { name: "Make More", src: "/images/logos/make-more.jpg" },
+  { name: "VT Cosmetics", src: "/images/logos/vt-cosmetics.jpg" },
 ];
 
 export const SOCIAL_HANDLES = {

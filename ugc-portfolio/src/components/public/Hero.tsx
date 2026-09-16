@@ -8,7 +8,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
         <div>
           <div className="mb-5 h-20 w-20 overflow-hidden rounded-full">
             <Image
-              src="/images/ugc-eudora-box.jpg"
+              src="/images/about.jpg"
               alt="Rafa Nunes"
               width={160}
               height={160}
@@ -53,7 +53,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
 
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
           <Image
-            src="/images/ugc-hair-oil.jpg"
+            src="/images/foto-capa.jpg"
             alt="Rafa Nunes"
             fill
             sizes="(max-width: 768px) 100vw, 40vw"

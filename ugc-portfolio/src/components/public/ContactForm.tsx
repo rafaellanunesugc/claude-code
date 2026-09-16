@@ -55,7 +55,7 @@ export function ContactForm({ t }: { t: Translations["contact"] }) {
 
           <div className="relative mt-6 aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl">
             <Image
-              src="/images/ugc-eudora-box.jpg"
+              src="/images/portrait-2.jpg"
               alt="Rafa Nunes"
               fill
               sizes="320px"

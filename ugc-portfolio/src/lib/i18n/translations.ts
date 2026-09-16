@@ -157,8 +157,7 @@ export const translations: Record<Locale, Translations> = {
     brandLogos: {
       eyebrow: "Marcas atendidas",
       title: "Marcas que já confiaram",
-      subtitle:
-        "Logos de exemplo — em breve com os logos reais das marcas parceiras.",
+      subtitle: "Marcas de beleza e saúde que já confiaram no meu trabalho.",
     },
     about: {
       eyebrow: "Sobre mim",
@@ -291,7 +290,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Visitas presenciais",
           description:
-            "Visita em loja para divulgação do espaço e dos produtos, com conteúdo publicado nos stories e no feed. Para empresas de Goiânia e Jataí.",
+            "Visita em loja para divulgação do espaço e dos produtos, com conteúdo publicado nos stories e no feed. Para empresas da região metropolitana de Goiânia e de Jataí.",
         },
         {
           title: "Provador",
@@ -454,7 +453,7 @@ export const translations: Record<Locale, Translations> = {
     brandLogos: {
       eyebrow: "Brands I've worked with",
       title: "Brands that already trusted me",
-      subtitle: "Sample logos — real partner brand logos coming soon.",
+      subtitle: "Beauty and health brands that have already trusted my work.",
     },
     about: {
       eyebrow: "About me",
@@ -587,7 +586,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "In-person visits",
           description:
-            "In-store visits to promote the space and products, with content posted to stories and feed. For companies in Goiânia and Jataí.",
+            "In-store visits to promote the space and products, with content posted to stories and feed. For companies in the greater Goiânia metro area and in Jataí.",
         },
         {
           title: "Fitting room",
