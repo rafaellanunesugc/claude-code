@@ -5,10 +5,13 @@ import {
   type PortfolioVideo,
 } from "@/lib/data/placeholders";
 
-// Pasta no bucket "videos" do Supabase Storage — cada categoria é uma
-// pasta (influenciadora/ e ugc/). Basta subir o arquivo na pasta certa
-// que ele aparece automaticamente no portfólio do site.
-const CATEGORY_FOLDERS: ContentCategory[] = ["influenciadora", "ugc"];
+// Nome do bucket e das pastas exatamente como criados no Supabase Storage
+// (o Storage do Supabase diferencia maiúsculas/minúsculas e acentos).
+const BUCKET_NAME = "Vídeos";
+const CATEGORY_FOLDERS: Record<ContentCategory, string> = {
+  influenciadora: "Influenciadora",
+  ugc: "UGC",
+};
 
 const GRADIENTS = [
   "from-brand-400 via-brand-600 to-ink-900",
@@ -20,10 +23,14 @@ const GRADIENTS = [
 const VIDEO_EXTENSIONS = [".mp4", ".mov", ".webm", ".m4v"];
 
 function titleFromFilename(filename: string) {
-  return filename
-    .replace(/\.[^.]+$/, "")
-    .replace(/[-_]+/g, " ")
-    .trim();
+  let name = filename;
+  // Remove extensões repetidas no fim (ex: "video.mp4.mov").
+  let ext = VIDEO_EXTENSIONS.find((e) => name.toLowerCase().endsWith(e));
+  while (ext) {
+    name = name.slice(0, -ext.length);
+    ext = VIDEO_EXTENSIONS.find((e) => name.toLowerCase().endsWith(e));
+  }
+  return name.replace(/[-_]+/g, " ").trim();
 }
 
 type SupabaseClient = Awaited<ReturnType<typeof createClient>>;
@@ -32,9 +39,10 @@ async function listCategory(
   supabase: SupabaseClient,
   category: ContentCategory
 ): Promise<PortfolioVideo[]> {
+  const folder = CATEGORY_FOLDERS[category];
   const { data, error } = await supabase.storage
-    .from("videos")
-    .list(category, { sortBy: { column: "created_at", order: "desc" } });
+    .from(BUCKET_NAME)
+    .list(folder, { sortBy: { column: "created_at", order: "desc" } });
 
   if (error || !data) return [];
 
@@ -43,9 +51,9 @@ async function listCategory(
       VIDEO_EXTENSIONS.some((ext) => file.name.toLowerCase().endsWith(ext))
     )
     .map((file, index) => {
-      const path = `${category}/${file.name}`;
+      const path = `${folder}/${file.name}`;
       const { data: publicUrlData } = supabase.storage
-        .from("videos")
+        .from(BUCKET_NAME)
         .getPublicUrl(path);
 
       return {
@@ -64,7 +72,9 @@ export async function fetchPortfolioVideos(): Promise<PortfolioVideo[]> {
   try {
     const supabase = await createClient();
     const results = await Promise.all(
-      CATEGORY_FOLDERS.map((category) => listCategory(supabase, category))
+      (Object.keys(CATEGORY_FOLDERS) as ContentCategory[]).map((category) =>
+        listCategory(supabase, category)
+      )
     );
     const combined = results.flat();
     return combined.length > 0 ? combined : PORTFOLIO_VIDEOS;
