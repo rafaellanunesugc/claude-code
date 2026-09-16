@@ -16,6 +16,7 @@ export type PortfolioVideo = {
   videoUrl: string;
   gradient: string;
   title?: string;
+  format?: string;
 };
 
 // Vídeo de exemplo (placeholder) — trocar pelos vídeos reais depois.
@@ -46,48 +47,56 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     category: "influenciadora",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-400 via-brand-600 to-ink-900",
+    format: "rotina",
   },
   {
     id: "influencer-2",
     category: "influenciadora",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-800 via-brand-700 to-brand-400",
+    format: "grwm",
   },
   {
     id: "influencer-3",
     category: "influenciadora",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-600 via-ink-800 to-ink-900",
+    format: "storytelling",
   },
   {
     id: "influencer-4",
     category: "influenciadora",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-300 via-brand-500 to-ink-800",
+    format: "dica",
   },
   {
     id: "ugc-1",
     category: "ugc",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-700 via-brand-600 to-brand-300",
+    format: "depoimento",
   },
   {
     id: "ugc-2",
     category: "ugc",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-500 via-ink-900 to-brand-700",
+    format: "unboxing",
   },
   {
     id: "ugc-3",
     category: "ugc",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-900 via-brand-400 to-brand-600",
+    format: "review",
   },
   {
     id: "ugc-4",
     category: "ugc",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-700 via-ink-800 to-brand-300",
+    format: "storytelling",
   },
 ];
 

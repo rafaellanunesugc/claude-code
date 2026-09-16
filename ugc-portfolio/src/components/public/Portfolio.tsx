@@ -15,11 +15,6 @@ export function Portfolio({
 }) {
   const [filter, setFilter] = useState<ContentCategory | "todos">("todos");
 
-  const categoryLabels: Record<ContentCategory, string> = {
-    influenciadora: t.filters.influenciadora,
-    ugc: t.filters.ugc,
-  };
-
   const filters: { key: ContentCategory | "todos"; label: string }[] = [
     { key: "todos", label: t.filters.todos },
     { key: "influenciadora", label: t.filters.influenciadora },
@@ -59,7 +54,7 @@ export function Portfolio({
               key={video.id}
               video={video}
               title={video.title ?? t.videoTitles[video.id] ?? video.id}
-              categoryLabel={categoryLabels[video.category]}
+              formatLabel={video.format ?? t.filters[video.category]}
             />
           ))}
         </div>

@@ -22,15 +22,44 @@ const GRADIENTS = [
 
 const VIDEO_EXTENSIONS = [".mp4", ".mov", ".webm", ".m4v"];
 
-function titleFromFilename(filename: string) {
+function stripExtensions(filename: string) {
   let name = filename;
-  // Remove extensões repetidas no fim (ex: "video.mp4.mov").
   let ext = VIDEO_EXTENSIONS.find((e) => name.toLowerCase().endsWith(e));
   while (ext) {
     name = name.slice(0, -ext.length);
     ext = VIDEO_EXTENSIONS.find((e) => name.toLowerCase().endsWith(e));
   }
-  return name.replace(/[-_]+/g, " ").trim();
+  return name;
+}
+
+function prettify(segment: string) {
+  return segment.replace(/[-_]+/g, " ").trim();
+}
+
+// Convenção de nome de arquivo: "formato-titulo.mp4" ou, quando o
+// formato tem mais de uma palavra, "formato-com-varias-palavras_titulo.mp4"
+// (usa "_" pra separar formato de título nesse caso). Sem separador,
+// o nome inteiro vira o título e não tem formato.
+function parseFilename(filename: string): { format?: string; title: string } {
+  const base = stripExtensions(filename);
+
+  if (base.includes("_")) {
+    const index = base.indexOf("_");
+    return {
+      format: prettify(base.slice(0, index)),
+      title: prettify(base.slice(index + 1)) || prettify(base),
+    };
+  }
+
+  if (base.includes("-")) {
+    const index = base.indexOf("-");
+    return {
+      format: prettify(base.slice(0, index)),
+      title: prettify(base.slice(index + 1)) || prettify(base),
+    };
+  }
+
+  return { title: prettify(base) };
 }
 
 type SupabaseClient = Awaited<ReturnType<typeof createClient>>;
@@ -55,13 +84,15 @@ async function listCategory(
       const { data: publicUrlData } = supabase.storage
         .from(BUCKET_NAME)
         .getPublicUrl(path);
+      const { format, title } = parseFilename(file.name);
 
       return {
         id: `${category}-${file.name}`,
         category,
         videoUrl: publicUrlData.publicUrl,
         gradient: GRADIENTS[index % GRADIENTS.length],
-        title: titleFromFilename(file.name),
+        title,
+        format,
       };
     });
 }
