@@ -3,10 +3,16 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
-import { PORTFOLIO_VIDEOS, type ContentCategory } from "@/lib/data/placeholders";
+import type { ContentCategory, PortfolioVideo } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 
-export function Portfolio({ t }: { t: Translations["portfolio"] }) {
+export function Portfolio({
+  t,
+  videos,
+}: {
+  t: Translations["portfolio"];
+  videos: PortfolioVideo[];
+}) {
   const [filter, setFilter] = useState<ContentCategory | "todos">("todos");
 
   const categoryLabels: Record<ContentCategory, string> = {
@@ -20,7 +26,7 @@ export function Portfolio({ t }: { t: Translations["portfolio"] }) {
     { key: "ugc", label: t.filters.ugc },
   ];
 
-  const videos = PORTFOLIO_VIDEOS.filter(
+  const filteredVideos = videos.filter(
     (video) => filter === "todos" || video.category === filter
   );
 
@@ -48,11 +54,11 @@ export function Portfolio({ t }: { t: Translations["portfolio"] }) {
         </div>
 
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-          {videos.map((video) => (
+          {filteredVideos.map((video) => (
             <VideoPlayer
               key={video.id}
               video={video}
-              title={t.videoTitles[video.id] ?? video.id}
+              title={video.title ?? t.videoTitles[video.id] ?? video.id}
               categoryLabel={categoryLabels[video.category]}
             />
           ))}

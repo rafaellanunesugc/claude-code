@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { translations, type Locale } from "@/lib/i18n/translations";
+import type { PortfolioVideo } from "@/lib/data/placeholders";
 import { SiteHeader } from "@/components/public/SiteHeader";
 import { Hero } from "@/components/public/Hero";
 import { TagMarquee } from "@/components/public/TagMarquee";
@@ -19,7 +20,7 @@ import { SiteFooter } from "@/components/public/SiteFooter";
 
 const STORAGE_KEY = "ugc_locale";
 
-export function PageContent() {
+export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
   const [locale, setLocale] = useState<Locale>("pt");
 
   useEffect(() => {
@@ -53,7 +54,7 @@ export function PageContent() {
       <InfluencerSection t={t.influencer} followers={followersValue} />
       <UGCSection t={t.ugc} />
       <WorkWithMe t={t.work} />
-      <Portfolio t={t.portfolio} />
+      <Portfolio t={t.portfolio} videos={videos} />
       <Feedbacks t={t.feedbacks} />
       <FAQ t={t.faq} />
       <WhyUGC t={t.whyUgc} />

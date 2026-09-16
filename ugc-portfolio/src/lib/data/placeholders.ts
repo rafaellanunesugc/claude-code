@@ -15,6 +15,7 @@ export type PortfolioVideo = {
   category: ContentCategory;
   videoUrl: string;
   gradient: string;
+  title?: string;
 };
 
 // Vídeo de exemplo (placeholder) — trocar pelos vídeos reais depois.
