@@ -84,3 +84,11 @@ drop policy if exists "Authenticated read events" on contact_events;
 create policy "Authenticated read events" on contact_events
   for select
   using (auth.role() = 'authenticated');
+
+-- Permite que o site (sem login) liste e carregue os vídeos do bucket
+-- "Vídeos" no Storage — sem isso, o Storage nega o acesso e o site não
+-- consegue ver os vídeos que você sobe, mesmo com o bucket marcado como público.
+drop policy if exists "Public read videos bucket" on storage.objects;
+create policy "Public read videos bucket" on storage.objects
+  for select
+  using (bucket_id = 'Vídeos');
