@@ -17,6 +17,7 @@ import { FAQ } from "@/components/public/FAQ";
 import { WhyUGC } from "@/components/public/WhyUGC";
 import { ContactForm } from "@/components/public/ContactForm";
 import { SiteFooter } from "@/components/public/SiteFooter";
+import { ContactPopup } from "@/components/public/ContactPopup";
 
 const STORAGE_KEY = "ugc_locale";
 
@@ -60,6 +61,7 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
       <WhyUGC t={t.whyUgc} />
       <ContactForm t={t.contact} />
       <SiteFooter t={t.footer} />
+      <ContactPopup t={t.popup} />
     </main>
   );
 }

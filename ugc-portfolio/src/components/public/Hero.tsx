@@ -6,16 +6,6 @@ export function Hero({ t }: { t: Translations["hero"] }) {
     <section id="topo" className="mx-auto max-w-6xl px-5 pt-12 md:pt-20">
       <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <div className="mb-5 h-20 w-20 overflow-hidden rounded-full">
-            <Image
-              src="/images/about.jpg"
-              alt="Rafa Nunes"
-              width={160}
-              height={160}
-              className="h-full w-full object-cover"
-            />
-          </div>
-
           <span className="inline-flex items-center gap-2 rounded-full bg-olive-50 px-3 py-1 text-xs font-semibold text-olive-800">
             <span className="h-2 w-2 rounded-full bg-olive-500" />
             {t.availability}

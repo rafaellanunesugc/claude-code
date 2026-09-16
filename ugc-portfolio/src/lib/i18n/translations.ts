@@ -32,6 +32,7 @@ export type Translations = {
     paragraphs: string[];
     commitment: string;
     chips: string[];
+    stats: { value: string; label: string }[];
   };
   influencer: {
     eyebrow: string;
@@ -124,6 +125,15 @@ export type Translations = {
     submitError: string;
   };
   footer: { rights: string; admin: string };
+  popup: {
+    eyebrow: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    fields: { name: string; brand: string; email: string; message: string };
+    submit: string;
+    successMessage: string;
+  };
 };
 
 export const translations: Record<Locale, Translations> = {
@@ -156,7 +166,7 @@ export const translations: Record<Locale, Translations> = {
     ],
     brandLogos: {
       eyebrow: "Marcas atendidas",
-      title: "Marcas que já confiaram",
+      title: "Marcas nacionais que já confiaram",
       subtitle: "Marcas de beleza e saúde que já confiaram no meu trabalho.",
     },
     about: {
@@ -171,6 +181,12 @@ export const translations: Record<Locale, Translations> = {
       commitment:
         "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
       chips: ["UGC Creator", "Influenciadora", "Videomaker"],
+      stats: [
+        { value: "25 anos", label: "Idade" },
+        { value: "Goiânia-GO", label: "Base" },
+        { value: "6 anos", label: "De experiência" },
+        { value: "23,8K", label: "Seguidores" },
+      ],
     },
     influencer: {
       eyebrow: "Como influenciadora",
@@ -422,6 +438,20 @@ export const translations: Record<Locale, Translations> = {
       rights: "Todos os direitos reservados.",
       admin: "Área administrativa",
     },
+    popup: {
+      eyebrow: "Solicitar proposta",
+      title: "Vamos criar conteúdo que",
+      titleHighlight: "gera resultado?",
+      subtitle: "Conta rapidinho o que você precisa.",
+      fields: {
+        name: "Seu nome",
+        brand: "Nome da marca",
+        email: "email@empresa.com",
+        message: "Objetivo da campanha, prazo, referências",
+      },
+      submit: "Solicitar proposta",
+      successMessage: "Recebi sua mensagem! Retorno em breve.",
+    },
   },
   en: {
     nav: {
@@ -452,7 +482,7 @@ export const translations: Record<Locale, Translations> = {
     ],
     brandLogos: {
       eyebrow: "Brands I've worked with",
-      title: "Brands that already trusted me",
+      title: "National brands that already trusted me",
       subtitle: "Beauty and health brands that have already trusted my work.",
     },
     about: {
@@ -467,6 +497,12 @@ export const translations: Record<Locale, Translations> = {
       commitment:
         "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
       chips: ["UGC Creator", "Influencer", "Videomaker"],
+      stats: [
+        { value: "25 years old", label: "Age" },
+        { value: "Goiânia, Brazil", label: "Based in" },
+        { value: "6 years", label: "Of experience" },
+        { value: "23.8K", label: "Followers" },
+      ],
     },
     influencer: {
       eyebrow: "As an influencer",
@@ -717,6 +753,20 @@ export const translations: Record<Locale, Translations> = {
     footer: {
       rights: "All rights reserved.",
       admin: "Admin area",
+    },
+    popup: {
+      eyebrow: "Request a quote",
+      title: "Let's create content that",
+      titleHighlight: "gets results?",
+      subtitle: "Tell me quickly what you need.",
+      fields: {
+        name: "Your name",
+        brand: "Brand name",
+        email: "email@company.com",
+        message: "Campaign goal, timeline, references",
+      },
+      submit: "Request a quote",
+      successMessage: "Got your message! I'll get back to you soon.",
     },
   },
 };
