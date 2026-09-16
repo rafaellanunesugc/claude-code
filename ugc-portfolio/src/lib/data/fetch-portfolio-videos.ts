@@ -6,10 +6,11 @@ import {
 } from "@/lib/data/placeholders";
 
 // Nome do bucket e das pastas exatamente como criados no Supabase Storage
-// (o Storage do Supabase diferencia maiúsculas/minúsculas e acentos).
-const BUCKET_NAME = "Vídeos";
+// (o Storage do Supabase diferencia maiúsculas/minúsculas, e a API rejeita
+// nomes de bucket com acento/maiúscula — por isso o bucket é "videos").
+const BUCKET_NAME = "videos";
 const CATEGORY_FOLDERS: Record<ContentCategory, string> = {
-  influenciadora: "Influenciadora",
+  influenciadora: "influenciadora",
   ugc: "UGC",
 };
 
