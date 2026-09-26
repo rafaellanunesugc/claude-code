@@ -13,7 +13,8 @@ export type ContentCategory = "influenciadora" | "ugc";
 export type PortfolioVideo = {
   id: string;
   category: ContentCategory;
-  videoUrl: string;
+  videoUrl?: string;
+  youtubeId?: string;
   gradient: string;
   title?: string;
   format?: string;
@@ -97,6 +98,20 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-700 via-ink-800 to-brand-300",
     format: "storytelling",
+  },
+];
+
+// Vídeos reais, hospedados como "não listados" no YouTube — mais fácil de
+// subir do que o Supabase Storage e sem limite de tamanho nem risco de
+// pausa do plano gratuito. Adicione um item aqui pra cada vídeo novo.
+export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
+  {
+    id: "ugc-oleo-ox",
+    category: "ugc",
+    youtubeId: "QO_IrDJNWIc",
+    gradient: "from-brand-500 via-ink-900 to-brand-700",
+    title: "Óleo OX",
+    format: "dica",
   },
 ];
 

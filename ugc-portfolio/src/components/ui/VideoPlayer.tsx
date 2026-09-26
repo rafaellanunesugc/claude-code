@@ -26,15 +26,25 @@ export function VideoPlayer({
             video.gradient
           )}
         />
-        <video
-          className="relative h-full w-full object-cover"
-          controls
-          preload="none"
-          poster=""
-          playsInline
-        >
-          <source src={video.videoUrl} type="video/mp4" />
-        </video>
+        {video.youtubeId ? (
+          <iframe
+            className="relative h-full w-full"
+            src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1`}
+            title={title}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <video
+            className="relative h-full w-full object-cover"
+            controls
+            preload="none"
+            poster=""
+            playsInline
+          >
+            <source src={video.videoUrl} type="video/mp4" />
+          </video>
+        )}
         <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-xs font-medium capitalize text-white backdrop-blur-sm">
           {formatLabel}
         </span>
