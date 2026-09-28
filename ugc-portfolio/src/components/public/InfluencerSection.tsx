@@ -13,7 +13,15 @@ function PlatformCard({
   t: Translations["influencer"]["metrics"];
   location?: { brazil: number; cities: string[] };
 }) {
-  const ageColors = ["bg-wine-300", "bg-wine-500", "bg-wine-700"];
+  const ageColors = [
+    "bg-wine-200",
+    "bg-wine-300",
+    "bg-wine-400",
+    "bg-wine-500",
+    "bg-wine-600",
+    "bg-wine-700",
+    "bg-wine-800",
+  ];
 
   return (
     <div className="rounded-2xl border border-ink-900/10 bg-white p-6 shadow-soft">
