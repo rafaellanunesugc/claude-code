@@ -27,25 +27,51 @@ export function BlackFridayBanner({ t }: { t: Translations["blackFridayBanner"] 
 
   if (dismissed) return null;
 
+  const items = [t.text, t.text, t.text];
+
   return (
-    <div className="relative bg-ink-900 px-4 py-3 text-center text-sm text-white">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-3 gap-y-1 pr-6">
-        <span className="font-medium">{t.text}</span>
-        <a
-          href="#contato"
-          className="inline-flex flex-none items-center rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-brand-700"
-        >
-          {t.cta}
-        </a>
+    <div className="flex items-center gap-3 bg-ink-900 py-2.5 pl-4 pr-3 text-sm text-white">
+      <div className="min-w-0 flex-1 overflow-hidden">
+        <div className="bf-marquee-track flex w-max items-center gap-10 whitespace-nowrap font-medium">
+          {[...items, ...items].map((text, index) => (
+            <span key={index} className="flex items-center gap-10">
+              {text}
+              <span className="text-brand-400">✦</span>
+            </span>
+          ))}
+        </div>
       </div>
+
+      <a
+        href="#contato"
+        className="inline-flex flex-none items-center whitespace-nowrap rounded-full bg-brand-600 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-brand-700"
+      >
+        {t.cta}
+      </a>
+
       <button
         type="button"
         onClick={handleDismiss}
         aria-label="Fechar"
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60 transition hover:text-white"
+        className="flex-none text-white/60 transition hover:text-white"
       >
         ✕
       </button>
+
+      <style>{`
+        .bf-marquee-track {
+          animation: bf-marquee-scroll 26s linear infinite;
+        }
+        @keyframes bf-marquee-scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .bf-marquee-track {
+            animation: none;
+          }
+        }
+      `}</style>
     </div>
   );
 }
