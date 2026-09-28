@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Translations } from "@/lib/i18n/translations";
+import { Star } from "@/components/ui/Star";
 
 export function Hero({ t }: { t: Translations["hero"] }) {
   return (
@@ -11,7 +12,8 @@ export function Hero({ t }: { t: Translations["hero"] }) {
             {t.availability}
           </span>
 
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-ink-900 md:text-5xl">
+          <h1 className="mt-4 flex items-center gap-2 font-signature text-5xl leading-tight text-ink-900 md:text-6xl">
+            <Star className="h-6 w-6 flex-none text-brand-500 md:h-8 md:w-8" />
             Rafa Nunes
           </h1>
           <p className="mt-2 text-lg font-medium text-wine-700">{t.tagline}</p>
@@ -41,15 +43,19 @@ export function Hero({ t }: { t: Translations["hero"] }) {
           </div>
         </div>
 
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
-          <Image
-            src="/images/foto-capa.jpg"
-            alt="Rafa Nunes"
-            fill
-            sizes="(max-width: 768px) 100vw, 40vw"
-            className="object-cover"
-            priority
-          />
+        <div className="relative">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
+            <Image
+              src="/images/foto-capa.jpg"
+              alt="Rafa Nunes"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <Star className="pointer-events-none absolute -left-3 -top-3 h-8 w-8 text-brand-400 md:-left-5 md:-top-5 md:h-10 md:w-10" />
+          <Star className="pointer-events-none absolute -bottom-2 -right-2 h-5 w-5 text-wine-400 md:h-6 md:w-6" />
         </div>
       </div>
     </section>

@@ -11,8 +11,10 @@ body {
   color: #433b0c;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-display), serif;
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), serif;
+  }
 }

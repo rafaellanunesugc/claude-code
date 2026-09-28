@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Star } from "@/components/ui/Star";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
 import type { PortfolioVideo } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
@@ -41,7 +42,10 @@ export function Portfolio({
   return (
     <section id="portfolio" className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
-        <h2 className="text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>
+        <h2 className="flex items-center gap-2 text-2xl font-bold text-ink-900 md:text-3xl">
+          <Star className="h-5 w-5 flex-none text-brand-500 md:h-6 md:w-6" />
+          {t.title}
+        </h2>
         <p className="mt-2 max-w-2xl text-ink-700">{t.subtitle}</p>
 
         <div className="mt-6 flex flex-wrap gap-2">
