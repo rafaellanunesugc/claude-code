@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import type { PortfolioVideo } from "@/lib/data/placeholders";
 
@@ -12,6 +15,8 @@ export function VideoPlayer({
   formatLabel: string;
   className?: string;
 }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div
       className={cn(
@@ -27,13 +32,35 @@ export function VideoPlayer({
           )}
         />
         {video.youtubeId ? (
-          <iframe
-            className="relative h-full w-full"
-            src={`https://www.youtube.com/embed/${video.youtubeId}?rel=0&modestbranding=1`}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          isPlaying ? (
+            <iframe
+              className="relative h-full w-full"
+              src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1`}
+              title={title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <button
+              type="button"
+              onClick={() => setIsPlaying(true)}
+              className="group relative block h-full w-full"
+              aria-label={title}
+            >
+              <img
+                src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                alt={title}
+                className="h-full w-full object-cover"
+              />
+              <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/30">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-105">
+                  <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 fill-ink-900">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </span>
+            </button>
+          )
         ) : (
           <video
             className="relative h-full w-full object-cover"
