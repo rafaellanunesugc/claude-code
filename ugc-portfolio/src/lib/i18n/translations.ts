@@ -342,7 +342,7 @@ export const translations: Record<Locale, Translations> = {
     portfolio: {
       title: "Portfólio",
       subtitle:
-        "Clique numa pasta pra filtrar · clique num vídeo pra assistir. (Vídeos de exemplo — em breve substituo pelos meus.)",
+        "Clique num nicho pra filtrar · clique num vídeo pra assistir.",
       filters: { todos: "Todos", influenciadora: "Influenciadora", ugc: "UGC" },
       videoTitles: {
         "influencer-1": "Rotina de skincare (exemplo)",
@@ -662,7 +662,7 @@ export const translations: Record<Locale, Translations> = {
     portfolio: {
       title: "Portfolio",
       subtitle:
-        "Click a folder to filter · click a video to watch. (Sample videos — mine coming soon.)",
+        "Click a niche to filter · click a video to watch.",
       filters: { todos: "All", influenciadora: "Influencer", ugc: "UGC" },
       videoTitles: {
         "influencer-1": "Skincare routine (example)",

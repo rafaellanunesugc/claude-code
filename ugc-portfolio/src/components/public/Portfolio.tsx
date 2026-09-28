@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
-import type { ContentCategory, PortfolioVideo } from "@/lib/data/placeholders";
+import type { PortfolioVideo } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
+
+const ALL_NICHES = "todos";
 
 export function Portfolio({
   t,
@@ -13,16 +15,27 @@ export function Portfolio({
   t: Translations["portfolio"];
   videos: PortfolioVideo[];
 }) {
-  const [filter, setFilter] = useState<ContentCategory | "todos">("todos");
+  const niches = useMemo(() => {
+    const seen = new Set<string>();
+    const ordered: string[] = [];
+    for (const video of videos) {
+      if (!seen.has(video.niche)) {
+        seen.add(video.niche);
+        ordered.push(video.niche);
+      }
+    }
+    return ordered;
+  }, [videos]);
 
-  const filters: { key: ContentCategory | "todos"; label: string }[] = [
-    { key: "todos", label: t.filters.todos },
-    { key: "influenciadora", label: t.filters.influenciadora },
-    { key: "ugc", label: t.filters.ugc },
+  const [filter, setFilter] = useState<string>(ALL_NICHES);
+
+  const filters = [
+    { key: ALL_NICHES, label: t.filters.todos },
+    ...niches.map((niche) => ({ key: niche, label: niche })),
   ];
 
   const filteredVideos = videos.filter(
-    (video) => filter === "todos" || video.category === filter
+    (video) => filter === ALL_NICHES || video.niche === filter
   );
 
   return (
@@ -54,7 +67,8 @@ export function Portfolio({
               key={video.id}
               video={video}
               title={video.title ?? t.videoTitles[video.id] ?? video.id}
-              formatLabel={video.format ?? t.filters[video.category]}
+              formatLabel={video.format ?? video.niche}
+              categoryLabel={t.filters[video.category]}
             />
           ))}
         </div>

@@ -8,11 +8,13 @@ export function VideoPlayer({
   video,
   title,
   formatLabel,
+  categoryLabel,
   className,
 }: {
   video: PortfolioVideo;
   title: string;
   formatLabel: string;
+  categoryLabel: string;
   className?: string;
 }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -74,6 +76,9 @@ export function VideoPlayer({
         )}
         <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-xs font-medium capitalize text-white backdrop-blur-sm">
           {formatLabel}
+        </span>
+        <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-ink-900 backdrop-blur-sm">
+          {categoryLabel}
         </span>
       </div>
       <div className="p-3">

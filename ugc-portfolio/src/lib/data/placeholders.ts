@@ -13,6 +13,7 @@ export type ContentCategory = "influenciadora" | "ugc";
 export type PortfolioVideo = {
   id: string;
   category: ContentCategory;
+  niche: string;
   videoUrl?: string;
   youtubeId?: string;
   gradient: string;
@@ -46,6 +47,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influencer-1",
     category: "influenciadora",
+    niche: "Rotina",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-400 via-brand-600 to-ink-900",
     format: "rotina",
@@ -53,6 +55,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influencer-2",
     category: "influenciadora",
+    niche: "Beleza",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-800 via-brand-700 to-brand-400",
     format: "grwm",
@@ -60,6 +63,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influencer-3",
     category: "influenciadora",
+    niche: "Depoimentos",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-600 via-ink-800 to-ink-900",
     format: "storytelling",
@@ -67,6 +71,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influencer-4",
     category: "influenciadora",
+    niche: "Beleza",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-300 via-brand-500 to-ink-800",
     format: "dica",
@@ -74,6 +79,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-1",
     category: "ugc",
+    niche: "Depoimentos",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-700 via-brand-600 to-brand-300",
     format: "depoimento",
@@ -81,6 +87,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-2",
     category: "ugc",
+    niche: "Tecnologia",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-500 via-ink-900 to-brand-700",
     format: "unboxing",
@@ -88,6 +95,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-3",
     category: "ugc",
+    niche: "Depoimentos",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-ink-900 via-brand-400 to-brand-600",
     format: "review",
@@ -95,6 +103,7 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-4",
     category: "ugc",
+    niche: "Depoimentos",
     videoUrl: SAMPLE_VIDEO,
     gradient: "from-brand-700 via-ink-800 to-brand-300",
     format: "storytelling",
@@ -108,6 +117,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-oleo-ox",
     category: "ugc",
+    niche: "Beleza",
     youtubeId: "QO_IrDJNWIc",
     gradient: "from-brand-500 via-ink-900 to-brand-700",
     title: "Óleo OX",
@@ -116,6 +126,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-dove",
     category: "ugc",
+    niche: "Beleza",
     youtubeId: "jzVlIs5gl4M",
     gradient: "from-ink-900 via-brand-400 to-brand-600",
     title: "Dove",
@@ -124,6 +135,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-e-lens",
     category: "ugc",
+    niche: "Saúde e bem estar",
     youtubeId: "7ebhVxDstu4",
     gradient: "from-brand-700 via-ink-800 to-brand-300",
     title: "E-lens",
@@ -132,6 +144,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-widicare",
     category: "ugc",
+    niche: "Beleza",
     youtubeId: "tpovLG0KB1U",
     gradient: "from-brand-400 via-brand-600 to-ink-900",
     title: "Cabelo – Widicare",
@@ -140,6 +153,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-comunidade-rotina",
     category: "influenciadora",
+    niche: "Rotina",
     youtubeId: "9qgqDoR4Dew",
     gradient: "from-ink-800 via-brand-700 to-brand-400",
     title: "Comunidade",
@@ -148,6 +162,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-transicao-capilar",
     category: "influenciadora",
+    niche: "Beleza",
     youtubeId: "FsamZz7TSK0",
     gradient: "from-brand-600 via-ink-800 to-ink-900",
     title: "Comunidade",
@@ -156,6 +171,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-creator-economy",
     category: "influenciadora",
+    niche: "Carreira Creator",
     youtubeId: "EiGIb8sMW94",
     gradient: "from-brand-300 via-brand-500 to-ink-800",
     title: "Creator Economy",
@@ -164,6 +180,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-mdc-store",
     category: "ugc",
+    niche: "Tecnologia",
     youtubeId: "es3NwubhE_A",
     gradient: "from-ink-700 via-brand-600 to-brand-300",
     title: "Loja de celular MDC Store",
@@ -172,6 +189,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-aluguel-jogos",
     category: "ugc",
+    niche: "Tecnologia",
     youtubeId: "moyxIQek3qM",
     gradient: "from-brand-500 via-ink-900 to-brand-700",
     title: "Experiência – Aluguel de jogos",
@@ -180,6 +198,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-nasa",
     category: "influenciadora",
+    niche: "Experiência",
     youtubeId: "Lw0Do1RIRWc",
     gradient: "from-ink-800 via-brand-700 to-brand-400",
     title: "Nasa",
@@ -188,6 +207,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-entrelace-cabelo",
     category: "influenciadora",
+    niche: "Beleza",
     youtubeId: "DPuIott6ems",
     gradient: "from-brand-600 via-ink-800 to-ink-900",
     title: "Entrelace no Cabelo",
@@ -196,6 +216,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-vlog-corrida",
     category: "influenciadora",
+    niche: "Saúde e bem estar",
     youtubeId: "ry564Zz93Nk",
     gradient: "from-brand-300 via-brand-500 to-ink-800",
     title: "Comunidade",
@@ -204,6 +225,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-cabelo-storytelling",
     category: "ugc",
+    niche: "Beleza",
     youtubeId: "82eh9GVkuOA",
     gradient: "from-ink-700 via-brand-600 to-brand-300",
     title: "Storytelling",
@@ -212,6 +234,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-casa-jardinagem",
     category: "influenciadora",
+    niche: "Casa",
     youtubeId: "7C3w2l48Juk",
     gradient: "from-brand-500 via-ink-900 to-brand-700",
     title: "DIY",
@@ -220,6 +243,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-corte-cabelo",
     category: "influenciadora",
+    niche: "Beleza",
     youtubeId: "LQi8DaLHtX4",
     gradient: "from-ink-900 via-brand-400 to-brand-600",
     title: "Corte de Cabelo – Storytelling",
@@ -228,6 +252,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-emagrecimento",
     category: "influenciadora",
+    niche: "Saúde e bem estar",
     youtubeId: "pyr8yv1Abjc",
     gradient: "from-brand-700 via-ink-800 to-brand-300",
     title: "Processo de Emagrecimento",
@@ -236,6 +261,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-extensao-cilios",
     category: "influenciadora",
+    niche: "Beleza",
     youtubeId: "BbYKtRyg6kw",
     gradient: "from-brand-400 via-brand-600 to-ink-900",
     title: "Extensão de Cílios",
@@ -244,6 +270,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "influenciadora-finalizacao-cabelo",
     category: "influenciadora",
+    niche: "Beleza",
     youtubeId: "8DMODfhEE-E",
     gradient: "from-ink-800 via-brand-700 to-brand-400",
     title: "Transição Capilar",
@@ -252,6 +279,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
     id: "ugc-depoimento-conteudo-site",
     category: "ugc",
+    niche: "Depoimentos",
     youtubeId: "B0O9cQ0AESY",
     gradient: "from-ink-900 via-brand-400 to-brand-600",
     title: "Experiência com o produto – Conteúdo para site",
