@@ -29,7 +29,13 @@ export type Translations = {
     coverPlaceholder: string;
   };
   marquee: string[];
-  brandLogos: { eyebrow: string; title: string; subtitle: string };
+  statement: { line1: string; line2: string };
+  brandLogos: { eyebrow: string; titleBold: string; titleItalic: string; subtitle: string };
+  studio: {
+    eyebrow: string;
+    title: string;
+    items: { title: string; description: string }[];
+  };
   about: {
     eyebrow: string;
     title: string;
@@ -172,10 +178,36 @@ export const translations: Record<Locale, Translations> = {
       "Anúncios",
       "UGC Manager",
     ],
+    statement: {
+      line1: "UGC, INFLUÊNCIA E VIDEOMAKER",
+      line2: "pensados pra vender de verdade.",
+    },
     brandLogos: {
       eyebrow: "Marcas atendidas",
-      title: "Marcas nacionais que já confiaram",
+      titleBold: "Marcas, histórias",
+      titleItalic: "sendo feitas juntas.",
       subtitle: "Marcas de beleza e saúde que já confiaram no meu trabalho.",
+    },
+    studio: {
+      eyebrow: "Como eu trabalho",
+      title: "Estúdio & Qualidade Técnica.",
+      items: [
+        {
+          title: "Equipamento e captação profissional",
+          description:
+            "Iluminação, câmera e áudio cuidados em cada gravação, pra imagem e som saírem prontos pra rodar em anúncio.",
+        },
+        {
+          title: "Olhar de maquiadora",
+          description:
+            "Mais de 10 anos como maquiadora ajudam a captar o melhor ângulo, luz e make de cada produto.",
+        },
+        {
+          title: "Estratégia de marketing",
+          description:
+            "5 anos de mercado corporativo em eventos e comercial trazem visão estratégica pra cada vídeo vender, não só aparecer bonito.",
+        },
+      ],
     },
     about: {
       eyebrow: "Sobre mim",
@@ -496,10 +528,36 @@ export const translations: Record<Locale, Translations> = {
       "Ads",
       "UGC Manager",
     ],
+    statement: {
+      line1: "UGC, INFLUENCE AND VIDEOMAKER",
+      line2: "built to actually sell.",
+    },
     brandLogos: {
       eyebrow: "Brands I've worked with",
-      title: "National brands that already trusted me",
+      titleBold: "Brands, stories",
+      titleItalic: "made together.",
       subtitle: "Beauty and health brands that have already trusted my work.",
+    },
+    studio: {
+      eyebrow: "How I work",
+      title: "Studio & Technical Quality.",
+      items: [
+        {
+          title: "Professional gear and capture",
+          description:
+            "Lighting, camera and audio handled carefully on every shoot, so image and sound come out ready to run as an ad.",
+        },
+        {
+          title: "A makeup artist's eye",
+          description:
+            "10+ years as a makeup artist help capture the best angle, light and makeup for each product.",
+        },
+        {
+          title: "Marketing strategy",
+          description:
+            "5 years in corporate events and sales bring a strategic view to every video, so it sells — not just looks good.",
+        },
+      ],
     },
     about: {
       eyebrow: "About me",

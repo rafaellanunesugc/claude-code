@@ -7,8 +7,10 @@ import { BlackFridayBanner } from "@/components/public/BlackFridayBanner";
 import { SiteHeader } from "@/components/public/SiteHeader";
 import { Hero } from "@/components/public/Hero";
 import { TagMarquee } from "@/components/public/TagMarquee";
+import { Statement } from "@/components/public/Statement";
 import { BrandLogos } from "@/components/public/BrandLogos";
 import { AboutMe } from "@/components/public/AboutMe";
+import { Studio } from "@/components/public/Studio";
 import { InfluencerSection } from "@/components/public/InfluencerSection";
 import { UGCSection } from "@/components/public/UGCSection";
 import { WorkWithMe } from "@/components/public/WorkWithMe";
@@ -53,8 +55,10 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
       <SiteHeader t={t.nav} locale={locale} onChangeLocale={handleChangeLocale} />
       <Hero t={t.hero} />
       <TagMarquee tags={t.marquee} />
+      <Statement t={t.statement} />
       <BrandLogos t={t.brandLogos} />
       <AboutMe t={t.about} />
+      <Studio t={t.studio} />
       <InfluencerSection t={t.influencer} followers={followersValue} />
       <UGCSection t={t.ugc} />
       <WorkWithMe t={t.work} />
