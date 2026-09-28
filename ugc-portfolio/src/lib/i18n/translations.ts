@@ -102,7 +102,7 @@ export type Translations = {
     resultLabel: string;
     testimonialLabel: string;
     verifiedLabel: string;
-    items: { caption: string; footnote: string }[];
+    items: { caption: string; footnote: string; image?: string }[];
   };
   faq: {
     eyebrow: string;
@@ -398,15 +398,16 @@ export const translations: Record<Locale, Translations> = {
     feedbacks: {
       eyebrow: "Feedbacks",
       title: "O que estão falando do meu trabalho",
-      subtitle:
-        "Feedbacks verdadeiros de marcas que já trabalharam comigo. (Prints de resultado reais em breve.)",
+      subtitle: "Feedbacks e resultados verdadeiros de trabalhos que já entreguei.",
       resultLabel: "Print de resultado",
       testimonialLabel: "Depoimento",
       verifiedLabel: "Feedback real",
       items: [
         {
-          caption: "Aqui entra um print de views/engajamento de uma campanha real.",
-          footnote: "Print de resultado (exemplo)",
+          caption:
+            "Print de resultado de reels orgânico, no meu perfil. O objetivo do vídeo era apresentar o serviço da minha cabeleireira de corte de cabelo. Mas isso prova o quanto é importante um bom storytelling no conteúdo, porque foi a partir disso que eu consegui fazer a retenção e a viralização desse conteúdo: linguagem simples, resultado, vídeo dinâmico, com uma boa história que conectava com o meu público.",
+          footnote: "80,4 mil visualizações · 155 novos seguidores · colab. com @jaqueilumina",
+          image: "/images/resultado-reel-corte-cabelo.jpg",
         },
         {
           caption:
@@ -748,15 +749,16 @@ export const translations: Record<Locale, Translations> = {
     feedbacks: {
       eyebrow: "Feedbacks",
       title: "What people are saying about my work",
-      subtitle:
-        "Real feedback from brands I've worked with. (Real result screenshots coming soon.)",
+      subtitle: "Real feedback and results from work I've already delivered.",
       resultLabel: "Result screenshot",
       testimonialLabel: "Testimonial",
       verifiedLabel: "Real feedback",
       items: [
         {
-          caption: "A views/engagement screenshot from a real campaign goes here.",
-          footnote: "Result screenshot (example)",
+          caption:
+            "Result screenshot from an organic reel on my own profile. The video's goal was to promote my hairdresser's haircut service. But it proves how important good storytelling is in content, because that's what drove the retention and virality of this piece: simple language, a clear payoff, dynamic editing, and a story that connected with my audience.",
+          footnote: "80.4K views · 155 new followers · collab with @jaqueilumina",
+          image: "/images/resultado-reel-corte-cabelo.jpg",
         },
         {
           caption:

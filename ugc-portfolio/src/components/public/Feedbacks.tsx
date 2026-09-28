@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { FEEDBACK_TYPES } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 import { cn } from "@/lib/utils";
@@ -46,26 +47,45 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
         </div>
       </div>
 
-      <div className="mt-8 min-h-[12rem] rounded-2xl border border-dashed border-ink-900/20 bg-white p-6">
-        <div className="flex items-center gap-2">
-          <span
-            className={cn(
-              "w-fit rounded-full px-3 py-1 text-xs font-semibold",
-              type === "resultado"
-                ? "bg-brand-100 text-brand-700"
-                : "bg-ink-900/10 text-ink-800"
-            )}
-          >
-            {type === "resultado" ? t.resultLabel : t.testimonialLabel}
-          </span>
-          {type === "depoimento" && (
-            <span className="text-xs font-medium text-olive-700">
-              ✓ {t.verifiedLabel}
+      <div
+        className={cn(
+          "mt-8 min-h-[12rem] rounded-2xl border border-ink-900/10 bg-white p-6",
+          item.image && "grid gap-6 sm:grid-cols-[0.6fr_1fr]"
+        )}
+      >
+        {item.image && (
+          <div className="relative aspect-[9/13] w-full overflow-hidden rounded-xl">
+            <Image
+              src={item.image}
+              alt={item.footnote}
+              fill
+              sizes="(max-width: 640px) 100vw, 30vw"
+              className="object-cover"
+            />
+          </div>
+        )}
+
+        <div>
+          <div className="flex items-center gap-2">
+            <span
+              className={cn(
+                "w-fit rounded-full px-3 py-1 text-xs font-semibold",
+                type === "resultado"
+                  ? "bg-brand-100 text-brand-700"
+                  : "bg-ink-900/10 text-ink-800"
+              )}
+            >
+              {type === "resultado" ? t.resultLabel : t.testimonialLabel}
             </span>
-          )}
+            {type === "depoimento" && (
+              <span className="text-xs font-medium text-olive-700">
+                ✓ {t.verifiedLabel}
+              </span>
+            )}
+          </div>
+          <p className="mt-4 text-ink-700">{item.caption}</p>
+          <span className="mt-4 block text-xs text-ink-700/50">{item.footnote}</span>
         </div>
-        <p className="mt-4 text-ink-700">{item.caption}</p>
-        <span className="mt-4 block text-xs text-ink-700/50">{item.footnote}</span>
       </div>
 
       <div className="mt-4 text-sm font-medium text-ink-700/60">
