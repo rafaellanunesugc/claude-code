@@ -8,6 +8,10 @@ export const LOCALE_LABELS: Record<Locale, { flag: string; short: string }> = {
 type WorkFormat = { title: string; description: string };
 
 export type Translations = {
+  blackFridayBanner: {
+    text: string;
+    cta: string;
+  };
   nav: {
     sobre: string;
     portfolio: string;
@@ -138,6 +142,10 @@ export type Translations = {
 
 export const translations: Record<Locale, Translations> = {
   pt: {
+    blackFridayBanner: {
+      text: "🖤 BLACK FRIDAY não espera: conteúdo bom exige tempo de produção. Garanta sua campanha UGC + Influenciadora antes que as vagas de novembro acabem.",
+      cta: "Solicitar orçamento",
+    },
     nav: {
       sobre: "Sobre",
       portfolio: "Portfólio",
@@ -458,6 +466,10 @@ export const translations: Record<Locale, Translations> = {
     },
   },
   en: {
+    blackFridayBanner: {
+      text: "🖤 BLACK FRIDAY won't wait: great content needs production time. Book your UGC + Influencer campaign before November slots run out.",
+      cta: "Request a quote",
+    },
     nav: {
       sobre: "About",
       portfolio: "Portfolio",

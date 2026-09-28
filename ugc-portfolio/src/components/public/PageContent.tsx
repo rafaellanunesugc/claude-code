@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { translations, type Locale } from "@/lib/i18n/translations";
 import type { PortfolioVideo } from "@/lib/data/placeholders";
+import { BlackFridayBanner } from "@/components/public/BlackFridayBanner";
 import { SiteHeader } from "@/components/public/SiteHeader";
 import { Hero } from "@/components/public/Hero";
 import { TagMarquee } from "@/components/public/TagMarquee";
@@ -48,6 +49,7 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
 
   return (
     <main lang={locale}>
+      <BlackFridayBanner t={t.blackFridayBanner} />
       <SiteHeader t={t.nav} locale={locale} onChangeLocale={handleChangeLocale} />
       <Hero t={t.hero} />
       <TagMarquee tags={t.marquee} />
