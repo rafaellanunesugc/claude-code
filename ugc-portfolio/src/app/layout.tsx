@@ -15,8 +15,10 @@ const signatureFont = localFont({
   variable: "--font-signature",
 });
 // TT Commons Pro (fonte real de texto). Não recebemos o peso "Regular",
-// então o DemiBold cobre a faixa 400–600 (texto normal e semi-negrito)
-// pra nenhum texto comum acabar caindo sem querer no ExtraLight/Thin.
+// então o texto comum (400, sem classe de peso) usa o ExtraLight — mais
+// perto de uma leitura normal do que o DemiBold, que fica pesado demais
+// pra parágrafo. DemiBold fica reservado pra quando algo pede negrito
+// médio de propósito (font-medium/font-semibold).
 const bodyFont = localFont({
   src: [
     {
@@ -26,17 +28,17 @@ const bodyFont = localFont({
     },
     {
       path: "../fonts/tt-commons/TT-Commons-ExtraLight.otf",
-      weight: "200",
+      weight: "200 400",
       style: "normal",
     },
     {
       path: "../fonts/tt-commons/TT-Commons-DemiBold.otf",
-      weight: "400 600",
+      weight: "500 600",
       style: "normal",
     },
     {
       path: "../fonts/tt-commons/TT-Commons-DemiBold-Italic.otf",
-      weight: "400 600",
+      weight: "200 600",
       style: "italic",
     },
     {
