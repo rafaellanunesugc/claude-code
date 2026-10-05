@@ -198,11 +198,6 @@ export const translations: Record<Locale, Translations> = {
             "Iluminação, câmera e áudio cuidados em cada gravação, pra imagem e som saírem prontos pra rodar em anúncio.",
         },
         {
-          title: "Olhar de maquiadora",
-          description:
-            "Mais de 10 anos como maquiadora ajudam a captar o melhor ângulo, luz e make de cada produto.",
-        },
-        {
           title: "Estratégia de marketing",
           description:
             "5 anos de mercado corporativo em eventos e comercial trazem visão estratégica pra cada vídeo vender, não só aparecer bonito.",
@@ -257,9 +252,9 @@ export const translations: Record<Locale, Translations> = {
         instagram: {
           heading: "Instagram",
           stats: [
-            { label: "Visualizações", value: "583.456" },
-            { label: "Seguidores líquidos", value: "+898" },
-            { label: "Interações", value: "46.608" },
+            { label: "Visualizações", value: "638.186" },
+            { label: "Seguidores líquidos", value: "+1.196" },
+            { label: "Interações", value: "53.143" },
             { label: "Visitas ao perfil", value: "4.478" },
             { label: "Seguidores totais", value: "6.330" },
           ],
@@ -269,13 +264,10 @@ export const translations: Record<Locale, Translations> = {
             { label: "Homens", value: 28 },
           ],
           age: [
-            { label: "13–17", value: 0.3 },
             { label: "18–24", value: 13.2 },
             { label: "25–34", value: 49.4 },
             { label: "35–44", value: 22.4 },
             { label: "45–54", value: 10.4 },
-            { label: "55–64", value: 3.3 },
-            { label: "65+", value: 1.1 },
           ],
           location: {
             brazil: 96.3,
@@ -419,6 +411,11 @@ export const translations: Record<Locale, Translations> = {
             "“Rafa o vídeo que você produziu foi muito bom para nossas campanhas! Deu um ar menos propaganda e mais comunidade, eu sempre falo o que funciona no orgânico tende a funcionar no pago, vai ser um vídeo atemporal e ainda irei usar muito.” — Fernanda Carneiro, Gestora de Tráfego Pago do Peça Rara",
           footnote: "Depoimento",
         },
+        {
+          caption:
+            "“Nós amamos muuuito o seu trabalho! ✨ Os conteúdos ficaram incríveis e você conseguiu captar super bem a ideia que queríamos transmitir, deixando-a muito natural e com a sua personalidade. Além de ser super solícita durante todo o processo e cumprir os prazos certinho 🌸 Ficamos muito felizes com o resultado e com a parceria. Com certeza vamos querer trabalhar juntas mais vezes! Foi um prazer ter você com a gente 💜”",
+          footnote: "Geovana, Gerente de Conteúdo da Bloomie Wellness",
+        },
       ],
     },
     faq: {
@@ -549,11 +546,6 @@ export const translations: Record<Locale, Translations> = {
             "Lighting, camera and audio handled carefully on every shoot, so image and sound come out ready to run as an ad.",
         },
         {
-          title: "A makeup artist's eye",
-          description:
-            "10+ years as a makeup artist help capture the best angle, light and makeup for each product.",
-        },
-        {
           title: "Marketing strategy",
           description:
             "5 years in corporate events and sales bring a strategic view to every video, so it sells — not just looks good.",
@@ -608,9 +600,9 @@ export const translations: Record<Locale, Translations> = {
         instagram: {
           heading: "Instagram",
           stats: [
-            { label: "Views", value: "583,456" },
-            { label: "Net followers", value: "+898" },
-            { label: "Interactions", value: "46,608" },
+            { label: "Views", value: "638,186" },
+            { label: "Net followers", value: "+1,196" },
+            { label: "Interactions", value: "53,143" },
             { label: "Profile visits", value: "4,478" },
             { label: "Total followers", value: "6,330" },
           ],
@@ -620,13 +612,10 @@ export const translations: Record<Locale, Translations> = {
             { label: "Men", value: 28 },
           ],
           age: [
-            { label: "13–17", value: 0.3 },
             { label: "18–24", value: 13.2 },
             { label: "25–34", value: 49.4 },
             { label: "35–44", value: 22.4 },
             { label: "45–54", value: 10.4 },
-            { label: "55–64", value: 3.3 },
-            { label: "65+", value: 1.1 },
           ],
           location: {
             brazil: 96.3,
@@ -769,6 +758,11 @@ export const translations: Record<Locale, Translations> = {
           caption:
             "“Rafa, the video you produced was great for our campaigns! It felt less like an ad and more like community — what works organically tends to work paid too. It's a timeless video and I'll keep using it a lot.” — Fernanda Carneiro, Paid Traffic Manager at Peça Rara",
           footnote: "Testimonial",
+        },
+        {
+          caption:
+            "“We loooove your work so much! ✨ The content turned out amazing and you really captured the idea we wanted to convey, making it feel very natural and full of your own personality. On top of that, you were super attentive throughout the whole process and always kept to the deadlines 🌸 We're so happy with the result and the partnership. We'll definitely want to work together again! It was a pleasure having you with us 💜”",
+          footnote: "Geovana, Content Manager at Bloomie Wellness",
         },
       ],
     },

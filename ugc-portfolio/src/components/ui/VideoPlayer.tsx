@@ -74,10 +74,11 @@ export function VideoPlayer({
             <source src={video.videoUrl} type="video/mp4" />
           </video>
         )}
-        <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/50 px-2.5 py-1 text-xs font-medium capitalize text-white backdrop-blur-sm">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/70 via-black/25 to-transparent" />
+        <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/80 px-2.5 py-1 text-xs font-medium capitalize text-white shadow-sm">
           {formatLabel}
         </span>
-        <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-ink-900 backdrop-blur-sm">
+        <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-ink-900 shadow-sm">
           {categoryLabel}
         </span>
       </div>

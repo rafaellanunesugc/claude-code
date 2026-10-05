@@ -16,23 +16,30 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
           {t.subtitle}
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          {BRAND_LOGOS.map((brand) => (
-            <div
-              key={brand.name}
-              className="flex h-24 w-24 items-center justify-center rounded-full bg-white p-4"
-            >
-              <Image
-                src={brand.src}
-                alt={brand.name}
-                width={80}
-                height={80}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          ))}
+        <div className="mt-8 overflow-hidden">
+          <div className="brand-marquee-track flex w-max items-center gap-4">
+            {[...BRAND_LOGOS, ...BRAND_LOGOS].map((brand, index) => (
+              <div
+                key={`${brand.name}-${index}`}
+                className="flex h-24 w-24 flex-none items-center justify-center rounded-full bg-white p-4"
+              >
+                <Image
+                  src={brand.src}
+                  alt={brand.name}
+                  width={80}
+                  height={80}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <style>{`
+        .brand-marquee-track { animation: brand-marquee-scroll 28s linear infinite; }
+        @keyframes brand-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) { .brand-marquee-track { animation: none; } }
+      `}</style>
     </section>
   );
 }
