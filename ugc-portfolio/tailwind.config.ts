@@ -5,60 +5,61 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#faf7f2",
-        // Coral — cor de ação (botões, CTAs, links, elementos interativos)
+        // Paleta Kiraku — ivory, dark green, forest green e pink
+        cream: "#f2f1d2",
+        // Forest green — cor de ação (botões, CTAs, links, elementos interativos)
         brand: {
-          50: "#fef7f3",
-          100: "#fdece4",
-          200: "#fbdac9",
-          300: "#f9c7ae",
-          400: "#f6b494",
-          500: "#f4a179",
-          600: "#f08a59",
-          700: "#d97245",
-          800: "#b85835",
-          900: "#8f4227",
+          50: "#f1f4f0",
+          100: "#d7e1d5",
+          200: "#bccfb8",
+          300: "#a1be9b",
+          400: "#85ad7d",
+          500: "#64a557",
+          600: "#518747",
+          700: "#3f6837",
+          800: "#2d4a27",
+          900: "#1a2c17",
         },
-        // Marrom escuro amadeirado — texto principal, headers, rodapé
+        // Dark green — texto principal, headers, rodapé
         ink: {
-          900: "#433b0c",
-          800: "#5c522a",
-          700: "#756a3f",
+          900: "#152827",
+          800: "#1e3a38",
+          700: "#264b49",
         },
-        // Vinho — cor de autoridade (títulos de destaque, elementos de marca)
+        // Pink (dusty rose) — cor de autoridade (títulos de destaque, elementos de marca)
         wine: {
-          50: "#f7e9ea",
-          100: "#f0d3d6",
-          200: "#dba0a6",
-          300: "#c56d76",
-          400: "#a4404b",
-          500: "#8a2632",
-          600: "#741c28",
-          700: "#601722",
-          800: "#4c121a",
-          900: "#380d13",
+          50: "#f7eeee",
+          100: "#ecd4d6",
+          200: "#e2b9bc",
+          300: "#d99da2",
+          400: "#d08186",
+          500: "#c5686e",
+          600: "#ba4d55",
+          700: "#a43f46",
+          800: "#89353b",
+          900: "#6e2b2f",
         },
-        // Oliva/mustarda — cor orgânica (ícones, tags de categoria)
+        // Forest green claro/sage — cor orgânica (ícones, tags de categoria)
         olive: {
-          50: "#f7f8e6",
-          100: "#eef0c9",
-          200: "#dde190",
-          300: "#ccd25c",
-          400: "#bdc946",
-          500: "#b3b939",
-          600: "#9a9f2f",
-          700: "#7d8226",
-          800: "#5f631d",
-          900: "#454813",
+          50: "#eff1ee",
+          100: "#d8e0d7",
+          200: "#c1d0be",
+          300: "#a9c0a5",
+          400: "#91b18b",
+          500: "#79a370",
+          600: "#648f5c",
+          700: "#53764c",
+          800: "#415d3c",
+          900: "#30442c",
         },
-        // Rosa claro — acento suave (uso moderado)
+        // Pink claro — acento suave (uso moderado)
         blush: {
-          50: "#fff6f7",
-          100: "#ffe9ec",
-          200: "#ffd2d9",
-          300: "#ffb3bf",
-          400: "#ff8fa1",
-          500: "#f76a80",
+          50: "#fcf8f8",
+          100: "#f5e9ea",
+          200: "#efdadc",
+          300: "#e9cacc",
+          400: "#e4b9bc",
+          500: "#e7a1a6",
         },
       },
       fontFamily: {
