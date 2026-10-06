@@ -15,6 +15,7 @@ import { InfluencerSection } from "@/components/public/InfluencerSection";
 import { UGCSection } from "@/components/public/UGCSection";
 import { WorkWithMe } from "@/components/public/WorkWithMe";
 import { Portfolio } from "@/components/public/Portfolio";
+import { Photos } from "@/components/public/Photos";
 import { Feedbacks } from "@/components/public/Feedbacks";
 import { FAQ } from "@/components/public/FAQ";
 import { WhyUGC } from "@/components/public/WhyUGC";
@@ -63,6 +64,7 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
       <UGCSection t={t.ugc} />
       <WorkWithMe t={t.work} />
       <Portfolio t={t.portfolio} videos={videos} />
+      <Photos t={t.photos} />
       <Feedbacks t={t.feedbacks} />
       <FAQ t={t.faq} />
       <WhyUGC t={t.whyUgc} />

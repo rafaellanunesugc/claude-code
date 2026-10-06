@@ -332,3 +332,8 @@ export const BUDGET_RANGES = [
 ];
 
 export const FEEDBACK_TYPES = ["resultado", "depoimento", "depoimento", "depoimento"] as const;
+
+export type PortfolioPhoto = { src: string; alt: string };
+
+// Fotos reais de bastidores e entregas — adicionar aqui conforme a Rafa for mandando.
+export const PORTFOLIO_PHOTOS: PortfolioPhoto[] = [];

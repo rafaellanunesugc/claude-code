@@ -35,6 +35,7 @@ export type Translations = {
     eyebrow: string;
     title: string;
     items: { title: string; description: string }[];
+    gear: string[];
   };
   about: {
     eyebrow: string;
@@ -94,6 +95,11 @@ export type Translations = {
     subtitle: string;
     filters: { todos: string; influenciadora: string; ugc: string };
     videoTitles: Record<string, string>;
+  };
+  photos: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
   };
   feedbacks: {
     eyebrow: string;
@@ -193,9 +199,9 @@ export const translations: Record<Locale, Translations> = {
       title: "Estúdio & Qualidade Técnica.",
       items: [
         {
-          title: "Equipamento e captação profissional",
+          title: "Equipamento pensado pra conversão",
           description:
-            "Iluminação, câmera e áudio cuidados em cada gravação, pra imagem e som saírem prontos pra rodar em anúncio.",
+            "Gravo em iPhone 17 Pro Max com estabilização Hollyland, iluminação Tomate e acessórios Ulanzi, em estúdio próprio — imagem nítida, áudio limpo e luz consistente, prontos pra rodar em anúncio sem precisar de ajuste extra.",
         },
         {
           title: "Estratégia de marketing",
@@ -203,6 +209,7 @@ export const translations: Record<Locale, Translations> = {
             "5 anos de mercado corporativo em eventos e comercial trazem visão estratégica pra cada vídeo vender, não só aparecer bonito.",
         },
       ],
+      gear: ["iPhone 17 Pro Max", "Hollyland", "Tomate", "Ulanzi", "Estúdio próprio"],
     },
     about: {
       eyebrow: "Sobre mim",
@@ -387,6 +394,11 @@ export const translations: Record<Locale, Translations> = {
         "ugc-4": "Storytelling de marca (exemplo)",
       },
     },
+    photos: {
+      eyebrow: "Fotos",
+      title: "Bastidores e resultados em imagem",
+      subtitle: "Fotos reais de gravações, produtos e entregas pras marcas que já trabalhei.",
+    },
     feedbacks: {
       eyebrow: "Feedbacks",
       title: "O que estão falando do meu trabalho",
@@ -541,9 +553,9 @@ export const translations: Record<Locale, Translations> = {
       title: "Studio & Technical Quality.",
       items: [
         {
-          title: "Professional gear and capture",
+          title: "Gear built for conversion",
           description:
-            "Lighting, camera and audio handled carefully on every shoot, so image and sound come out ready to run as an ad.",
+            "I shoot on an iPhone 17 Pro Max with Hollyland stabilization, Tomate lighting and Ulanzi accessories, in my own studio — sharp image, clean audio and consistent light, ready to run as an ad with no extra tweaking.",
         },
         {
           title: "Marketing strategy",
@@ -551,6 +563,7 @@ export const translations: Record<Locale, Translations> = {
             "5 years in corporate events and sales bring a strategic view to every video, so it sells — not just looks good.",
         },
       ],
+      gear: ["iPhone 17 Pro Max", "Hollyland", "Tomate", "Ulanzi", "Private studio"],
     },
     about: {
       eyebrow: "About me",
@@ -734,6 +747,11 @@ export const translations: Record<Locale, Translations> = {
         "ugc-3": "Real-review style review (example)",
         "ugc-4": "Brand storytelling (example)",
       },
+    },
+    photos: {
+      eyebrow: "Photos",
+      title: "Behind the scenes and results in pictures",
+      subtitle: "Real photos from shoots, products and deliveries for brands I've worked with.",
     },
     feedbacks: {
       eyebrow: "Feedbacks",

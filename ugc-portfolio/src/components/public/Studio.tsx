@@ -29,6 +29,17 @@ export function Studio({ t }: { t: Translations["studio"] }) {
               </div>
             ))}
           </div>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {t.gear.map((item) => (
+              <span
+                key={item}
+                className="rounded-full bg-brand-50 px-3.5 py-1.5 text-xs font-semibold text-brand-700"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
