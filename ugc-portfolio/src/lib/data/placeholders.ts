@@ -36,6 +36,7 @@ export const BRAND_LOGOS = [
   { name: "Saint Germain", src: "/images/logos/saint-germain.png" },
   { name: "Make More", src: "/images/logos/make-more.jpg" },
   { name: "VT Cosmetics", src: "/images/logos/vt-cosmetics.jpg" },
+  { name: "Bloomie Wellness", src: "/images/logos/bloomie-wellness.png" },
 ];
 
 export const SOCIAL_HANDLES = {
