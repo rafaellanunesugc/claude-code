@@ -192,7 +192,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Marcas atendidas",
       titleBold: "Marcas, histórias",
       titleItalic: "sendo feitas juntas.",
-      subtitle: "Marcas de beleza e saúde que já confiaram no meu trabalho.",
+      subtitle: "Marcas que já confiaram no meu trabalho.",
     },
     studio: {
       eyebrow: "Como eu trabalho",
@@ -546,7 +546,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Brands I've worked with",
       titleBold: "Brands, stories",
       titleItalic: "made together.",
-      subtitle: "Beauty and health brands that have already trusted my work.",
+      subtitle: "Brands that have already trusted my work.",
     },
     studio: {
       eyebrow: "How I work",
