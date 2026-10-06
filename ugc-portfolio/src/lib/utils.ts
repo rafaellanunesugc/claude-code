@@ -14,6 +14,13 @@ export function formatDateBR(value: string | null | undefined) {
   return date.toLocaleDateString("pt-BR");
 }
 
+export function formatDateTimeBR(value: string | null | undefined) {
+  if (!value) return "—";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" });
+}
+
 export function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
 }

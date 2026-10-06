@@ -40,9 +40,10 @@ Todo o conteúdo hoje é placeholder (vídeos de exemplo, "Nome da Marca", "R$ 0
 1. Suba este repositório para o GitHub (se ainda não estiver lá).
 2. Em [vercel.com](https://vercel.com), clique em **Add New > Project** e importe o repositório.
 3. Como o projeto Next.js está na pasta `ugc-portfolio` (não na raiz do repositório), configure em **Root Directory** o valor `ugc-portfolio`.
-4. Em **Environment Variables**, adicione as mesmas duas variáveis do `.env.local`:
+4. Em **Environment Variables**, adicione as mesmas variáveis do `.env.local`:
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `RESEND_API_KEY` (opcional, pra receber email a cada novo pedido de orçamento)
 5. Clique em **Deploy**. A Vercel detecta o Next.js automaticamente.
 6. Depois do primeiro deploy, se quiser um domínio próprio, configure em **Settings > Domains**.
 

@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { signOutAction } from "@/lib/actions/admin";
 
 const NAV_ITEMS = [
+  { href: "/admin/mensagens", label: "Mensagens" },
   { href: "/admin/funil", label: "Funil de marcas" },
   { href: "/admin/propostas", label: "Propostas" },
   { href: "/admin/entregas", label: "Entregas" },
