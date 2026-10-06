@@ -263,7 +263,7 @@ export const translations: Record<Locale, Translations> = {
             { label: "Seguidores líquidos", value: "+1.196" },
             { label: "Interações", value: "53.143" },
             { label: "Visitas ao perfil", value: "4.478" },
-            { label: "Seguidores totais", value: "6.330" },
+            { label: "Seguidores totais", value: "7.000" },
           ],
           topFormats: "Os formatos que mais performam são Reels e Stories.",
           gender: [
@@ -617,7 +617,7 @@ export const translations: Record<Locale, Translations> = {
             { label: "Net followers", value: "+1,196" },
             { label: "Interactions", value: "53,143" },
             { label: "Profile visits", value: "4,478" },
-            { label: "Total followers", value: "6,330" },
+            { label: "Total followers", value: "7,000" },
           ],
           topFormats: "The best-performing formats are Reels and Stories.",
           gender: [
