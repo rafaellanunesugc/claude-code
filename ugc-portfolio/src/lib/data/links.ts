@@ -1,6 +1,6 @@
 import { SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/lib/data/placeholders";
 
-// Conteúdo da página /links (o "link na bio").
+// Conteúdo da página principal (o "link na bio"). O portfólio fica em /portfolio.
 // Para trocar textos, links ou cupons, é só editar este arquivo.
 
 // Abre o WhatsApp já com uma mensagem escrita. Usado nos produtos que ainda
@@ -12,7 +12,7 @@ export function whatsappLink(message: string) {
 export const LINKS_PROFILE = {
   name: "Rafa Nunes",
   role: "Creator UGC · Saúde, bem-estar & beleza",
-  bio: "Que bom te ver por aqui! Eu crio conteúdo que conecta e vende para marcas de saúde, bem-estar e beleza — e ajudo quem tá começando a fazer o mesmo. Aqui embaixo tá tudo: portfólio, cupons, mentoria e o CRIA.",
+  bio: "Faço vídeos UGC que mostram o produto na vida real — do skincare da manhã ao treino do fim da tarde. E ensino quem tá começando a transformar conteúdo em parceria paga.",
   photo: "/images/foto-capa.jpg",
   stats: [
     { value: "+45", label: "marcas atendidas" },
@@ -24,16 +24,16 @@ export const LINKS_PROFILE = {
 // Seção "Sou marca"
 export const BRAND_LINKS = [
   {
-    title: "Hey marca, acesse meu portfólio",
-    description: "Vídeos, cases, formatos e como fechar uma parceria comigo",
-    href: "/",
+    title: "Ver meu portfólio",
+    description: "Meus vídeos, as marcas que já confiaram em mim e como eu trabalho",
+    href: "/portfolio",
     icon: "briefcase" as const,
     featured: true,
   },
   {
-    title: "Pedir um orçamento",
-    description: "Me conta sobre a campanha e eu te respondo rapidinho",
-    href: "/#contato",
+    title: "Solicitar orçamento",
+    description: "Conte sua ideia de campanha e receba uma proposta sob medida",
+    href: "/portfolio#contato",
     icon: "send" as const,
     featured: false,
   },
@@ -54,27 +54,27 @@ export const CREATOR_PRODUCTS: ProductLink[] = [
     tag: "Curso ao vivo",
     title: "CRIA",
     description:
-      "Aulas ao vivo pra você sair do zero e começar a fechar com marcas como creator UGC — com o passo a passo que eu uso.",
+      "Encontros ao vivo comigo pra você montar seu perfil, gravar seus primeiros vídeos e chegar nas marcas com segurança.",
     href: whatsappLink("Oi, Rafa! Quero saber mais sobre o CRIA, o curso ao vivo."),
-    cta: "Quero participar",
+    cta: "Quero entrar no CRIA",
   },
   {
     tag: "Mentoria 1:1 · Vagas limitadas",
     title: "Mentoria individual",
-    description: "Acompanhamento comigo, no seu ritmo e no seu perfil",
+    description: "Um plano feito pro seu perfil, olhando junto cada passo",
     href: whatsappLink("Oi, Rafa! Quero saber mais sobre a mentoria individual."),
   },
   {
     tag: "Em breve",
     title: "Modelo de portfólio",
-    description: "O modelo pronto pra você montar o seu e mandar pras marcas",
+    description: "A estrutura que eu uso, pronta pra você preencher com seus vídeos",
     href: whatsappLink("Oi, Rafa! Quero entrar na lista de espera do modelo de portfólio."),
     soon: true,
   },
   {
     tag: "Em breve",
     title: "Diagnóstico de perfil",
-    description: "Uma análise do seu perfil com o que ajustar pra atrair marcas",
+    description: "Eu analiso seu perfil e te digo o que mudar antes de prospectar",
     href: whatsappLink("Oi, Rafa! Quero entrar na lista de espera do diagnóstico de perfil."),
     soon: true,
   },
