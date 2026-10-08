@@ -32,8 +32,8 @@ export const BRAND_LINKS = [
   },
   {
     title: "Solicitar orçamento",
-    description: "Conte sua ideia de campanha e receba uma proposta sob medida",
-    href: "/portfolio#contato",
+    description: "Me chama no WhatsApp com a sua ideia de campanha e receba uma proposta sob medida",
+    href: whatsappLink("Olá, Rafa! Sou de uma marca e gostaria de solicitar um orçamento para uma campanha."),
     icon: "send" as const,
     featured: false,
   },
