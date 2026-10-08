@@ -29,9 +29,13 @@ export function CouponCard({ brand, code, logo, discount, href }: Coupon) {
   return (
     <div className="rounded-2xl border border-dashed border-wine-300 bg-white p-4">
       <div className="flex items-center gap-3">
-        {logo && (
+        {logo ? (
           <span className="relative h-12 w-12 flex-none overflow-hidden rounded-full border border-ink-900/10 bg-white">
             <Image src={logo} alt={brand} fill sizes="48px" className="object-cover" />
+          </span>
+        ) : (
+          <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-ink-900 font-display text-xl text-white">
+            {brand.charAt(0)}
           </span>
         )}
         <div className="min-w-0 flex-1">
