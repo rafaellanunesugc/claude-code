@@ -65,7 +65,7 @@ export const CREATOR_PRODUCTS: ProductLink[] = [
     description:
       "7 aulas ao vivo para transformar criação de conteúdo em posicionamento, oportunidade e profissão.",
     details: "Aulas ao vivo de 19/10 a 09/11 · segundas e quartas, 19h30",
-    href: whatsappLink("Oi, Rafa! Quero minha vaga no CRIA LAB."),
+    href: "https://criametodo.netlify.app",
     cta: "Quero minha vaga no CRIA LAB",
   },
   {
