@@ -49,16 +49,21 @@ export type ProductLink = {
   soon?: boolean;
   // Imagem do logo (em /public). Quando existir, aparece no lugar do título.
   logo?: string;
+  subtitle?: string;
+  details?: string;
 };
 
 export const CREATOR_PRODUCTS: ProductLink[] = [
   {
-    tag: "Curso ao vivo",
-    title: "CRIA",
+    tag: "Curso ao vivo · Método CRIA",
+    title: "CRIA LAB",
+    logo: "/images/cria-logo.png",
+    subtitle: "Da criação à profissionalização",
     description:
-      "Encontros ao vivo comigo pra você montar seu perfil, gravar seus primeiros vídeos e chegar nas marcas com segurança.",
-    href: whatsappLink("Oi, Rafa! Quero saber mais sobre o CRIA, o curso ao vivo."),
-    cta: "Quero entrar no CRIA",
+      "7 aulas ao vivo para transformar criação de conteúdo em posicionamento, oportunidade e profissão.",
+    details: "Aulas ao vivo de 19/10 a 09/11 · segundas e quartas, 19h30",
+    href: whatsappLink("Oi, Rafa! Quero minha vaga no CRIA LAB."),
+    cta: "Quero minha vaga no CRIA LAB",
   },
   {
     tag: "Mentoria 1:1 · Vagas limitadas",

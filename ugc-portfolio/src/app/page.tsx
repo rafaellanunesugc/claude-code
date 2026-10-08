@@ -146,30 +146,41 @@ export default function LinksPage() {
           <SectionHeading eyebrow="Para creators" title="Do zero à" accent="primeira parceria." />
 
           {featured && (
+            // Cartão do CRIA nas cores da marca do curso (marinho, amarelo e creme).
             <a
               href={featured.href}
               {...linkProps(featured.href)}
-              className="block rounded-2xl bg-gradient-to-br from-brand-600 to-ink-900 p-7 text-white shadow-soft transition hover:-translate-y-0.5"
+              className="relative block overflow-hidden rounded-2xl bg-[#3c405b] p-7 text-center text-[#f3f0e0] shadow-soft transition hover:-translate-y-0.5"
             >
+              <span className="absolute inset-x-0 top-0 h-1.5 bg-[#f2e05a]" />
+              <span className="pointer-events-none absolute -left-16 -top-16 h-40 w-40 rounded-full border border-[#f3f0e0]/20" />
+              <span className="pointer-events-none absolute -bottom-20 -right-16 h-44 w-44 rounded-full border border-[#f3f0e0]/20" />
               {featured.tag && (
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-200">{featured.tag}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f2e05a]">{featured.tag}</p>
               )}
               {featured.logo ? (
                 <Image
                   src={featured.logo}
                   alt={featured.title}
-                  width={220}
-                  height={80}
-                  className="mt-3 h-14 w-auto object-contain object-left"
+                  width={322}
+                  height={146}
+                  className="mx-auto mt-5 h-16 w-auto"
                 />
               ) : (
-                <h3 className="mt-3 flex items-center gap-2 text-4xl font-bold">
-                  {featured.title}
-                  <Star className="h-6 w-6 text-blush-300" />
-                </h3>
+                <h3 className="mt-3 text-4xl font-bold">{featured.title}</h3>
               )}
-              <p className="mt-3 leading-relaxed text-white/85">{featured.description}</p>
-              <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-brand-800">
+              {featured.subtitle && <p className="mt-2 text-lg text-[#f3f0e0]/90">{featured.subtitle}</p>}
+              <p className="mt-4 leading-relaxed text-[#f3f0e0]/80">{featured.description}</p>
+              {featured.details && (
+                <p className="mt-5 rounded-xl border border-[#f2e05a]/70 px-4 py-3 text-sm font-semibold text-[#f2e05a]">
+                  {featured.details.split(" · ").map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </p>
+              )}
+              <span className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#f2e05a] px-5 py-3.5 font-semibold text-[#3c405b]">
                 {featured.cta ?? "Quero saber mais"} <ArrowRight className="h-4 w-4" />
               </span>
             </a>
