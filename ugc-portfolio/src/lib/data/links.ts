@@ -51,6 +51,9 @@ export type ProductLink = {
   logo?: string;
   subtitle?: string;
   details?: string;
+  price?: string;
+  // Produtos do CRIA usam as cores da marca do curso.
+  cria?: boolean;
 };
 
 export const CREATOR_PRODUCTS: ProductLink[] = [
@@ -66,10 +69,13 @@ export const CREATOR_PRODUCTS: ProductLink[] = [
     cta: "Quero minha vaga no CRIA LAB",
   },
   {
-    tag: "Mentoria 1:1 · Vagas limitadas",
-    title: "Mentoria individual",
-    description: "Um plano feito pro seu perfil, olhando junto cada passo",
-    href: whatsappLink("Oi, Rafa! Quero saber mais sobre a mentoria individual."),
+    tag: "Mentoria individual",
+    title: "CRIA 1:1 com a Rafa",
+    description: "30 dias · 4 encontros individuais · acompanhamento direto comigo",
+    price: "R$ 998",
+    href: whatsappLink("Oi, Rafa! Quero a mentoria CRIA 1:1."),
+    cta: "Quero a mentoria com a Rafa",
+    cria: true,
   },
   {
     tag: "Em breve",

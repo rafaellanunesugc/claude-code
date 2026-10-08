@@ -187,7 +187,30 @@ export default function LinksPage() {
           )}
 
           <div className="mt-3 space-y-3">
-            {products.map((product) => (
+            {products.map((product) =>
+              product.cria ? (
+                <a
+                  key={product.title}
+                  href={product.href}
+                  {...linkProps(product.href)}
+                  className="group block rounded-2xl bg-[#f3f0e0] p-6 text-[#3c405b] transition hover:-translate-y-0.5"
+                >
+                  {product.tag && (
+                    <span className="block text-xs font-bold uppercase tracking-[0.14em] text-[#a8321f]">
+                      {product.tag}
+                    </span>
+                  )}
+                  <span className="mt-1 flex items-baseline justify-between gap-3">
+                    <span className="text-xl font-bold">{product.title}</span>
+                    {product.price && <span className="flex-none text-xl font-extrabold">{product.price}</span>}
+                  </span>
+                  <span className="mt-1 block text-[#3c405b]/80">{product.description}</span>
+                  <span className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#3c405b] px-5 py-3 font-semibold text-[#f2e05a]">
+                    {product.cta ?? "Quero saber mais"}
+                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                  </span>
+                </a>
+              ) : (
               <a
                 key={product.title}
                 href={product.href}
@@ -212,7 +235,8 @@ export default function LinksPage() {
                 </span>
                 <ArrowRight className="h-5 w-5 flex-none text-wine-500 transition group-hover:translate-x-1" />
               </a>
-            ))}
+              ),
+            )}
           </div>
         </section>
 
