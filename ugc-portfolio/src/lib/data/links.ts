@@ -11,8 +11,8 @@ export function whatsappLink(message: string) {
 
 export const LINKS_PROFILE = {
   name: "Rafa Nunes",
-  role: "Creator UGC · Saúde, bem-estar & beleza",
-  bio: "Faço vídeos UGC que mostram o produto na vida real — do skincare da manhã ao treino do fim da tarde. E ensino quem tá começando a transformar conteúdo em parceria paga.",
+  role: "UGC Creator · Influenciadora · Mentora de Creators",
+  bio: "Crio vídeos UGC e conteúdo de influência que fazem as marcas serem lembradas. E ensino quem tá começando a transformar conteúdo em parceria paga.",
   photo: "/images/foto-capa.jpg",
   stats: [
     { value: "+45", label: "marcas atendidas" },
@@ -47,6 +47,8 @@ export type ProductLink = {
   href: string;
   cta?: string;
   soon?: boolean;
+  // Imagem do logo (em /public). Quando existir, aparece no lugar do título.
+  logo?: string;
 };
 
 export const CREATOR_PRODUCTS: ProductLink[] = [

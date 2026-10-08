@@ -95,7 +95,7 @@ export default function LinksPage() {
         </div>
       </section>
 
-      <TagMarquee tags={["UGC", "Saúde", "Bem-estar", "Beleza", "Skincare", "Rotina", "Mentoria", "CRIA"]} />
+      <TagMarquee tags={["UGC Creator", "Influenciadora", "Mentora de Creators", "CRIA"]} />
 
       {/* Sou marca */}
       <section id="marca" className="scroll-mt-4 bg-ink-900 py-14">
@@ -154,10 +154,20 @@ export default function LinksPage() {
               {featured.tag && (
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-200">{featured.tag}</p>
               )}
-              <h3 className="mt-3 flex items-center gap-2 text-4xl font-bold">
-                {featured.title}
-                <Star className="h-6 w-6 text-blush-300" />
-              </h3>
+              {featured.logo ? (
+                <Image
+                  src={featured.logo}
+                  alt={featured.title}
+                  width={220}
+                  height={80}
+                  className="mt-3 h-14 w-auto object-contain object-left"
+                />
+              ) : (
+                <h3 className="mt-3 flex items-center gap-2 text-4xl font-bold">
+                  {featured.title}
+                  <Star className="h-6 w-6 text-blush-300" />
+                </h3>
+              )}
               <p className="mt-3 leading-relaxed text-white/85">{featured.description}</p>
               <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-brand-800">
                 {featured.cta ?? "Quero saber mais"} <ArrowRight className="h-4 w-4" />
