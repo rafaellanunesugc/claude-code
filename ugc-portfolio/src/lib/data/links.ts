@@ -109,6 +109,10 @@ export const COUPONS: Coupon[] = [
     code: "a-rafaanunesg",
     logo: "/images/logos/saint-germain.png",
   },
+  {
+    brand: "Mafit",
+    code: "RAFANUNES5",
+  },
 ];
 
 export const LINKS_SOCIALS = SOCIAL_LINKS;
