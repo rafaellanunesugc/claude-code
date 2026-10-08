@@ -94,19 +94,20 @@ export const CREATOR_PRODUCTS: ProductLink[] = [
 ];
 
 // Cupons de desconto. Se a lista ficar vazia, a seção some da página.
-// TROCAR pelos cupons reais (marca, desconto, código e link da loja).
-export const COUPONS = [
+// `discount` e `href` (link da loja) são opcionais.
+export type Coupon = {
+  brand: string;
+  code: string;
+  logo?: string;
+  discount?: string;
+  href?: string;
+};
+
+export const COUPONS: Coupon[] = [
   {
-    brand: "Nome da marca",
-    discount: "10% OFF",
-    code: "RAFA10",
-    href: "#",
-  },
-  {
-    brand: "Nome da marca",
-    discount: "15% OFF",
-    code: "RAFA15",
-    href: "#",
+    brand: "Saint Germain",
+    code: "a-rafaanunesg",
+    logo: "/images/logos/saint-germain.png",
   },
 ];
 

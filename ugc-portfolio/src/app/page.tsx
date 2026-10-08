@@ -249,7 +249,6 @@ export default function LinksPage() {
                 <CouponCard key={coupon.code} {...coupon} />
               ))}
             </div>
-            <p className="mt-3 text-center text-sm text-ink-700/70">Toque no código pra copiar</p>
           </section>
         )}
 
