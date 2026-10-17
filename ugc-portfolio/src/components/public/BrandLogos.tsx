@@ -17,18 +17,18 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
         </p>
 
         <div className="mt-8 overflow-hidden">
-          <div className="brand-marquee-track flex w-max items-center gap-4">
+          <div className="brand-marquee-track flex w-max items-center gap-5">
             {[...BRAND_LOGOS, ...BRAND_LOGOS].map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
-                className="flex h-24 w-24 flex-none items-center justify-center rounded-full bg-white p-4"
+                className="h-32 w-32 flex-none overflow-hidden rounded-full md:h-36 md:w-36"
               >
                 <Image
                   src={brand.src}
                   alt={brand.name}
-                  width={80}
-                  height={80}
-                  className="h-full w-full object-contain"
+                  width={144}
+                  height={144}
+                  className="h-full w-full object-cover"
                 />
               </div>
             ))}

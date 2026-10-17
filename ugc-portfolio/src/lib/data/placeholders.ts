@@ -26,17 +26,17 @@ const SAMPLE_VIDEO =
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
 export const BRAND_LOGOS = [
-  { name: "Dove", src: "/images/logos/dove.png" },
-  { name: "Pantene", src: "/images/logos/pantene.png" },
+  { name: "Dove", src: "/images/logos/dove-sq.png" },
+  { name: "Pantene", src: "/images/logos/pantene-sq.png" },
   { name: "Eudora", src: "/images/logos/eudora.png" },
-  { name: "Herbéra", src: "/images/logos/herbera.webp" },
+  { name: "Herbéra", src: "/images/logos/herbera-sq.png" },
   { name: "E-lens", src: "/images/logos/e-lens.png" },
   { name: "Peça Rara", src: "/images/logos/peca-rara.png" },
   { name: "Óticas Prevent", src: "/images/logos/oticas-prevent.jpg" },
   { name: "Saint Germain", src: "/images/logos/saint-germain.png" },
   { name: "Make More", src: "/images/logos/make-more.jpg" },
   { name: "VT Cosmetics", src: "/images/logos/vt-cosmetics.jpg" },
-  { name: "Bloomie Wellness", src: "/images/logos/bloomie-wellness.png" },
+  { name: "Bloomie Wellness", src: "/images/logos/bloomie-wellness-sq.png" },
   { name: "Popozuda", src: "/images/logos/popozuda.jpg" },
   { name: "Growth Supplements", src: "/images/logos/growth-supplements.png" },
   { name: "Riachuelo", src: "/images/logos/riachuelo.png" },
