@@ -16,7 +16,7 @@ export const LINKS_PROFILE = {
   photo: "/images/foto-capa.jpg",
   stats: [
     { value: "+45", label: "marcas atendidas" },
-    { value: "23,8K", label: "seguidores" },
+    { value: "24,9K", label: "seguidores" },
   ],
   email: "rafaellanunes.contato@gmail.com",
 };

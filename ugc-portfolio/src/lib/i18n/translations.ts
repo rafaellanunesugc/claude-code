@@ -171,7 +171,7 @@ export const translations: Record<Locale, Translations> = {
       tagline: "vídeos que conectam e vendem",
       stats: [
         { value: "+45", label: "marcas atendidas" },
-        { value: "23,8K", label: "seguidores" },
+        { value: "24,9K", label: "seguidores" },
       ],
       ctaPrimary: "Solicitar proposta",
       ctaSecondary: "Ver portfólio",
@@ -227,7 +227,7 @@ export const translations: Record<Locale, Translations> = {
         { value: "25 anos", label: "Idade" },
         { value: "Goiânia-GO", label: "Base" },
         { value: "6 anos", label: "De experiência" },
-        { value: "23,8K", label: "Seguidores" },
+        { value: "24,9K", label: "Seguidores" },
       ],
     },
     influencer: {
@@ -263,7 +263,7 @@ export const translations: Record<Locale, Translations> = {
             { label: "Seguidores líquidos", value: "+1.196" },
             { label: "Interações", value: "53.143" },
             { label: "Visitas ao perfil", value: "4.478" },
-            { label: "Seguidores totais", value: "7.000" },
+            { label: "Seguidores totais", value: "7.113" },
           ],
           topFormats: "Os formatos que mais performam são Reels e Stories.",
           gender: [
@@ -284,7 +284,7 @@ export const translations: Record<Locale, Translations> = {
         tiktok: {
           heading: "TikTok",
           stats: [
-            { label: "Seguidores", value: "17,5K" },
+            { label: "Seguidores", value: "17,8K" },
             { label: "Visualizações", value: "301 mil" },
             { label: "Visitas ao perfil", value: "5,2 mil" },
           ],
@@ -525,7 +525,7 @@ export const translations: Record<Locale, Translations> = {
       tagline: "videos that connect and sell",
       stats: [
         { value: "+45", label: "brands served" },
-        { value: "23.8K", label: "followers" },
+        { value: "24.9K", label: "followers" },
       ],
       ctaPrimary: "Request a quote",
       ctaSecondary: "View portfolio",
@@ -581,7 +581,7 @@ export const translations: Record<Locale, Translations> = {
         { value: "25 years old", label: "Age" },
         { value: "Goiânia, Brazil", label: "Based in" },
         { value: "6 years", label: "Of experience" },
-        { value: "23.8K", label: "Followers" },
+        { value: "24.9K", label: "Followers" },
       ],
     },
     influencer: {
@@ -617,7 +617,7 @@ export const translations: Record<Locale, Translations> = {
             { label: "Net followers", value: "+1,196" },
             { label: "Interactions", value: "53,143" },
             { label: "Profile visits", value: "4,478" },
-            { label: "Total followers", value: "7,000" },
+            { label: "Total followers", value: "7,113" },
           ],
           topFormats: "The best-performing formats are Reels and Stories.",
           gender: [
@@ -638,7 +638,7 @@ export const translations: Record<Locale, Translations> = {
         tiktok: {
           heading: "TikTok",
           stats: [
-            { label: "Followers", value: "17.5K" },
+            { label: "Followers", value: "17.8K" },
             { label: "Views", value: "301K" },
             { label: "Profile visits", value: "5.2K" },
           ],
