@@ -40,6 +40,7 @@ export const BRAND_LOGOS = [
   { name: "Popozuda", src: "/images/logos/popozuda.jpg" },
   { name: "Growth Supplements", src: "/images/logos/growth-supplements.png" },
   { name: "Riachuelo", src: "/images/logos/riachuelo.png" },
+  { name: "Lucia", src: "/images/logos/lucia.png" },
 ];
 
 export const SOCIAL_HANDLES = {
