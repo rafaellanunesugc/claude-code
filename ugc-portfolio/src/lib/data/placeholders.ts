@@ -38,6 +38,8 @@ export const BRAND_LOGOS = [
   { name: "VT Cosmetics", src: "/images/logos/vt-cosmetics.jpg" },
   { name: "Bloomie Wellness", src: "/images/logos/bloomie-wellness.png" },
   { name: "Popozuda", src: "/images/logos/popozuda.jpg" },
+  { name: "Growth Supplements", src: "/images/logos/growth-supplements.png" },
+  { name: "Riachuelo", src: "/images/logos/riachuelo.png" },
 ];
 
 export const SOCIAL_HANDLES = {
