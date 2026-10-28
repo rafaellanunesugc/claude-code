@@ -15,7 +15,7 @@ export const LINKS_PROFILE = {
   bio: "Crio vídeos UGC e conteúdo de influência que fazem as marcas serem lembradas. E ensino quem tá começando a transformar conteúdo em parceria paga.",
   photo: "/images/foto-capa.jpg",
   stats: [
-    { value: "+50", label: "marcas atendidas" },
+    { value: "+60", label: "marcas atendidas" },
     { value: "24,9K", label: "seguidores" },
   ],
   email: "rafaellanunes.contato@gmail.com",

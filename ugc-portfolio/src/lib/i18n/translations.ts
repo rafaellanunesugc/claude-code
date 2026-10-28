@@ -170,7 +170,7 @@ export const translations: Record<Locale, Translations> = {
       availability: "Disponível para novas campanhas",
       tagline: "vídeos que conectam e vendem",
       stats: [
-        { value: "+50", label: "marcas atendidas" },
+        { value: "+60", label: "marcas atendidas" },
         { value: "24,9K", label: "seguidores" },
       ],
       ctaPrimary: "Solicitar proposta",
@@ -524,7 +524,7 @@ export const translations: Record<Locale, Translations> = {
       availability: "Available for new campaigns",
       tagline: "videos that connect and sell",
       stats: [
-        { value: "+50", label: "brands served" },
+        { value: "+60", label: "brands served" },
         { value: "24.9K", label: "followers" },
       ],
       ctaPrimary: "Request a quote",
