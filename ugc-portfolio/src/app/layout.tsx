@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 // Tan Mon Cheri (a fonte real, estilo assinatura) é usada só no nome
 // "Rafa Nunes" — em palavras normais ela embaralha algumas letras, então
@@ -51,6 +52,7 @@ const bodyFont = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Rafa Nunes | UGC Creator, Videomaker e Influenciadora",
   description:
     "Vídeos que conectam e vendem — UGC, conteúdo de influenciadora e produção audiovisual para marcas de Goiânia e de todo o Brasil.",

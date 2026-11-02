@@ -16,7 +16,17 @@ import {
 
 export const metadata: Metadata = {
   title: "Rafa Nunes | UGC Creator",
-  description: "Portfólio, cupons, mentoria, CRIA e tudo o que eu faço — num link só.",
+  description:
+    "UGC Creator, influenciadora e mentora de creators. +60 marcas atendidas. Portfólio, mentoria CRIA, cupons de desconto e contato para parcerias.",
+  alternates: { canonical: "/" },
+  // Prévia ao mandar o link (WhatsApp, Instagram etc.). A imagem vem de app/opengraph-image.png.
+  openGraph: {
+    title: "Rafa Nunes | UGC Creator",
+    description: "Portfólio, CRIA, mentoria, cupons e contato — tudo num link só.",
+    siteName: "Rafa Nunes",
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 const BRAND_ICONS = { briefcase: Briefcase, send: Send };
