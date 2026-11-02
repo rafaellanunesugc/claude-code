@@ -67,7 +67,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
             {t.commitment}
           </p>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             {t.chips.map((chip) => (
               <span
                 key={chip}
@@ -77,6 +77,22 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
               </span>
             ))}
           </div>
+
+          <a
+            href="/#creator"
+            className="group mt-4 flex items-center gap-3 rounded-2xl bg-[#3c405b] px-4 py-3.5 transition hover:-translate-y-0.5"
+          >
+            <Image
+              src="/images/cria-logo.png"
+              alt="CRIA"
+              width={140}
+              height={64}
+              className="h-7 w-auto flex-none"
+            />
+            <span className="text-sm leading-snug text-[#f3f0e0]/90">
+              {t.criaBadge}
+            </span>
+          </a>
         </div>
       </div>
     </section>

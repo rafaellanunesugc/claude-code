@@ -44,6 +44,7 @@ export type Translations = {
     commitment: string;
     chips: string[];
     stats: { value: string; label: string }[];
+    criaBadge: string;
   };
   influencer: {
     eyebrow: string;
@@ -219,10 +220,13 @@ export const translations: Record<Locale, Translations> = {
         "Antes de criar conteúdo, passei 5 anos no mercado corporativo, incluindo uma passagem pela Amcham Brasil, fui líder das áreas de eventos, onde saí como sênior da área comercial. Fui maquiadora por mais de 10 anos. **Sempre fui a pessoa que enxerga estratégia em tudo**: num evento bem planejado, numa campanha de marca, num vídeo que vende sem parecer que está vendendo. Foi esse olhar que me trouxe pra criação de conteúdo.",
         "**Hoje transformei isso em profissão**. Já criei conteúdo sobre produtos da Nivea com mais de **435 mil visualizações no orgânico**, **conteúdo educativo para a E-lens com 337 mil visualizações**, conteúdo orgânico para a **L'Oréal Paris com 243 mil visualizações**, e um **criativo de tráfego pago para a Peça Rara alcançando quase 92 mil contas**. Atuo principalmente nos nichos de beleza e saúde e bem-estar.",
         "Não penso só no vídeo bonito. **Penso em roteiro pensado pra conversão, edição alinhada com o algoritmo e estratégia de marca por trás de cada entrega.** A faculdade me deu a base, os 5 anos de corporativo me deram visão comercial, e a prática me deu o repertório.",
+        "Hoje também sou **mentora de creators**: criei o método CRIA, onde ensino quem está começando a transformar conteúdo em parceria paga. Isso me deixa ainda mais afiada do lado das marcas — porque entendo os dois lados da mesa.",
       ],
       commitment:
         "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
-      chips: ["UGC Creator", "Influenciadora", "Videomaker"],
+      chips: ["UGC Creator", "Influenciadora", "Videomaker", "Mentora de Creators"],
+      criaBadge:
+        "Idealizadora do método CRIA — mentoria pra creators que querem profissionalizar o conteúdo.",
       stats: [
         { value: "25 anos", label: "Idade" },
         { value: "Goiânia-GO", label: "Base" },
@@ -573,10 +577,13 @@ export const translations: Record<Locale, Translations> = {
         "Before creating content, I spent 5 years in the corporate world, including a stint at Amcham Brasil, where I led events teams and left as a senior commercial professional. I was also a makeup artist for over 10 years. **I've always been the person who sees strategy in everything** — in a well-planned event, in a brand campaign, in a video that sells without looking like it's selling. That perspective is what brought me into content creation.",
         "**Today I've turned that into a career.** I've created content for Nivea with over **435,000 organic views**, **educational content for E-lens with 337,000 views**, organic content for **L'Oréal Paris with 243,000 views**, and a **paid traffic creative for Peça Rara that reached almost 92,000 accounts**. I mainly work in the beauty and health & wellness niches.",
         "I don't just think about a pretty video. **I think about a script built for conversion, editing aligned with the algorithm, and brand strategy behind every delivery.** College gave me the foundation, 5 years in corporate gave me business vision, and practice gave me the repertoire.",
+        "Today I'm also a **creator mentor**: I created the CRIA method, where I teach creators who are just starting out how to turn content into paid partnerships. That keeps me even sharper on the brand side — because I understand both sides of the table.",
       ],
       commitment:
         "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
-      chips: ["UGC Creator", "Influencer", "Videomaker"],
+      chips: ["UGC Creator", "Influencer", "Videomaker", "Creator Mentor"],
+      criaBadge:
+        "Creator of the CRIA method — mentoring creators who want to professionalize their content.",
       stats: [
         { value: "25 years old", label: "Age" },
         { value: "Goiânia, Brazil", label: "Based in" },
