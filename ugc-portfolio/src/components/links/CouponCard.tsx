@@ -27,26 +27,26 @@ export function CouponCard({ brand, code, logo, discount, href }: Coupon) {
   );
 
   return (
-    <div className="rounded-2xl border border-dashed border-wine-300 bg-white p-4">
+    <div className="rounded-2xl border border-ink-900/10 bg-white p-4 shadow-soft">
       <div className="flex items-center gap-3">
         {logo ? (
-          <span className="relative h-12 w-12 flex-none overflow-hidden rounded-full border border-ink-900/10 bg-white">
+          <span className="relative h-12 w-12 flex-none overflow-hidden rounded-xl border border-ink-900/10 bg-white">
             <Image src={logo} alt={brand} fill sizes="48px" className="object-cover" />
           </span>
         ) : (
-          <span className="flex h-12 w-12 flex-none items-center justify-center rounded-full bg-ink-900 font-display text-xl text-white">
+          <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-brand-600 font-display text-xl font-bold text-white">
             {brand.charAt(0)}
           </span>
         )}
         <div className="min-w-0 flex-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-wine-600">{discount ?? "Cupom"}</p>
-          <p className="mt-0.5 font-semibold text-ink-900">{brandName}</p>
+          <span className="inline-block rounded-full bg-wine-50 px-2.5 py-0.5 text-xs font-bold text-wine-700">{discount ?? "Cupom"}</span>
+          <p className="mt-1 font-bold text-ink-900">{brandName}</p>
         </div>
       </div>
       <button
         type="button"
         onClick={copy}
-        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-blush-100 px-4 py-2.5 font-mono text-sm font-semibold text-ink-900 transition hover:bg-blush-200"
+        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-dashed border-ink-900/25 bg-cream/60 px-4 py-2.5 font-mono text-sm font-semibold text-ink-900 transition hover:border-brand-500"
         aria-label={`Copiar cupom ${code}`}
       >
         {code}
