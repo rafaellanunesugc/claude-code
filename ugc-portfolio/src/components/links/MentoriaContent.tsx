@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CREATOR_PRODUCTS, MENTORIA } from "@/lib/data/links";
 import { Eyebrow, Headline, IndexRow, SolidButton, pad } from "@/components/links/editorial";
 
@@ -8,10 +7,7 @@ export function MentoriaContent({ showProducts = true }: { showProducts?: boolea
     <>
     <Eyebrow>{MENTORIA.tag}</Eyebrow>
     <Headline>{MENTORIA.slogan}</Headline>
-    <div className="relative mt-8 aspect-square w-full overflow-hidden bg-duo/10">
-      <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-center" />
-    </div>
-    <p className="mt-6 text-lg leading-relaxed text-duo/80">{MENTORIA.pitch}</p>
+    <p className="mt-8 text-lg leading-relaxed text-duo/80">{MENTORIA.pitch}</p>
     
     <div className="mt-8 grid grid-cols-2 border-y border-duo/20">
       {MENTORIA.proof.map((item, i) => (
