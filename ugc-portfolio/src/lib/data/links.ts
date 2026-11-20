@@ -151,7 +151,7 @@ export const SETUP_INTRO: {
 
 export const SETUP_ITEMS: SetupItem[] = [
   { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", icon: "celular", image: "/images/setup/iphone-17-pro-max.jpg" },
-  { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", icon: "microfone" },
+  { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", icon: "microfone", image: "/images/setup/hollyland-lark-a1.jpg" },
   {
     category: "Iluminação",
     name: "Ring Light LED Braço Duplo 45W + Tripé + Bolsa",
