@@ -168,7 +168,7 @@ export const SETUP_ITEMS: SetupItem[] = [
     icon: "lanterna",
     image: "/images/setup/lanterna-vedo.jpg",
   },
-  { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", icon: "tripe" },
+  { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", icon: "tripe", image: "/images/setup/tripe-magnetico-tt88.jpg" },
   { category: "Iluminação", name: "Luz de Preenchimento RGB Tomate", store: "Shopee", href: "https://s.shopee.com.br/4fwRaDg4am", icon: "rgb" },
   { category: "Iluminação", name: "Rebatedor Fotográfico", store: "Shopee", href: "https://s.shopee.com.br/5VVYZUjV5t", icon: "rebatedor" },
   { category: "Suporte", name: "Suporte de Celular com Ventosa", store: "Shopee", href: "https://s.shopee.com.br/1qcGCpmVG9", icon: "suporte" },
