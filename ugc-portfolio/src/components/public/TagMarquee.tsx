@@ -7,7 +7,7 @@ export function TagMarquee({ tags }: { tags: string[] }) {
         {doubled.map((tag, index) => (
           <span key={`${tag}-${index}`} className="flex items-center gap-8">
             {tag}
-            <span className="text-gold-200">•</span>
+            <span className="text-cream/70">•</span>
           </span>
         ))}
       </div>

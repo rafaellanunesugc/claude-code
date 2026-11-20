@@ -7,8 +7,20 @@ const config: Config = {
       colors: {
         // Creme quente — fundo principal das seções
         cream: "#FBF4E9",
-        // Oliva claro — fundo alternado das seções
-        sage: "#ECE8D6",
+        // Terracota clarinho — fundo alternado das seções
+        sage: "#F2DECB",
+        // Terracota — acento (badges, detalhes, mentoria)
+        terracotta: {
+          500: "#C1623A",
+          600: "#A8502E",
+          700: "#8A3F22",
+        },
+        // Café — acento escuro (cards de destaque, mentoria)
+        coffee: {
+          700: "#4A3222",
+          800: "#3A2819",
+          900: "#2B1D12",
+        },
         // Forest green — cor de ação (botões, CTAs, links, elementos interativos)
         brand: {
           50: "#f1f4f0",
@@ -40,17 +52,6 @@ const config: Config = {
           700: "#74112b",
           800: "#520f22",
           900: "#370c19",
-        },
-        // Dourado — acento leve (badges, detalhes, mentoria)
-        gold: {
-          50: "#fbf0df",
-          100: "#f3ddb3",
-          200: "#e9c583",
-          300: "#dfad57",
-          400: "#d39a3e",
-          500: "#c68a3d",
-          600: "#a86f2c",
-          700: "#8a5a22",
         },
         // Forest green claro/sage — cor orgânica (ícones, tags de categoria)
         olive: {

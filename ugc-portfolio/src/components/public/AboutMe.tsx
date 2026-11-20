@@ -81,7 +81,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
 
             <a
               href="/#creator"
-              className="group mt-4 flex items-center gap-3 rounded-2xl bg-wine-800 px-4 py-3.5 transition hover:-translate-y-0.5"
+              className="group mt-4 flex items-center gap-3 rounded-2xl bg-coffee-800 px-4 py-3.5 transition hover:-translate-y-0.5"
             >
               <Image
                 src="/images/cria-logo.png"
