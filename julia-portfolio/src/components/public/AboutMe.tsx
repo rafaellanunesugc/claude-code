@@ -58,7 +58,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
           </div>
         </div>
 
-        <dl className="mt-16 grid grid-cols-2 border-t border-ink-900/15 md:grid-cols-4">
+        <dl className="mt-16 grid grid-cols-2 border-t border-ink-900/15 md:grid-cols-3">
           {t.stats.map((stat, index) => (
             <div
               key={stat.label}

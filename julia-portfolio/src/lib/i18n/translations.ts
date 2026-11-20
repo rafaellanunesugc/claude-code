@@ -163,10 +163,9 @@ export const translations: Record<Locale, Translations> = {
       availability: "Disponível para novas campanhas",
       // A Júlia ainda não tem certeza dessa frase — revisar.
       tagline: "naturalidade com estratégia",
-      stats: [
-        { value: "[+0]", label: "marcas atendidas" },
-        { value: "[0K]", label: "seguidores" },
-      ],
+      // Sem números por enquanto (ainda não há marcas atendidas). Quando tiver,
+      // adicionar aqui, ex.: { value: "+5", label: "marcas atendidas" }.
+      stats: [],
       ctaPrimary: "Solicitar proposta",
       ctaSecondary: "Ver portfólio",
       coverPlaceholder: "Foto de capa (em breve)",
@@ -234,7 +233,6 @@ export const translations: Record<Locale, Translations> = {
         { value: "27 anos", label: "Idade" },
         { value: "Goiânia - GO", label: "Base" },
         { value: "2026", label: "Criando conteúdo desde" },
-        { value: "[0K]", label: "Seguidores" },
       ],
     },
     influencer: {
@@ -480,10 +478,7 @@ export const translations: Record<Locale, Translations> = {
     hero: {
       availability: "Available for new campaigns",
       tagline: "natural content, strategic results",
-      stats: [
-        { value: "[+0]", label: "brands served" },
-        { value: "[0K]", label: "followers" },
-      ],
+      stats: [],
       ctaPrimary: "Request a quote",
       ctaSecondary: "View portfolio",
       coverPlaceholder: "Cover photo (coming soon)",
@@ -550,7 +545,6 @@ export const translations: Record<Locale, Translations> = {
         { value: "27", label: "Age" },
         { value: "Goiânia, Brazil", label: "Based in" },
         { value: "2026", label: "Creating content since" },
-        { value: "[0K]", label: "Followers" },
       ],
     },
     influencer: {

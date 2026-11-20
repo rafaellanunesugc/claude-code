@@ -48,7 +48,6 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
   }
 
   const t = translations[locale];
-  const followersValue = t.hero.stats[1]?.value ?? "";
 
   return (
     <main lang={locale}>
@@ -61,7 +60,7 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
       <Studio t={t.studio} />
       <Portfolio t={t.portfolio} videos={videos} />
       <UGCSection t={t.ugc} />
-      <InfluencerSection t={t.influencer} followers={followersValue} />
+      <InfluencerSection t={t.influencer} />
       <WorkWithMe t={t.work} />
       <BrandLogos t={t.brandLogos} />
       <Photos t={t.photos} />

@@ -37,6 +37,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
 
           <p className="mt-6 text-sm uppercase tracking-[0.3em] text-ink-700">{t.tagline}</p>
 
+          {t.stats.length > 0 && (
           <div className="mt-10 grid max-w-md grid-cols-2 border-y border-ink-900/15">
             {t.stats.map((stat, index) => (
               <div key={stat.label} className={index > 0 ? "border-l border-ink-900/15 py-4 pl-6" : "py-4"}>
@@ -45,6 +46,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
               </div>
             ))}
           </div>
+          )}
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a

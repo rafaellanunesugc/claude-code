@@ -65,25 +65,11 @@ function PlatformPanel({
   );
 }
 
-export function InfluencerSection({
-  t,
-  followers,
-}: {
-  t: Translations["influencer"];
-  followers: string;
-}) {
+export function InfluencerSection({ t }: { t: Translations["influencer"] }) {
   return (
     <section id="influenciadora" className="bg-paper">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-        <div className="grid gap-10 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-7">
-            <SectionHeading number="05" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
-          </div>
-          <div className="md:col-span-4 md:col-start-9 md:text-right">
-            <p className="font-display text-6xl text-wine-700">{followers}</p>
-            <p className="mt-1 text-[11px] uppercase tracking-[0.25em] text-ink-700">{t.followersSuffix}</p>
-          </div>
-        </div>
+        <SectionHeading number="05" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           <PlatformPanel
