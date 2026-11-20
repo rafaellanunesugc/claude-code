@@ -391,7 +391,7 @@ function SetupTab() {
           >
             <span className="relative block aspect-square border-b border-ink-900/10 bg-white">
               {item.image ? (
-                <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain p-3" />
+                <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain px-3 pb-3 pt-10" />
               ) : (
                 <SetupIconTile icon={item.icon} />
               )}

@@ -150,7 +150,7 @@ export const SETUP_INTRO: {
 };
 
 export const SETUP_ITEMS: SetupItem[] = [
-  { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", icon: "celular" },
+  { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", icon: "celular", image: "/images/setup/iphone-17-pro-max.jpg" },
   { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", icon: "microfone" },
   {
     category: "Iluminação",
@@ -166,6 +166,7 @@ export const SETUP_ITEMS: SetupItem[] = [
     store: "TikTok Shop",
     href: "https://shop.tiktok.com/br/pdp/1737082375400490939?_t=ZS-99yRzLJfFiS",
     icon: "lanterna",
+    image: "/images/setup/lanterna-vedo.jpg",
   },
   { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", icon: "tripe" },
   { category: "Iluminação", name: "Luz de Preenchimento RGB Tomate", store: "Shopee", href: "https://s.shopee.com.br/4fwRaDg4am", icon: "rgb" },
