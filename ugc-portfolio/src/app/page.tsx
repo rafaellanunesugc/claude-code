@@ -1,6 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Briefcase, Check, Send, ShoppingBag } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  BatteryCharging,
+  Briefcase,
+  Camera,
+  Check,
+  Flashlight,
+  Lightbulb,
+  Magnet,
+  Mic,
+  Palette,
+  Send,
+  ShoppingBag,
+  Smartphone,
+  Sparkles,
+  TabletSmartphone,
+} from "lucide-react";
 import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { TagMarquee } from "@/components/public/TagMarquee";
@@ -318,7 +335,32 @@ const STORE_BADGE: Record<string, string> = {
   Amazon: "bg-[#232f3e] text-white",
   Shopee: "bg-[#ee4d2d] text-white",
   Magalu: "bg-[#0086ff] text-white",
+  "TikTok Shop": "bg-black text-white",
 };
+
+const SETUP_ICONS = {
+  celular: Smartphone,
+  microfone: Mic,
+  luz: Lightbulb,
+  lanterna: Flashlight,
+  tripe: Camera,
+  rgb: Palette,
+  rebatedor: Sparkles,
+  suporte: TabletSmartphone,
+  bateria: BatteryCharging,
+  ima: Magnet,
+};
+
+function SetupIconTile({ icon }: { icon: keyof typeof SETUP_ICONS }) {
+  const Icon = SETUP_ICONS[icon];
+  return (
+    <span className="absolute inset-0 flex items-center justify-center bg-blush-50">
+      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-ink-900 text-white">
+        <Icon className="h-9 w-9" strokeWidth={1.75} />
+      </span>
+    </span>
+  );
+}
 
 function SetupTab() {
   return (
@@ -348,7 +390,11 @@ function SetupTab() {
             className="group flex flex-col overflow-hidden rounded-2xl border border-ink-900/10 bg-white transition hover:-translate-y-0.5 hover:border-wine-300"
           >
             <span className="relative block aspect-square border-b border-ink-900/10 bg-white">
-              <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain p-3" />
+              {item.image ? (
+                <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain p-3" />
+              ) : (
+                <SetupIconTile icon={item.icon} />
+              )}
               <span
                 className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide ${
                   STORE_BADGE[item.store] ?? "bg-ink-900 text-white"

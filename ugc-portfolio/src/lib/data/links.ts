@@ -117,14 +117,18 @@ export const LINKS_SOCIALS = SOCIAL_LINKS;
 // Aba "Meu setup": equipamentos com link de afiliada.
 // Para adicionar um item: coloque a foto em public/images/setup/ e preencha
 // categoria, nome, loja e o seu link de afiliada. Com a lista vazia, a aba some.
-export type SetupStore = "Mercado Livre" | "Amazon" | "Shopee" | "Magalu" | "Outra loja";
+export type SetupStore = "Mercado Livre" | "Amazon" | "Shopee" | "Magalu" | "TikTok Shop" | "Outra loja";
+
+// Ícone mostrado quando o item ainda não tem foto.
+export type SetupIcon = "celular" | "microfone" | "luz" | "lanterna" | "tripe" | "rgb" | "rebatedor" | "suporte" | "bateria" | "ima";
 
 export type SetupItem = {
   category: string;
   name: string;
-  image: string;
   store: SetupStore;
   href: string;
+  icon: SetupIcon;
+  image?: string;
 };
 
 export const SETUP_INTRO: {
@@ -140,8 +144,32 @@ export const SETUP_INTRO: {
   eyebrow: "Indicações",
   title: "O que eu uso",
   accent: "pra gravar.",
-  text: "Os equipamentos da minha rotina de criação, testados no dia a dia.",
-  disclosure: "Alguns links são de afiliada: comprando por eles, você não paga nada a mais e me ajuda a continuar criando.",
+  text: "Os equipamentos da minha rotina de criação. E lembra: você pode começar com o que já tem!",
+  disclosure:
+    "Links de afiliada: comprando por eles, você paga o mesmo preço e ainda me ajuda a continuar criando conteúdo.",
 };
 
-export const SETUP_ITEMS: SetupItem[] = [];
+export const SETUP_ITEMS: SetupItem[] = [
+  { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", icon: "celular" },
+  { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", icon: "microfone" },
+  {
+    category: "Iluminação",
+    name: "Ring Light LED Braço Duplo 45W + Tripé + Bolsa",
+    store: "Mercado Livre",
+    href: "https://meli.la/2mVWp7Z",
+    icon: "luz",
+  },
+  { category: "Acessório", name: "Tela Magnética", store: "Mercado Livre", href: "https://meli.la/1u75Lyu", icon: "ima" },
+  {
+    category: "Iluminação",
+    name: "Lanterna VEDO",
+    store: "TikTok Shop",
+    href: "https://shop.tiktok.com/br/pdp/1737082375400490939?_t=ZS-99yRzLJfFiS",
+    icon: "lanterna",
+  },
+  { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", icon: "tripe" },
+  { category: "Iluminação", name: "Luz de Preenchimento RGB Tomate", store: "Shopee", href: "https://s.shopee.com.br/4fwRaDg4am", icon: "rgb" },
+  { category: "Iluminação", name: "Rebatedor Fotográfico", store: "Shopee", href: "https://s.shopee.com.br/5VVYZUjV5t", icon: "rebatedor" },
+  { category: "Suporte", name: "Suporte de Celular com Ventosa", store: "Shopee", href: "https://s.shopee.com.br/1qcGCpmVG9", icon: "suporte" },
+  { category: "Bateria", name: "Power Bank", store: "Shopee", href: "https://s.shopee.com.br/7AdmYiv7BE", icon: "bateria" },
+];
