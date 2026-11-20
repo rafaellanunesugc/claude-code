@@ -274,7 +274,7 @@ export default function LinksPage() {
           <Star className="absolute -right-1 bottom-4 h-5 w-5 text-wine-400" />
         </div>
 
-        <h1 className="mt-6 whitespace-nowrap font-signature text-5xl leading-tight text-ink-900">
+        <h1 className="mt-6 whitespace-nowrap font-name text-5xl font-extrabold leading-none tracking-tight text-ink-900">
           {LINKS_PROFILE.name}
         </h1>
         <p className="mt-1 text-lg font-thin text-wine-700">{LINKS_PROFILE.role}</p>

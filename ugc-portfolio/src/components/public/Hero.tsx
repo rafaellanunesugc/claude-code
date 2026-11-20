@@ -12,7 +12,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
             {t.availability}
           </span>
 
-          <h1 className="mt-8 flex items-center gap-3 font-signature md:mt-12 lg:mt-16 text-7xl leading-tight text-ink-900 md:text-8xl lg:text-9xl">
+          <h1 className="mt-6 flex items-center gap-3 font-name text-6xl font-extrabold leading-none tracking-tight text-ink-900 md:mt-8 md:text-7xl lg:text-8xl">
             <Star className="h-8 w-8 flex-none text-brand-500 md:h-10 md:w-10 lg:h-12 lg:w-12" />
             Rafa Nunes
           </h1>

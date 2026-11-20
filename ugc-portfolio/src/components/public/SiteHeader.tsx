@@ -22,7 +22,7 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-ink-900/5 bg-white/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-        <a href="#topo" className="flex items-center gap-1.5 font-signature text-2xl text-ink-900">
+        <a href="#topo" className="flex items-center gap-1.5 font-name text-2xl font-extrabold tracking-tight text-ink-900">
           <Star className="h-4 w-4 flex-none text-brand-500" />
           Rafa <span className="text-wine-700">Nunes</span>
         </a>

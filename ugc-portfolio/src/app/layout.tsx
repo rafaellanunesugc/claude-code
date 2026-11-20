@@ -3,12 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-// Tan Mon Cheri (a fonte real, estilo assinatura) é usada só no nome
-// "Rafa Nunes" — em palavras normais ela embaralha algumas letras, então
-// os títulos de seção continuam numa fonte normal (Poppins).
-const signatureFont = localFont({
-  src: "../fonts/tan-mon-cheri.ttf",
-  variable: "--font-signature",
+// Urbanist ExtraBold: só no nome "Rafa Nunes" (alternativa gratuita à Gilroy).
+const nameFont = localFont({
+  src: "../fonts/urbanist/Urbanist-ExtraBold.woff2",
+  weight: "800",
+  variable: "--font-name",
 });
 // Poppins (títulos, estilo bold & moderno).
 const displayFont = localFont({
@@ -48,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${displayFont.variable} ${signatureFont.variable} ${bodyFont.variable}`}
+      className={`${displayFont.variable} ${nameFont.variable} ${bodyFont.variable}`}
     >
       <body className="font-sans antialiased">{children}</body>
     </html>
