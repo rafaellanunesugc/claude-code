@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function FAQ({ t }: { t: Translations["faq"] }) {
   return (
-    <section id="faq" className="bg-white">
+    <section id="faq" className="bg-paper">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-12 md:px-10 md:py-28">
         <div className="md:col-span-4">
           <SectionHeading number="09" eyebrow={t.eyebrow} title={t.title} />

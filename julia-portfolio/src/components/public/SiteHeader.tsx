@@ -20,7 +20,7 @@ export function SiteHeader({
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-900/10 bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-ink-900/10 bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-10">
         <a href="#topo" className="text-sm font-semibold uppercase tracking-[0.3em] text-ink-900">
           {SITE_NAME}

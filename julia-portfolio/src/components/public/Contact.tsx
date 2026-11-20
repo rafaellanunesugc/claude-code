@@ -7,34 +7,34 @@ import type { Translations } from "@/lib/i18n/translations";
 
 export function Contact({ t }: { t: Translations["contact"] }) {
   return (
-    <section id="contato" className="bg-wine-700 text-cream">
+    <section id="contato" className="bg-wine-700 text-paper">
       <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:grid-cols-12 md:items-center md:px-10 md:py-28">
         <div className="md:col-span-7">
-          <p className="text-[11px] uppercase tracking-[0.28em] text-cream/70">{SITE_NAME}</p>
+          <p className="text-[11px] uppercase tracking-[0.28em] text-paper/75">{SITE_NAME}</p>
           <h2 className="mt-4 font-display text-5xl leading-[1.02] md:text-7xl">{t.title}</h2>
-          <p className="mt-6 max-w-md leading-relaxed text-cream/80">{t.subtitle}</p>
+          <p className="mt-6 max-w-md leading-relaxed text-paper/85">{t.subtitle}</p>
 
           <a
             href={whatsappLink(t.whatsappMessage)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 bg-cream px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-ink-900 transition hover:bg-white"
+            className="mt-10 inline-flex items-center gap-3 bg-cream px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-ink-900 transition hover:bg-paper"
           >
             <SocialIcon name="whatsapp" className="h-4 w-4" />
             {t.submit}
           </a>
 
-          <ul className="mt-12 max-w-md border-t border-cream/25">
+          <ul className="mt-12 max-w-md border-t border-paper/30">
             {SOCIAL_LINKS.map((link) => (
-              <li key={link.label} className="border-b border-cream/25">
+              <li key={link.label} className="border-b border-paper/30">
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 py-4 text-sm transition hover:text-white"
+                  className="flex items-center gap-4 py-4 text-sm transition hover:text-paper"
                 >
                   <SocialIcon name={link.icon} className="h-4 w-4 flex-none" />
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-cream/70">{link.label}</span>
+                  <span className="text-[11px] uppercase tracking-[0.2em] text-paper/75">{link.label}</span>
                   <span className="ml-auto">{link.handle}</span>
                 </a>
               </li>

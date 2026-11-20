@@ -8,7 +8,7 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
   if (BRAND_LOGOS.length === 0) return null;
 
   return (
-    <section className="border-y border-ink-900/10 bg-white py-16">
+    <section className="border-y border-ink-900/10 bg-paper py-16">
       <SectionHeading
         eyebrow={t.eyebrow}
         title={`${t.titleBold} ${t.titleItalic}`}

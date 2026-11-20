@@ -149,7 +149,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     category: "ugc",
     niche: "Alimentação",
     youtubeId: "",
-    gradient: "from-olive-300 via-brand-500 to-ink-900",
+    gradient: "from-wine-200 via-brand-500 to-ink-900",
     format: "Prove Saudável",
   },
 ];

@@ -43,7 +43,7 @@ export function Portfolio({
   const filteredVideos = videosInCategory.filter((video) => niche === ALL || video.niche === niche);
 
   return (
-    <section id="portfolio" className="bg-white">
+    <section id="portfolio" className="bg-paper">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading number="03" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />

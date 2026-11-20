@@ -18,7 +18,7 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
   }
 
   return (
-    <section id="feedbacks" className="bg-white">
+    <section id="feedbacks" className="bg-paper">
       <div className="mx-auto max-w-5xl px-5 py-20 text-center md:px-10 md:py-28">
         <SectionHeading number="07" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} center />
 

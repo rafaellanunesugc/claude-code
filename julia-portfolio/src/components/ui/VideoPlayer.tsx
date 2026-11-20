@@ -48,7 +48,7 @@ export function VideoPlayer({
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/80 text-white backdrop-blur-sm transition group-hover:bg-white group-hover:text-ink-900">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/80 text-white backdrop-blur-sm transition group-hover:bg-paper group-hover:text-ink-900">
                   <svg viewBox="0 0 24 24" className="ml-1 h-5 w-5 fill-current">
                     <path d="M8 5v14l11-7z" />
                   </svg>

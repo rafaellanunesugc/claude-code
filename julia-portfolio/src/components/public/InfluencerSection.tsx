@@ -17,7 +17,7 @@ function PlatformPanel({
   location?: { brazil: number; cities: string[] };
 }) {
   return (
-    <div className="border border-ink-900/15 bg-white p-6 md:p-8">
+    <div className="border border-ink-900/15 bg-paper p-6 md:p-8">
       <div className="flex items-baseline justify-between gap-4 border-b border-ink-900/10 pb-4">
         <h3 className="font-display text-2xl text-ink-900">
           {data.heading} <span className="text-base italic text-ink-700/60">{handle}</span>
@@ -73,7 +73,7 @@ export function InfluencerSection({
   followers: string;
 }) {
   return (
-    <section id="influenciadora" className="bg-white">
+    <section id="influenciadora" className="bg-paper">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">

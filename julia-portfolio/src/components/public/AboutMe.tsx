@@ -22,7 +22,7 @@ function RichText({ text }: { text: string }) {
 
 export function AboutMe({ t }: { t: Translations["about"] }) {
   return (
-    <section id="sobre" className="bg-white">
+    <section id="sobre" className="bg-paper">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
         <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-7">

@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Tenor_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
-// Fontes neutras provisórias (Google Fonts, gratuitas).
-// TODO: trocar pelas fontes da identidade visual da Júlia quando ela definir.
-const displayFont = Playfair_Display({
+// Fontes da identidade da Júlia:
+// - Tenor Sans (texto) — a mesma da identidade visual.
+// - Títulos: a identidade usa a "Higuen Elegant Serif", que é paga. Enquanto não
+//   tivermos o arquivo da fonte, usamos a Cormorant Garamond (gratuita e parecida).
+//   Para trocar: colocar o arquivo em src/fonts/ e usar next/font/local aqui.
+const displayFont = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-display",
 });
-const bodyFont = Inter({
+const bodyFont = Tenor_Sans({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-sans",
 });
 
