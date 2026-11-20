@@ -56,7 +56,7 @@ export function Portfolio({
   );
 
   return (
-    <section id="portfolio" className="bg-sage py-16">
+    <section id="portfolio" className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
         <h2 className="flex items-center gap-2 text-2xl font-bold text-ink-900 md:text-3xl">
           <Star className="h-5 w-5 flex-none text-brand-500 md:h-6 md:w-6" />

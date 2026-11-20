@@ -71,9 +71,9 @@ function SectionHeading({
   );
 }
 
-// Cores do cartão da mentoria: as mesmas do cartão de mentora no portfólio (café + terracota).
-const MENTORIA_BG = "bg-coffee-800";
-const MENTORIA_ACCENT = "bg-terracotta-500 text-coffee-900";
+// Cores do cartão da mentoria: bordô forte sempre que mencionarmos a mentoria.
+const MENTORIA_BG = "bg-wine-900";
+const MENTORIA_ACCENT = "bg-wine-500 text-cream";
 
 export default function LinksPage() {
   const linksContent = (
@@ -137,7 +137,7 @@ export default function LinksPage() {
             </div>
             <div className="p-6">
               <h3 className="text-4xl font-extrabold uppercase tracking-tight">{MENTORIA.title}</h3>
-              <p className="mt-1 text-xl font-bold italic text-terracotta-500">{MENTORIA.slogan}</p>
+              <p className="mt-1 text-xl font-bold italic text-wine-400">{MENTORIA.slogan}</p>
               <p className="mt-4 leading-relaxed text-cream/85">{MENTORIA.pitch}</p>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
@@ -149,7 +149,7 @@ export default function LinksPage() {
                 ))}
               </div>
 
-              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-terracotta-500">Os 4 encontros</p>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-wine-400">Os 4 encontros</p>
               <ol className="mt-3 space-y-3">
                 {MENTORIA.steps.map((step, i) => (
                   <li key={step.title} className="flex gap-3">
@@ -164,7 +164,7 @@ export default function LinksPage() {
                 ))}
               </ol>
               <p className="mt-4 flex gap-2 text-sm text-cream/85">
-                <Check className="mt-0.5 h-4 w-4 flex-none text-terracotta-500" />
+                <Check className="mt-0.5 h-4 w-4 flex-none text-wine-400" />
                 {MENTORIA.bonus}
               </p>
 

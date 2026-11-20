@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { logFormOpened, submitContactForm } from "@/lib/actions/public";
@@ -53,16 +52,6 @@ export function ContactForm({ t }: { t: Translations["contact"] }) {
         <div>
           <h2 className="text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>
           <p className="mt-2 text-ink-700">{t.subtitle}</p>
-
-          <div className="relative mt-6 aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl">
-            <Image
-              src="/images/foto-capa.jpg"
-              alt="Rafa Nunes"
-              fill
-              sizes="320px"
-              className="object-cover"
-            />
-          </div>
 
           <div className="mt-6 space-y-3">
             {SOCIAL_LINKS.map((link) => (

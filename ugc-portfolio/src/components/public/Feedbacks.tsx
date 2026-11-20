@@ -17,7 +17,7 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
   }
 
   return (
-    <section id="feedbacks" className="bg-sage py-16">
+    <section id="feedbacks" className="bg-cream py-16">
       <div className="mx-auto max-w-4xl px-5">
         <div className="flex items-start justify-between gap-4">
           <div>

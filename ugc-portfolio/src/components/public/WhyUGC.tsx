@@ -2,7 +2,7 @@ import type { Translations } from "@/lib/i18n/translations";
 
 export function WhyUGC({ t }: { t: Translations["whyUgc"] }) {
   return (
-    <section className="bg-sage py-16">
+    <section className="bg-cream py-16">
       <div className="mx-auto max-w-4xl px-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
           {t.eyebrow}
