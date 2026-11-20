@@ -47,7 +47,8 @@ export function ContactForm({ t }: { t: Translations["contact"] }) {
   }, [state.status]);
 
   return (
-    <section id="contato" className="mx-auto max-w-6xl px-5 py-16">
+    <section id="contato" className="bg-cream py-16">
+      <div className="mx-auto max-w-6xl px-5">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <h2 className="text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>
@@ -171,6 +172,7 @@ export function ContactForm({ t }: { t: Translations["contact"] }) {
             )}
           </div>
         </form>
+      </div>
       </div>
     </section>
   );

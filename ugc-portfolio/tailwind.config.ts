@@ -5,8 +5,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paleta Kiraku — ivory, dark green, forest green e pink
-        cream: "#f2f1d2",
+        // Creme quente — fundo principal das seções
+        cream: "#FBF4E9",
+        // Oliva claro — fundo alternado das seções
+        sage: "#ECE8D6",
         // Forest green — cor de ação (botões, CTAs, links, elementos interativos)
         brand: {
           50: "#f1f4f0",
@@ -26,18 +28,29 @@ const config: Config = {
           800: "#1e3a38",
           700: "#264b49",
         },
-        // Pink (dusty rose) — cor de autoridade (títulos de destaque, elementos de marca)
+        // Bordô — cor de autoridade (títulos de destaque, elementos de marca)
         wine: {
-          50: "#f7eeee",
-          100: "#ecd4d6",
-          200: "#e2b9bc",
-          300: "#d99da2",
-          400: "#d08186",
-          500: "#c5686e",
-          600: "#ba4d55",
-          700: "#a43f46",
-          800: "#89353b",
-          900: "#6e2b2f",
+          50: "#f9f0f2",
+          100: "#f2d9dd",
+          200: "#e8b0ba",
+          300: "#dd7e91",
+          400: "#d34564",
+          500: "#b42244",
+          600: "#911836",
+          700: "#74112b",
+          800: "#520f22",
+          900: "#370c19",
+        },
+        // Dourado — acento leve (badges, detalhes, mentoria)
+        gold: {
+          50: "#fbf0df",
+          100: "#f3ddb3",
+          200: "#e9c583",
+          300: "#dfad57",
+          400: "#d39a3e",
+          500: "#c68a3d",
+          600: "#a86f2c",
+          700: "#8a5a22",
         },
         // Forest green claro/sage — cor orgânica (ícones, tags de categoria)
         olive: {

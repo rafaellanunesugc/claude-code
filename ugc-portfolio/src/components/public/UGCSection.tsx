@@ -2,7 +2,7 @@ import type { Translations } from "@/lib/i18n/translations";
 
 export function UGCSection({ t }: { t: Translations["ugc"] }) {
   return (
-    <section id="ugc" className="bg-cream py-16">
+    <section id="ugc" className="bg-sage py-16">
       <div className="mx-auto max-w-6xl px-5">
         <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
           {t.eyebrow}

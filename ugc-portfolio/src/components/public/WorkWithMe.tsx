@@ -41,7 +41,8 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
   }
 
   return (
-    <section id="trabalhar-comigo" className="mx-auto max-w-6xl px-5 py-16">
+    <section id="trabalhar-comigo" className="bg-cream py-16">
+      <div className="mx-auto max-w-6xl px-5">
       <div className="rounded-2xl border border-ink-900/10 bg-white p-6 shadow-soft sm:p-8">
         <p className="text-xs font-semibold uppercase tracking-wide text-brand-600">
           {t.eyebrow}
@@ -57,14 +58,14 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
         href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t.mentoria.whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="group mt-6 block overflow-hidden rounded-2xl bg-[#3c405b] p-6 transition hover:-translate-y-0.5 sm:p-8"
+        className="group mt-6 block overflow-hidden rounded-2xl bg-wine-800 p-6 transition hover:-translate-y-0.5 sm:p-8"
       >
-        <span className="inline-block rounded-full bg-[#f2e05a] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#3c405b]">
+        <span className="inline-block rounded-full bg-gold-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-wine-900">
           {t.mentoria.tag}
         </span>
-        <h3 className="mt-3 text-xl font-bold text-white md:text-2xl">{t.mentoria.title}</h3>
-        <p className="mt-2 max-w-2xl text-[#f3f0e0]/85">{t.mentoria.description}</p>
-        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#f2e05a] px-5 py-3 text-sm font-semibold text-[#3c405b]">
+        <h3 className="mt-3 text-xl font-bold text-cream md:text-2xl">{t.mentoria.title}</h3>
+        <p className="mt-2 max-w-2xl text-cream/85">{t.mentoria.description}</p>
+        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-3 text-sm font-semibold text-wine-900">
           {t.mentoria.cta} · {t.mentoria.price}
         </span>
       </a>
@@ -148,6 +149,7 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
           </p>
           <p className="mt-1 text-sm text-ink-900">{t.delivery.emiteNota}</p>
         </div>
+      </div>
       </div>
     </section>
   );
