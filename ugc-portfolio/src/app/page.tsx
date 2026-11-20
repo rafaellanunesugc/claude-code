@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
-import type { CSSProperties, ReactNode } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { CouponCard } from "@/components/links/CouponCard";
+import { MentoriaContent } from "@/components/links/MentoriaContent";
+import {
+  CONTACT_HREF,
+  Eyebrow,
+  Headline,
+  IndexRow,
+  SolidButton,
+  THEMES,
+  linkProps,
+  pad,
+  themeStyle,
+} from "@/components/links/editorial";
 import {
   BRAND_LINKS,
   COUPONS,
-  CREATOR_PRODUCTS,
   LINKS_PROFILE,
   LINKS_SOCIALS,
-  MENTORIA,
   SETUP_INTRO,
   SETUP_ITEMS,
   whatsappLink,
@@ -31,95 +40,6 @@ export const metadata: Metadata = {
   },
 };
 
-// O link da bio usa só duas cores: a principal (textos, linhas, botões, faixas)
-// e um creme (fundo). Para trocar o tema, mude THEME. Valores em R G B.
-const THEMES = {
-  marrom: { main: "58 40 25", off: "244 236 224" }, // café #3A2819 + creme off #F4ECE0
-  bordo: { main: "116 17 43", off: "250 246 240" }, // bordô #74112B + off-white #FAF6F0
-};
-const THEME = THEMES.marrom;
-const THEME_STYLE = { "--duo": THEME.main, "--duo-off": THEME.off } as CSSProperties;
-
-const CONTACT_HREF = whatsappLink("Oi, Rafa! Vim pelo seu link da bio.");
-
-function linkProps(href: string) {
-  return href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {};
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, "0");
-}
-
-// Etiqueta pequena em caixa alta e bem espaçada, acima dos títulos.
-function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
-  return (
-    <p className={`text-xs font-semibold uppercase tracking-[0.3em] ${light ? "text-duo-off/80" : "text-duo/80"}`}>
-      {children}
-    </p>
-  );
-}
-
-// Título grande em caixa alta (Urbanist ExtraBold).
-function Headline({ children, light = false }: { children: ReactNode; light?: boolean }) {
-  return (
-    <h2
-      className={`mt-4 font-name text-[2.6rem] font-extrabold uppercase leading-[0.95] tracking-tight ${
-        light ? "text-duo-off" : "text-duo"
-      }`}
-    >
-      {children}
-    </h2>
-  );
-}
-
-// Linha de índice: número, título, seta e uma linha fina embaixo.
-function IndexRow({
-  n,
-  title,
-  description,
-  href,
-  light = false,
-}: {
-  n: number;
-  title: string;
-  description?: string;
-  href: string;
-  light?: boolean;
-}) {
-  return (
-    <a
-      href={href}
-      {...linkProps(href)}
-      className={`group flex items-start gap-4 border-b py-5 ${light ? "border-duo-off/25" : "border-duo/20"}`}
-    >
-      <span className={`pt-0.5 text-sm ${light ? "text-duo-off/70" : "text-duo/60"}`}>{pad(n)}</span>
-      <span className="min-w-0 flex-1">
-        <span className="block font-bold">{title}</span>
-        {description && (
-          <span className={`mt-1 block text-sm leading-relaxed ${light ? "text-duo-off/75" : "text-duo/70"}`}>
-            {description}
-          </span>
-        )}
-      </span>
-      <ArrowUpRight className="mt-0.5 h-4 w-4 flex-none transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-    </a>
-  );
-}
-
-function SolidButton({ href, children, light = false }: { href: string; children: ReactNode; light?: boolean }) {
-  return (
-    <a
-      href={href}
-      {...linkProps(href)}
-      className={`inline-flex items-center gap-6 px-6 py-4 text-sm font-semibold transition hover:opacity-90 ${
-        light ? "bg-duo-off text-duo" : "bg-duo text-duo-off"
-      }`}
-    >
-      {children} <ArrowUpRight className="h-4 w-4" />
-    </a>
-  );
-}
-
 export default function LinksPage() {
   const withPhoto = SETUP_ITEMS.filter((item) => item.image);
   const textOnly = SETUP_ITEMS.filter((item) => !item.image);
@@ -132,7 +52,7 @@ export default function LinksPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-duo-off font-sans text-duo" style={THEME_STYLE}>
+    <main className="min-h-screen bg-duo-off font-sans text-duo" style={themeStyle(THEMES.marrom)}>
       <div className="mx-auto max-w-md px-5">
         {/* Cabeçalho */}
         <header className="flex items-center justify-between gap-4 border-b border-duo/20 py-6">
@@ -208,64 +128,17 @@ export default function LinksPage() {
       </section>
 
       <div className="mx-auto max-w-md px-5">
-        {/* Mentoria */}
-        <section id="mentoria" className="scroll-mt-4 py-14">
-          <Eyebrow>{MENTORIA.tag}</Eyebrow>
-          <Headline>{MENTORIA.slogan}</Headline>
-          <div className="relative mt-8 aspect-square w-full overflow-hidden bg-duo/10">
-            <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-center" />
-          </div>
-          <p className="mt-6 text-lg leading-relaxed text-duo/80">{MENTORIA.pitch}</p>
-
-          <div className="mt-8 grid grid-cols-2 border-y border-duo/20">
-            {MENTORIA.proof.map((item, i) => (
-              <div key={item.label} className={`py-5 ${i > 0 ? "border-l border-duo/20 pl-4" : ""}`}>
-                <p className="font-name text-4xl font-extrabold">{item.value}</p>
-                <p className="mt-1 text-sm text-duo/70">{item.label}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8">
-            {MENTORIA.steps.map((step, i) => (
-              <div key={step.title}>
-                <p className="text-sm text-duo/60">
-                  {pad(i + 1)} / Encontro {i + 1}
-                </p>
-                <h3 className="mt-3 font-name text-xl font-extrabold leading-tight">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-duo/75">{step.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-8 border-l-2 border-duo pl-4 leading-relaxed text-duo/80">{MENTORIA.bonus}</p>
-
-          <div className="mt-10 border border-duo/25 p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-duo/70">Investimento</p>
-            <p className="mt-3 font-name text-5xl font-extrabold">{MENTORIA.price}</p>
-            <p className="mt-2 text-sm text-duo/70">{MENTORIA.priceNote}</p>
-            <div className="mt-6">
-              <SolidButton href={MENTORIA.href}>{MENTORIA.cta}</SolidButton>
-            </div>
-            <p className="mt-3 text-xs text-duo/60">Você fala direto comigo no WhatsApp.</p>
-          </div>
-
-          {CREATOR_PRODUCTS.length > 0 && (
-            <div className="mt-12">
-              <Eyebrow>Em breve</Eyebrow>
-              <div className="mt-4 border-t border-duo/20">
-                {CREATOR_PRODUCTS.map((product, i) => (
-                  <IndexRow
-                    key={product.title}
-                    n={i + 1}
-                    title={product.title}
-                    description={`${product.description}. Entre na lista de espera.`}
-                    href={product.href}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-        </section>
+        {/* Mentoria: em bordô, como na página /mentoria */}
+      </div>
+      <section id="mentoria" className="scroll-mt-4 bg-duo-off text-duo" style={themeStyle(THEMES.bordo)}>
+        <div className="mx-auto max-w-md px-5 py-14">
+          <MentoriaContent />
+          <a href="/mentoria" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4">
+            Ver a página completa da mentoria <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      </section>
+      <div className="mx-auto max-w-md px-5">
       </div>
 
       {/* Meu setup */}
