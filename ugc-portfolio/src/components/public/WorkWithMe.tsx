@@ -58,14 +58,14 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
         href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t.mentoria.whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="group mt-6 block overflow-hidden rounded-2xl bg-coffee-800 p-6 transition hover:-translate-y-0.5 sm:p-8"
+        className="group mt-6 block overflow-hidden rounded-2xl bg-wine-900 p-6 transition hover:-translate-y-0.5 sm:p-8"
       >
-        <span className="inline-block rounded-full bg-terracotta-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-coffee-900">
+        <span className="inline-block rounded-full bg-wine-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-cream">
           {t.mentoria.tag}
         </span>
         <h3 className="mt-3 text-xl font-bold text-cream md:text-2xl">{t.mentoria.title}</h3>
         <p className="mt-2 max-w-2xl text-cream/85">{t.mentoria.description}</p>
-        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-terracotta-500 px-5 py-3 text-sm font-semibold text-coffee-900">
+        <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 text-sm font-semibold text-wine-900">
           {t.mentoria.cta} · {t.mentoria.price}
         </span>
       </a>

@@ -2,7 +2,7 @@ import type { Translations } from "@/lib/i18n/translations";
 
 export function Statement({ t }: { t: Translations["statement"] }) {
   return (
-    <section className="bg-sage py-14">
+    <section className="bg-cream py-14">
       <div className="mx-auto max-w-4xl px-5 text-center">
         <p className="text-2xl font-extrabold uppercase tracking-tight text-ink-900 md:text-4xl">
           {t.line1}

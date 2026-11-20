@@ -3,7 +3,7 @@ import type { Translations } from "@/lib/i18n/translations";
 
 export function Studio({ t }: { t: Translations["studio"] }) {
   return (
-    <section className="bg-sage py-16">
+    <section className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
