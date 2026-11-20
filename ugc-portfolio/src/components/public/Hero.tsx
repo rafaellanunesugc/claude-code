@@ -46,7 +46,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
         <div className="relative">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-white shadow-soft">
             <Image
-              src="/images/foto-principal.jpg"
+              src="/images/foto-capa.jpg"
               alt="Rafa Nunes"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"

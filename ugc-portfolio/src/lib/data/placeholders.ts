@@ -509,7 +509,7 @@ export type PortfolioPhoto = { src: string; alt: string };
 
 // Fotos reais de bastidores e entregas — adicionar aqui conforme a Rafa for mandando.
 export const PORTFOLIO_PHOTOS: PortfolioPhoto[] = [
-  { src: "/images/fotos/foto-brisalys-serum.jpg", alt: "Rafa Nunes aplicando o sérum facial de niacinamida da Brisalys" },
+  { src: "/images/fotos/foto-estudio-bege.jpg", alt: "Rafa Nunes sorrindo, estúdio com fundo bege" },
   { src: "/images/fotos/foto-eudora-siage.jpg", alt: "Rafa Nunes com a caixa do perfume Eudora Siàge" },
   { src: "/images/fotos/foto-ox-nutre.jpg", alt: "Rafa Nunes aplicando o óleo nutritivo 3 em 1 da OX" },
   { src: "/images/fotos/foto-acuvue-oasys.jpg", alt: "Rafa Nunes com as lentes de contato Acuvue Oasys" },
