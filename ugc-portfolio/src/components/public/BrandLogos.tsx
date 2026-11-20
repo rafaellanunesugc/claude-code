@@ -1,8 +1,75 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { BRAND_LOGOS } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 
+// Tempo (em segundos) pra percorrer uma volta completa — mesma velocidade
+// de antes, só que agora calculada em cima da largura real da fileira.
+const LOOP_DURATION_S = 28;
+
 export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef(0);
+  const draggingRef = useRef(false);
+  const lastXRef = useRef(0);
+  const singleWidthRef = useRef(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || BRAND_LOGOS.length === 0) return;
+
+    singleWidthRef.current = track.scrollWidth / 2;
+    const speed = singleWidthRef.current / LOOP_DURATION_S; // px por segundo
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let lastTime: number | null = null;
+    let frameId: number;
+
+    function tick(time: number) {
+      if (lastTime === null) lastTime = time;
+      const dt = (time - lastTime) / 1000;
+      lastTime = time;
+
+      if (!draggingRef.current && !reduceMotion) {
+        posRef.current -= speed * dt;
+      }
+
+      const half = singleWidthRef.current;
+      if (half > 0) {
+        let p = posRef.current % half;
+        if (p > 0) p -= half;
+        posRef.current = p;
+      }
+
+      if (track) track.style.transform = `translateX(${posRef.current}px)`;
+      frameId = requestAnimationFrame(tick);
+    }
+
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
+    draggingRef.current = true;
+    lastXRef.current = event.clientX;
+    event.currentTarget.setPointerCapture(event.pointerId);
+  }
+
+  function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
+    if (!draggingRef.current) return;
+    const dx = event.clientX - lastXRef.current;
+    lastXRef.current = event.clientX;
+    posRef.current += dx;
+  }
+
+  function handlePointerUp() {
+    draggingRef.current = false;
+  }
+
+  if (BRAND_LOGOS.length === 0) return null;
+
   return (
     <section className="bg-ink-900 py-14">
       <div className="mx-auto max-w-6xl px-5">
@@ -17,7 +84,15 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
         </p>
 
         <div className="mt-8 overflow-hidden">
-          <div className="brand-marquee-track flex w-max items-center gap-5">
+          <div
+            ref={trackRef}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            onPointerLeave={handlePointerUp}
+            className="flex w-max cursor-grab touch-pan-y items-center gap-5 select-none active:cursor-grabbing"
+          >
             {[...BRAND_LOGOS, ...BRAND_LOGOS].map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
@@ -28,6 +103,7 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
                   alt={brand.name}
                   width={144}
                   height={144}
+                  draggable={false}
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -35,11 +111,6 @@ export function BrandLogos({ t }: { t: Translations["brandLogos"] }) {
           </div>
         </div>
       </div>
-      <style>{`
-        .brand-marquee-track { animation: brand-marquee-scroll 28s linear infinite; }
-        @keyframes brand-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        @media (prefers-reduced-motion: reduce) { .brand-marquee-track { animation: none; } }
-      `}</style>
     </section>
   );
 }
