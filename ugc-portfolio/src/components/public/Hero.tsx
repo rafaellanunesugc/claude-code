@@ -5,7 +5,7 @@ import { Star } from "@/components/ui/Star";
 export function Hero({ t }: { t: Translations["hero"] }) {
   return (
     <section id="topo" className="mx-auto max-w-6xl px-5 pt-12 md:pt-20">
-      <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+      <div className="grid items-center gap-10 md:grid-cols-[1fr_1.1fr]">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full bg-olive-50 px-3 py-1 text-xs font-semibold text-olive-800">
             <span className="h-2 w-2 rounded-full bg-olive-500" />
