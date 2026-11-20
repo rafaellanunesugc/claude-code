@@ -40,19 +40,19 @@ export function LinksTabs({
   }
 
   const base = "flex flex-1 items-center justify-center gap-2 rounded-full py-2.5 text-sm font-semibold transition";
-  const active = "bg-brand-600 text-white";
-  const idle = "text-ink-900 hover:bg-ink-900/5";
+  const active = "bg-duo text-duo-off";
+  const idle = "text-duo hover:bg-duo/5";
 
   return (
     <>
       <div id="setup" className="sticky top-3 z-30 mx-auto max-w-md scroll-mt-3 px-5">
-        <div role="tablist" className="flex gap-1 rounded-full border border-ink-900/10 bg-white p-1.5 shadow-soft">
+        <div role="tablist" className="flex gap-1 rounded-full border border-duo/10 bg-duo-off p-1.5 shadow-soft">
           <button type="button" role="tab" aria-selected={tab === "links"} onClick={() => choose("links")} className={`${base} ${tab === "links" ? active : idle}`}>
             Links
           </button>
           <button type="button" role="tab" aria-selected={tab === "setup"} onClick={() => choose("setup")} className={`${base} ${tab === "setup" ? active : idle}`}>
             Meu setup
-            <span className={`flex h-6 min-w-6 items-center justify-center rounded-full px-1.5 text-xs ${tab === "setup" ? "bg-white text-brand-700" : "bg-wine-50 text-wine-700"}`}>
+            <span className={`flex h-6 min-w-6 items-center justify-center rounded-full px-1.5 text-xs ${tab === "setup" ? "bg-duo-off text-duo" : "bg-duo/10 text-duo"}`}>
               {setupCount}
             </span>
           </button>

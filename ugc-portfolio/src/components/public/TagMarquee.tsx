@@ -1,13 +1,21 @@
-export function TagMarquee({ tags }: { tags: string[] }) {
+export function TagMarquee({
+  tags,
+  className = "border-y border-wine-800 bg-wine-600 text-white",
+  dotClassName = "text-cream/70",
+}: {
+  tags: string[];
+  className?: string;
+  dotClassName?: string;
+}) {
   const doubled = [...tags, ...tags];
 
   return (
-    <div className="overflow-hidden border-y border-wine-800 bg-wine-600 py-3">
-      <div className="marquee-track flex w-max items-center gap-8 text-sm font-semibold uppercase tracking-wide text-white">
+    <div className={`overflow-hidden py-3 ${className}`}>
+      <div className="marquee-track flex w-max items-center gap-8 text-sm font-semibold uppercase tracking-wide">
         {doubled.map((tag, index) => (
           <span key={`${tag}-${index}`} className="flex items-center gap-8">
             {tag}
-            <span className="text-cream/70">•</span>
+            <span className={dotClassName}>•</span>
           </span>
         ))}
       </div>

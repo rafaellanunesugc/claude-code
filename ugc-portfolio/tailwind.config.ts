@@ -5,6 +5,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Duas cores do link da bio (definidas em src/app/page.tsx): a principal e o creme.
+        duo: {
+          DEFAULT: "rgb(var(--duo) / <alpha-value>)",
+          off: "rgb(var(--duo-off) / <alpha-value>)",
+        },
         // Creme quente — fundo principal das seções
         cream: "#FBF4E9",
         // Terracota clarinho — fundo alternado das seções
