@@ -112,4 +112,36 @@ export const COUPONS: Coupon[] = [
   },
 ];
 
+// Aba "Meu setup": os equipamentos que eu uso, com os meus links de afiliada.
+// Para cada produto:
+//   - `store`: loja do link ("Mercado Livre", "Amazon", "Shopee" ou outra)
+//   - `href`: o seu link de afiliada. Sem `href`, o cartão mostra "Link em breve".
+//   - `image`: foto do produto. Coloque o arquivo em public/images/setup/ e
+//     escreva o caminho, ex.: "/images/setup/celular.jpg". Sem foto, aparece um ícone.
+export type SetupProduct = {
+  category: string;
+  name: string;
+  store?: string;
+  href?: string;
+  image?: string;
+};
+
+export const SETUP = {
+  photo: "/images/ugc-unboxing-bg.jpg",
+  eyebrow: "Indicações",
+  title: "Meu setup",
+  accent: "de gravação.",
+  text: "Os equipamentos que eu uso de verdade pra gravar meus vídeos.",
+  // Aviso de afiliada: obrigatório por transparência (CONAR).
+  disclaimer: "Alguns links são de afiliada: se você comprar por eles, eu ganho uma pequena comissão e você não paga nada a mais.",
+};
+
+// EXEMPLOS: troque pelos seus produtos e links reais.
+export const SETUP_PRODUCTS: SetupProduct[] = [
+  { category: "Celular", name: "Meu celular" },
+  { category: "Iluminação", name: "Ring light" },
+  { category: "Áudio", name: "Microfone de lapela" },
+  { category: "Suporte", name: "Tripé de celular" },
+];
+
 export const LINKS_SOCIALS = SOCIAL_LINKS;

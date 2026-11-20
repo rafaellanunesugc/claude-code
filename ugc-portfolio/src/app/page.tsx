@@ -5,6 +5,8 @@ import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { TagMarquee } from "@/components/public/TagMarquee";
 import { CouponCard } from "@/components/links/CouponCard";
+import { LinksTabs } from "@/components/links/LinksTabs";
+import { SetupSection } from "@/components/links/SetupSection";
 import {
   BRAND_LINKS,
   COUPONS,
@@ -12,6 +14,7 @@ import {
   LINKS_PROFILE,
   LINKS_SOCIALS,
   MENTORIA,
+  SETUP_PRODUCTS,
   whatsappLink,
 } from "@/lib/data/links";
 
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
   // Prévia ao mandar o link (WhatsApp, Instagram etc.). A imagem vem de app/opengraph-image.png.
   openGraph: {
     title: "Rafa Nunes | UGC Creator",
-    description: "Portfólio, mentoria, cupons e contato — tudo num link só.",
+    description: "Portfólio, mentoria, meu setup, cupons e contato — tudo num link só.",
     siteName: "Rafa Nunes",
     locale: "pt_BR",
     type: "website",
@@ -64,7 +67,7 @@ export default function LinksPage() {
   return (
     <main className="min-h-screen bg-white text-ink-900">
       {/* Topo */}
-      <section className="mx-auto max-w-md px-4 pb-10 pt-12 text-center">
+      <section className="mx-auto max-w-md px-4 pb-6 pt-12 text-center">
         <div className="relative mx-auto h-44 w-44">
           <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-soft ring-2 ring-wine-300">
             <Image src={LINKS_PROFILE.photo} alt={LINKS_PROFILE.name} fill sizes="176px" className="object-cover" priority />
@@ -104,6 +107,11 @@ export default function LinksPage() {
         </div>
       </section>
 
+      <LinksTabs
+        setupCount={SETUP_PRODUCTS.length}
+        setup={<SetupSection />}
+        links={
+      <>
       <TagMarquee tags={["UGC Creator", "Influenciadora", "Mentora de Creators", "Mentoria individual"]} />
 
       {/* Sou marca */}
@@ -292,10 +300,14 @@ export default function LinksPage() {
           </div>
         </section>
 
-        <footer className="py-10 text-center text-sm text-ink-700/60">
-          © {new Date().getFullYear()} {LINKS_PROFILE.name} · Goiânia-GO
-        </footer>
       </div>
+      </>
+        }
+      />
+
+      <footer className="py-10 text-center text-sm text-ink-700/60">
+        © {new Date().getFullYear()} {LINKS_PROFILE.name} · Goiânia-GO
+      </footer>
     </main>
   );
 }
