@@ -158,6 +158,7 @@ export const SETUP_ITEMS: SetupItem[] = [
     store: "Mercado Livre",
     href: "https://meli.la/2mVWp7Z",
     icon: "luz",
+    image: "/images/setup/ring-light-braco-duplo.jpg",
   },
   { category: "Acessório", name: "Tela Magnética", store: "Mercado Livre", href: "https://meli.la/1u75Lyu", icon: "ima" },
   {
