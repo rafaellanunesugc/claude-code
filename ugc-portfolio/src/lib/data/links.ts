@@ -17,6 +17,7 @@ export const LINKS_PROFILE = {
   stats: [
     { value: "+60", label: "marcas atendidas" },
     { value: "25K", label: "seguidores" },
+    { value: "+15", label: "alunas" },
   ],
   email: "rafaellanunes.contato@gmail.com",
 };
@@ -39,44 +40,40 @@ export const BRAND_LINKS = [
   },
 ];
 
-// Seção "Sou creator" — o primeiro item aparece em destaque.
+// Seção "Sou creator": a mentoria em destaque, seguida dos outros produtos.
+export const MENTORIA = {
+  tag: "Mentoria individual · vagas limitadas",
+  title: "Mentoria",
+  slogan: "Transformando conteúdo em profissão.",
+  photo: "/images/portrait-2.jpg",
+  pitch:
+    "30 dias comigo, só você e eu. Nada de aula genérica: tudo pensado pro seu perfil, o seu nicho e o seu momento, até você fechar com marcas.",
+  proof: [
+    { value: "+15", label: "alunas mentoradas" },
+    { value: "+60", label: "marcas que eu já atendi" },
+  ],
+  steps: [
+    { title: "Posicionamento e perfil", text: "Bio e direção pra marca entender quem você é logo de cara." },
+    { title: "Conteúdo", text: "Vídeos que conectam e têm cara de parceria paga." },
+    { title: "Portfólio", text: "Um portfólio profissional pra mandar pras marcas." },
+    { title: "Abordagem", text: "Como achar as marcas certas e ser aprovada." },
+  ],
+  bonus: "Entre um encontro e outro, eu acompanho o que você produz e ajusto tudo na prática.",
+  price: "R$ 998",
+  priceNote: "4 encontros individuais + acompanhamento por 30 dias",
+  href: whatsappLink("Oi, Rafa! Quero garantir minha vaga na mentoria."),
+  cta: "Quero minha vaga na mentoria",
+};
+
 export type ProductLink = {
   tag?: string;
   title: string;
   description: string;
   href: string;
-  cta?: string;
   soon?: boolean;
-  // Imagem do logo (em /public). Quando existir, aparece no lugar do título.
-  logo?: string;
-  subtitle?: string;
-  details?: string;
-  price?: string;
-  // Produtos do CRIA usam as cores da marca do curso.
-  cria?: boolean;
 };
 
 export const CREATOR_PRODUCTS: ProductLink[] = [
-  {
-    tag: "Curso ao vivo · Método CRIA",
-    title: "CRIA LAB",
-    logo: "/images/cria-logo.png",
-    subtitle: "Da criação à profissionalização",
-    description:
-      "7 aulas ao vivo para transformar criação de conteúdo em posicionamento, oportunidade e profissão.",
-    details: "Aulas ao vivo de 19/10 a 09/11 · segundas e quartas, 19h30",
-    href: "https://criametodo.netlify.app",
-    cta: "Quero minha vaga no CRIA LAB",
-  },
-  {
-    tag: "Mentoria individual",
-    title: "CRIA 1:1 com a Rafa",
-    description: "30 dias · 4 encontros individuais · acompanhamento direto comigo",
-    price: "R$ 998",
-    href: whatsappLink("Oi, Rafa! Quero a mentoria CRIA 1:1."),
-    cta: "Quero a mentoria com a Rafa",
-    cria: true,
-  },
   {
     tag: "Em breve",
     title: "Modelo de portfólio",

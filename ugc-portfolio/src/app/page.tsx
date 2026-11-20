@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Briefcase, Send } from "lucide-react";
+import { ArrowDown, ArrowRight, Briefcase, Check, Send } from "lucide-react";
 import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { TagMarquee } from "@/components/public/TagMarquee";
@@ -11,18 +11,19 @@ import {
   CREATOR_PRODUCTS,
   LINKS_PROFILE,
   LINKS_SOCIALS,
+  MENTORIA,
   whatsappLink,
 } from "@/lib/data/links";
 
 export const metadata: Metadata = {
   title: "Rafa Nunes | UGC Creator",
   description:
-    "UGC Creator, influenciadora e mentora de creators. +60 marcas atendidas. Portfólio, mentoria CRIA, cupons de desconto e contato para parcerias.",
+    "UGC Creator, influenciadora e mentora de creators. +60 marcas atendidas e +15 alunas. Portfólio, mentoria individual, cupons de desconto e contato para parcerias.",
   alternates: { canonical: "/" },
   // Prévia ao mandar o link (WhatsApp, Instagram etc.). A imagem vem de app/opengraph-image.png.
   openGraph: {
     title: "Rafa Nunes | UGC Creator",
-    description: "Portfólio, CRIA, mentoria, cupons e contato — tudo num link só.",
+    description: "Portfólio, mentoria, cupons e contato — tudo num link só.",
     siteName: "Rafa Nunes",
     locale: "pt_BR",
     type: "website",
@@ -60,8 +61,6 @@ function SectionHeading({
 }
 
 export default function LinksPage() {
-  const [featured, ...products] = CREATOR_PRODUCTS;
-
   return (
     <main className="min-h-screen bg-white text-ink-900">
       {/* Topo */}
@@ -80,9 +79,9 @@ export default function LinksPage() {
         <p className="mt-1 text-lg font-thin text-wine-700">{LINKS_PROFILE.role}</p>
         <p className="mt-4 text-lg leading-relaxed text-ink-800">{LINKS_PROFILE.bio}</p>
 
-        <div className="mt-6 grid grid-cols-2 gap-3">
+        <div className="mt-6 grid grid-cols-3 gap-2">
           {LINKS_PROFILE.stats.map((stat) => (
-            <div key={stat.label} className="rounded-2xl border border-ink-900/10 px-4 py-3 text-left">
+            <div key={stat.label} className="rounded-2xl border border-ink-900/10 px-3 py-3 text-left">
               <p className="text-xl font-extrabold text-wine-700">{stat.value}</p>
               <p className="text-xs uppercase tracking-wide text-ink-700/60">{stat.label}</p>
             </div>
@@ -105,7 +104,7 @@ export default function LinksPage() {
         </div>
       </section>
 
-      <TagMarquee tags={["UGC Creator", "Influenciadora", "Mentora de Creators", "CRIA"]} />
+      <TagMarquee tags={["UGC Creator", "Influenciadora", "Mentora de Creators", "Mentoria individual"]} />
 
       {/* Sou marca */}
       <section id="marca" className="scroll-mt-4 bg-ink-900 py-14">
@@ -153,74 +152,67 @@ export default function LinksPage() {
       <div className="mx-auto max-w-md px-4">
         {/* Sou creator */}
         <section id="creator" className="scroll-mt-4 pt-14">
-          <SectionHeading eyebrow="Para creators" title="Do zero à" accent="primeira parceria." />
+          <SectionHeading eyebrow="Para creators" title="Do zero à" accent="primeira parceria paga." />
 
-          {featured && (
-            // Cartão do CRIA nas cores da marca do curso (marinho, amarelo e creme).
-            <a
-              href={featured.href}
-              {...linkProps(featured.href)}
-              className="relative block overflow-hidden rounded-2xl bg-[#3c405b] p-7 text-center text-[#f3f0e0] shadow-soft transition hover:-translate-y-0.5"
-            >
-              <span className="absolute inset-x-0 top-0 h-1.5 bg-[#f2e05a]" />
-              <span className="pointer-events-none absolute -left-16 -top-16 h-40 w-40 rounded-full border border-[#f3f0e0]/20" />
-              <span className="pointer-events-none absolute -bottom-20 -right-16 h-44 w-44 rounded-full border border-[#f3f0e0]/20" />
-              {featured.tag && (
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#f2e05a]">{featured.tag}</p>
-              )}
-              {featured.logo ? (
-                <Image
-                  src={featured.logo}
-                  alt={featured.title}
-                  width={322}
-                  height={146}
-                  className="mx-auto mt-5 h-16 w-auto"
-                />
-              ) : (
-                <h3 className="mt-3 text-4xl font-bold">{featured.title}</h3>
-              )}
-              {featured.subtitle && <p className="mt-2 text-lg text-[#f3f0e0]/90">{featured.subtitle}</p>}
-              <p className="mt-4 leading-relaxed text-[#f3f0e0]/80">{featured.description}</p>
-              {featured.details && (
-                <p className="mt-5 rounded-xl border border-[#f2e05a]/70 px-4 py-3 text-sm font-semibold text-[#f2e05a]">
-                  {featured.details.split(" · ").map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </p>
-              )}
-              <span className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#f2e05a] px-5 py-3.5 font-semibold text-[#3c405b]">
-                {featured.cta ?? "Quero saber mais"} <ArrowRight className="h-4 w-4" />
+          {/* Mentoria: o principal produto pra creators */}
+          <div className="overflow-hidden rounded-3xl bg-ink-900 text-white shadow-soft">
+            <div className="relative aspect-[4/3]">
+              <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-top" />
+              <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink-900">
+                {MENTORIA.tag}
               </span>
-            </a>
-          )}
+            </div>
+            <div className="p-6">
+              <h3 className="font-sans text-5xl font-extrabold uppercase tracking-tight">{MENTORIA.title}</h3>
+              <p className="mt-1 text-xl font-semibold text-blush-300">{MENTORIA.slogan}</p>
+              <p className="mt-4 leading-relaxed text-white/85">{MENTORIA.pitch}</p>
+
+              <div className="mt-5 grid grid-cols-2 gap-3">
+                {MENTORIA.proof.map((item) => (
+                  <div key={item.label} className="rounded-2xl bg-white/10 px-4 py-3">
+                    <p className="text-3xl font-extrabold">{item.value}</p>
+                    <p className="text-sm text-white/70">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-brand-300">Os 4 encontros</p>
+              <ol className="mt-3 space-y-3">
+                {MENTORIA.steps.map((step, i) => (
+                  <li key={step.title} className="flex gap-3">
+                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-brand-600 text-sm font-extrabold">
+                      {i + 1}
+                    </span>
+                    <span>
+                      <span className="block font-semibold">{step.title}</span>
+                      <span className="block text-sm text-white/70">{step.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-4 flex gap-2 text-sm text-white/85">
+                <Check className="mt-0.5 h-4 w-4 flex-none text-brand-300" />
+                {MENTORIA.bonus}
+              </p>
+
+              <div className="mt-6 rounded-2xl bg-white p-5 text-center text-ink-900">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-wine-600">Investimento</p>
+                <p className="mt-1 text-4xl font-extrabold">{MENTORIA.price}</p>
+                <p className="mt-1 text-sm text-ink-700/80">{MENTORIA.priceNote}</p>
+                <a
+                  href={MENTORIA.href}
+                  {...linkProps(MENTORIA.href)}
+                  className="mt-4 flex items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-4 font-bold text-white transition hover:bg-brand-700"
+                >
+                  {MENTORIA.cta} <ArrowRight className="h-5 w-5" />
+                </a>
+                <p className="mt-2 text-xs text-ink-700/70">Você fala direto comigo no WhatsApp.</p>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-3 space-y-3">
-            {products.map((product) =>
-              product.cria ? (
-                <a
-                  key={product.title}
-                  href={product.href}
-                  {...linkProps(product.href)}
-                  className="group block rounded-2xl bg-[#f3f0e0] p-6 text-[#3c405b] transition hover:-translate-y-0.5"
-                >
-                  {product.tag && (
-                    <span className="block text-xs font-bold uppercase tracking-[0.14em] text-[#a8321f]">
-                      {product.tag}
-                    </span>
-                  )}
-                  <span className="mt-1 flex items-baseline justify-between gap-3">
-                    <span className="text-xl font-bold">{product.title}</span>
-                    {product.price && <span className="flex-none text-xl font-extrabold">{product.price}</span>}
-                  </span>
-                  <span className="mt-1 block text-[#3c405b]/80">{product.description}</span>
-                  <span className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#3c405b] px-5 py-3 font-semibold text-[#f2e05a]">
-                    {product.cta ?? "Quero saber mais"}
-                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                  </span>
-                </a>
-              ) : (
+            {CREATOR_PRODUCTS.map((product) => (
               <a
                 key={product.title}
                 href={product.href}
@@ -245,8 +237,7 @@ export default function LinksPage() {
                 </span>
                 <ArrowRight className="h-5 w-5 flex-none text-wine-500 transition group-hover:translate-x-1" />
               </a>
-              ),
-            )}
+            ))}
           </div>
         </section>
 
