@@ -1,100 +1,64 @@
 import { SOCIAL_HANDLES } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 import { PercentBar } from "@/components/ui/PercentBar";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
-type PlatformMetrics = Translations["influencer"]["metrics"]["instagram"];
+type Metrics = Translations["influencer"]["metrics"];
 
-function PlatformCard({
+function PlatformPanel({
   data,
   t,
+  handle,
   location,
 }: {
-  data: PlatformMetrics | Translations["influencer"]["metrics"]["tiktok"];
-  t: Translations["influencer"]["metrics"];
+  data: Metrics["instagram"] | Metrics["tiktok"];
+  t: Metrics;
+  handle: string;
   location?: { brazil: number; cities: string[] };
 }) {
-  const ageColors = [
-    "bg-wine-200",
-    "bg-wine-300",
-    "bg-wine-400",
-    "bg-wine-500",
-    "bg-wine-600",
-    "bg-wine-700",
-    "bg-wine-800",
-  ];
-
   return (
-    <div className="rounded-2xl border border-ink-900/10 bg-white p-6 shadow-soft">
-      <div className="flex items-baseline justify-between">
-        <h3 className="text-lg font-bold text-ink-900">{data.heading}</h3>
-        <span className="text-xs text-ink-700/60">{t.periodLabel}</span>
+    <div className="border border-ink-900/15 bg-white p-6 md:p-8">
+      <div className="flex items-baseline justify-between gap-4 border-b border-ink-900/10 pb-4">
+        <h3 className="font-display text-2xl text-ink-900">
+          {data.heading} <span className="text-base italic text-ink-700/60">{handle}</span>
+        </h3>
+        <span className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{t.periodLabel}</span>
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3">
         {data.stats.map((stat) => (
-          <div key={stat.label} className="rounded-xl bg-cream p-3">
-            <p className="text-lg font-extrabold text-ink-900">{stat.value}</p>
-            <p className="text-xs text-ink-700/70">{stat.label}</p>
+          <div key={stat.label}>
+            <dt className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{stat.label}</dt>
+            <dd className="mt-1 font-display text-2xl text-ink-900">{stat.value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
 
-      {"topFormats" in data && (
-        <p className="mt-3 text-xs text-ink-700/70">{data.topFormats}</p>
-      )}
+      {"topFormats" in data && <p className="mt-5 text-sm italic text-ink-700">{data.topFormats}</p>}
 
-      <div className="mt-5 grid gap-5 sm:grid-cols-2">
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase text-ink-700/60">
-            {t.genderLabel}
-          </p>
-          <div className="space-y-2">
-            {data.gender.map((item, index) => (
-              <PercentBar
-                key={item.label}
-                label={item.label}
-                value={item.value}
-                colorClass={index === 0 ? "bg-brand-600" : "bg-wine-400"}
-              />
-            ))}
-          </div>
+      <div className="mt-8 grid gap-8 sm:grid-cols-2">
+        <div className="space-y-3">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{t.genderLabel}</p>
+          {data.gender.map((item) => (
+            <PercentBar key={item.label} label={item.label} value={item.value} colorClass="bg-wine-600" />
+          ))}
         </div>
-        <div>
-          <p className="mb-2 text-xs font-semibold uppercase text-ink-700/60">
-            {t.ageLabel}
-          </p>
-          <div className="space-y-2">
-            {data.age.map((item, index) => (
-              <PercentBar
-                key={item.label}
-                label={item.label}
-                value={item.value}
-                colorClass={ageColors[index % ageColors.length]}
-              />
-            ))}
-          </div>
+        <div className="space-y-3">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{t.ageLabel}</p>
+          {data.age.map((item) => (
+            <PercentBar key={item.label} label={item.label} value={item.value} colorClass="bg-brand-600" />
+          ))}
         </div>
       </div>
 
       {location && (
-        <div className="mt-5">
-          <p className="mb-2 text-xs font-semibold uppercase text-ink-700/60">
-            {t.locationLabel}
+        <div className="mt-8 space-y-3">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{t.locationLabel}</p>
+          <PercentBar label="Brasil" value={location.brazil} colorClass="bg-olive-600" />
+          <p className="pt-2 text-sm text-ink-700">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-ink-700/60">{t.citiesLabel}: </span>
+            {location.cities.join(", ")}
           </p>
-          <PercentBar label="Brasil" value={location.brazil} colorClass="bg-olive-500" />
-          <p className="mt-3 text-xs font-semibold uppercase text-ink-700/60">
-            {t.citiesLabel}
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {location.cities.map((city) => (
-              <span
-                key={city}
-                className="rounded-full bg-olive-100 px-3 py-1 text-xs text-olive-800"
-              >
-                {city}
-              </span>
-            ))}
-          </div>
         </div>
       )}
     </div>
@@ -109,45 +73,31 @@ export function InfluencerSection({
   followers: string;
 }) {
   return (
-    <section id="influenciadora" className="mx-auto max-w-6xl px-5 py-16">
-      <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-        {t.eyebrow}
-      </p>
-      <h2 className="mt-2 max-w-2xl text-2xl font-bold text-ink-900 md:text-3xl">
-        {t.title}
-      </h2>
-      <p className="mt-3 max-w-2xl text-ink-700">{t.subtitle}</p>
+    <section id="influenciadora" className="bg-white">
+      <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+          <div className="md:col-span-7">
+            <SectionHeading number="05" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
+          </div>
+          <div className="md:col-span-4 md:col-start-9 md:text-right">
+            <p className="font-display text-6xl text-wine-700">{followers}</p>
+            <p className="mt-1 text-[11px] uppercase tracking-[0.25em] text-ink-700">{t.followersSuffix}</p>
+          </div>
+        </div>
 
-      <div className="mt-6 flex flex-wrap gap-3">
-        <span className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm">
-          Instagram · {SOCIAL_HANDLES.instagram}
-        </span>
-        <span className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm">
-          TikTok · {SOCIAL_HANDLES.tiktok}
-        </span>
-        <span className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm">
-          {followers} {t.followersSuffix}
-        </span>
-      </div>
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          <PlatformPanel
+            data={t.metrics.instagram}
+            t={t.metrics}
+            handle={SOCIAL_HANDLES.instagram}
+            location={t.metrics.instagram.location}
+          />
+          <PlatformPanel data={t.metrics.tiktok} t={t.metrics} handle={SOCIAL_HANDLES.tiktok} />
+        </div>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-2">
-        <PlatformCard data={t.metrics.instagram} t={t.metrics} location={t.metrics.instagram.location} />
-        <PlatformCard data={t.metrics.tiktok} t={t.metrics} />
-      </div>
-
-      <div className="mt-8 rounded-2xl border border-ink-900/10 bg-white p-6 shadow-soft">
-        <p className="text-sm font-semibold text-ink-900">
-          {t.profileTopicsTitle}
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {t.topics.map((topic) => (
-            <span
-              key={topic}
-              className="rounded-full bg-olive-100 px-3 py-1.5 text-sm text-olive-800"
-            >
-              {topic}
-            </span>
-          ))}
+        <div className="mt-12 flex flex-col gap-4 border-t border-ink-900/15 pt-8 md:flex-row md:items-baseline md:gap-10">
+          <p className="text-[11px] uppercase tracking-[0.25em] text-ink-700">{t.profileTopicsTitle}</p>
+          <p className="font-display text-xl italic text-ink-900 md:text-2xl">{t.topics.join(" · ")}</p>
         </div>
       </div>
     </section>

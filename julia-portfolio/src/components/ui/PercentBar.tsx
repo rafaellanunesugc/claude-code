@@ -11,13 +11,10 @@ export function PercentBar({
     <div>
       <div className="flex items-baseline justify-between text-xs text-ink-700">
         <span>{label}</span>
-        <span className="font-semibold text-ink-900">{value}%</span>
+        <span className="font-display text-sm text-ink-900">{value}%</span>
       </div>
-      <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-ink-900/[0.06]">
-        <div
-          className={`h-full rounded-full ${colorClass}`}
-          style={{ width: `${Math.min(value, 100)}%` }}
-        />
+      <div className="mt-1.5 h-px w-full bg-ink-900/15">
+        <div className={`h-[3px] -translate-y-px ${colorClass}`} style={{ width: `${Math.min(value, 100)}%` }} />
       </div>
     </div>
   );

@@ -2,13 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Star } from "@/components/ui/Star";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { ContentCategory, PortfolioVideo } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
 
-const ALL_CATEGORIES = "todos";
-const ALL_NICHES = "todos";
+const ALL = "todos";
 
 export function Portfolio({
   t,
@@ -17,101 +16,76 @@ export function Portfolio({
   t: Translations["portfolio"];
   videos: PortfolioVideo[];
 }) {
-  const [category, setCategory] = useState<string>(ALL_CATEGORIES);
-  const [niche, setNiche] = useState<string>(ALL_NICHES);
+  const [category, setCategory] = useState<string>(ALL);
+  const [niche, setNiche] = useState<string>(ALL);
 
   const categories = [
-    { key: ALL_CATEGORIES, label: t.filters.todos },
+    { key: ALL, label: t.filters.todos },
     { key: "influenciadora" as ContentCategory, label: t.filters.influenciadora },
     { key: "ugc" as ContentCategory, label: t.filters.ugc },
   ];
 
   const videosInCategory = useMemo(
-    () =>
-      category === ALL_CATEGORIES
-        ? videos
-        : videos.filter((video) => video.category === category),
+    () => (category === ALL ? videos : videos.filter((video) => video.category === category)),
     [videos, category]
   );
 
-  const niches = useMemo(() => {
-    const seen = new Set<string>();
-    const ordered: string[] = [];
-    for (const video of videosInCategory) {
-      if (!seen.has(video.niche)) {
-        seen.add(video.niche);
-        ordered.push(video.niche);
-      }
-    }
-    return ordered;
-  }, [videosInCategory]);
+  const niches = useMemo(
+    () => Array.from(new Set(videosInCategory.map((video) => video.niche))),
+    [videosInCategory]
+  );
 
   function handleCategoryChange(next: string) {
     setCategory(next);
-    setNiche(ALL_NICHES);
+    setNiche(ALL);
   }
 
-  const filteredVideos = videosInCategory.filter(
-    (video) => niche === ALL_NICHES || video.niche === niche
-  );
+  const filteredVideos = videosInCategory.filter((video) => niche === ALL || video.niche === niche);
 
   return (
-    <section id="portfolio" className="bg-cream py-16">
-      <div className="mx-auto max-w-6xl px-5">
-        <h2 className="flex items-center gap-2 text-2xl font-bold text-ink-900 md:text-3xl">
-          <Star className="h-5 w-5 flex-none text-brand-500 md:h-6 md:w-6" />
-          {t.title}
-        </h2>
-        <p className="mt-2 max-w-2xl text-ink-700">{t.subtitle}</p>
+    <section id="portfolio" className="bg-white">
+      <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <SectionHeading number="03" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {categories.map((item) => (
-            <button
-              key={item.key}
-              onClick={() => handleCategoryChange(item.key)}
-              className={cn(
-                "rounded-full border px-4 py-2 text-sm font-semibold transition",
-                category === item.key
-                  ? "border-brand-600 bg-brand-600 text-white"
-                  : "border-ink-900/15 bg-white text-ink-900 hover:bg-ink-900/5"
-              )}
-            >
-              {item.label}
-            </button>
-          ))}
+          {/* Filtro 1: categoria */}
+          <div className="flex gap-6 border-b border-ink-900/15">
+            {categories.map((item) => (
+              <button
+                key={item.key}
+                onClick={() => handleCategoryChange(item.key)}
+                className={cn(
+                  "-mb-px border-b-2 pb-3 text-xs font-semibold uppercase tracking-[0.2em] transition",
+                  category === item.key
+                    ? "border-wine-700 text-ink-900"
+                    : "border-transparent text-ink-700/50 hover:text-ink-900"
+                )}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {category !== ALL_CATEGORIES && niches.length > 0 && (
-          <div className="mt-3 flex flex-wrap gap-2 border-t border-ink-900/10 pt-3">
-            <button
-              onClick={() => setNiche(ALL_NICHES)}
-              className={cn(
-                "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition",
-                niche === ALL_NICHES
-                  ? "border-wine-600 bg-wine-600 text-white"
-                  : "border-ink-900/15 bg-white text-ink-700 hover:bg-ink-900/5"
-              )}
-            >
-              {t.filters.todos}
-            </button>
-            {niches.map((item) => (
+        {/* Filtro 2: nichos da categoria escolhida */}
+        {category !== ALL && niches.length > 0 && (
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            {[ALL, ...niches].map((item) => (
               <button
                 key={item}
                 onClick={() => setNiche(item)}
                 className={cn(
-                  "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition",
-                  niche === item
-                    ? "border-wine-600 bg-wine-600 text-white"
-                    : "border-ink-900/15 bg-white text-ink-700 hover:bg-ink-900/5"
+                  "font-display italic transition",
+                  niche === item ? "text-wine-700 underline underline-offset-4" : "text-ink-700 hover:text-ink-900"
                 )}
               >
-                {t.nicheLabels[item] ?? item}
+                {item === ALL ? t.filters.todos : t.nicheLabels[item] ?? item}
               </button>
             ))}
           </div>
         )}
 
-        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
           {filteredVideos.map((video) => (
             <VideoPlayer
               key={video.id}

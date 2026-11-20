@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FEEDBACK_TYPES } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
 export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
@@ -17,79 +18,41 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
   }
 
   return (
-    <section id="feedbacks" className="mx-auto max-w-4xl px-5 py-16">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-            {t.eyebrow}
-          </p>
-          <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>
-          <p className="mt-2 max-w-lg text-ink-700">{t.subtitle}</p>
+    <section id="feedbacks" className="bg-white">
+      <div className="mx-auto max-w-5xl px-5 py-20 text-center md:px-10 md:py-28">
+        <SectionHeading number="07" eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} center />
+
+        <div className={cn("mt-14", item.image && "grid gap-10 text-left md:grid-cols-[0.6fr_1fr] md:items-center")}>
+          {item.image && (
+            <div className="relative aspect-[9/13] w-full overflow-hidden">
+              <Image src={item.image} alt={item.footnote} fill sizes="(max-width: 768px) 100vw, 30vw" className="object-cover" />
+            </div>
+          )}
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-olive-700">
+              {type === "resultado" ? t.resultLabel : `${t.testimonialLabel} · ${t.verifiedLabel}`}
+            </p>
+            <span className="mt-4 block font-display text-7xl leading-none text-wine-300" aria-hidden>
+              “
+            </span>
+            <blockquote className="mx-auto -mt-4 max-w-3xl font-display text-2xl italic leading-snug text-ink-900 md:text-3xl">
+              {item.caption}
+            </blockquote>
+            <p className="mt-6 text-[11px] uppercase tracking-[0.25em] text-ink-700">{item.footnote}</p>
+          </div>
         </div>
 
-        <div className="flex flex-none gap-2">
-          <button
-            type="button"
-            onClick={() => goTo(index - 1)}
-            aria-label="Anterior"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition hover:bg-ink-900/5"
-          >
+        <div className="mt-12 flex items-center justify-center gap-6 text-sm">
+          <button type="button" onClick={() => goTo(index - 1)} aria-label="Anterior" className="text-ink-700 hover:text-wine-700">
             ←
           </button>
-          <button
-            type="button"
-            onClick={() => goTo(index + 1)}
-            aria-label="Próximo"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-ink-900/15 text-ink-900 transition hover:bg-ink-900/5"
-          >
+          <span className="font-display italic text-ink-700">
+            {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+          </span>
+          <button type="button" onClick={() => goTo(index + 1)} aria-label="Próximo" className="text-ink-700 hover:text-wine-700">
             →
           </button>
         </div>
-      </div>
-
-      <div
-        className={cn(
-          "mt-8 min-h-[12rem] rounded-2xl border border-ink-900/10 bg-white p-6",
-          item.image && "grid gap-6 sm:grid-cols-[0.6fr_1fr]"
-        )}
-      >
-        {item.image && (
-          <div className="relative aspect-[9/13] w-full overflow-hidden rounded-xl">
-            <Image
-              src={item.image}
-              alt={item.footnote}
-              fill
-              sizes="(max-width: 640px) 100vw, 30vw"
-              className="object-cover"
-            />
-          </div>
-        )}
-
-        <div>
-          <div className="flex items-center gap-2">
-            <span
-              className={cn(
-                "w-fit rounded-full px-3 py-1 text-xs font-semibold",
-                type === "resultado"
-                  ? "bg-brand-100 text-brand-700"
-                  : "bg-ink-900/10 text-ink-800"
-              )}
-            >
-              {type === "resultado" ? t.resultLabel : t.testimonialLabel}
-            </span>
-            {type === "depoimento" && (
-              <span className="text-xs font-medium text-olive-700">
-                ✓ {t.verifiedLabel}
-              </span>
-            )}
-          </div>
-          <p className="mt-4 text-ink-700">{item.caption}</p>
-          <span className="mt-4 block text-xs text-ink-700/50">{item.footnote}</span>
-        </div>
-      </div>
-
-      <div className="mt-4 text-sm font-medium text-ink-700/60">
-        {String(index + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
       </div>
     </section>
   );

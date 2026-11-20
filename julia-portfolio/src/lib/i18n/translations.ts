@@ -92,6 +92,7 @@ export type Translations = {
     delivery: { prazoPadrao: string; prazoExpress: string; emiteNota: string };
   };
   portfolio: {
+    eyebrow: string;
     title: string;
     subtitle: string;
     filters: { todos: string; influenciadora: string; ugc: string };
@@ -184,7 +185,7 @@ export const translations: Record<Locale, Translations> = {
     ],
     // A Júlia ainda não tem certeza dessa frase — revisar.
     statement: {
-      line1: "A MELHOR PROPAGANDA",
+      line1: "A melhor propaganda",
       line2: "é aquela que ninguém percebe que é.",
     },
     brandLogos: {
@@ -359,6 +360,7 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     portfolio: {
+      eyebrow: "Trabalhos selecionados",
       title: "Portfólio",
       subtitle: "Escolha uma categoria e um nicho pra filtrar · clique num vídeo pra assistir.",
       filters: { todos: "Todos", influenciadora: "Influenciadora", ugc: "UGC" },
@@ -499,7 +501,7 @@ export const translations: Record<Locale, Translations> = {
       "Editing",
     ],
     statement: {
-      line1: "THE BEST ADVERTISING",
+      line1: "The best advertising",
       line2: "is the kind no one notices.",
     },
     brandLogos: {
@@ -673,6 +675,7 @@ export const translations: Record<Locale, Translations> = {
       },
     },
     portfolio: {
+      eyebrow: "Selected work",
       title: "Portfolio",
       subtitle: "Pick a category and a niche to filter · click a video to watch.",
       filters: { todos: "All", influenciadora: "Influencer", ugc: "UGC" },

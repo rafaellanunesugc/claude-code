@@ -1,28 +1,23 @@
 import type { Translations } from "@/lib/i18n/translations";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function WhyUGC({ t }: { t: Translations["whyUgc"] }) {
   return (
-    <section className="mx-auto max-w-4xl px-5 py-16">
-      <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-        {t.eyebrow}
-      </p>
-      <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
-        {t.title}
-      </h2>
-      <p className="mt-3 max-w-2xl text-ink-700">{t.paragraph}</p>
-
-      <div className="mt-6 grid gap-3 sm:grid-cols-2">
-        {t.stats.map((stat) => (
-          <div
-            key={stat}
-            className="flex items-start gap-3 rounded-2xl border border-ink-900/10 bg-white p-4 shadow-sm"
-          >
-            <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-brand-600 text-xs font-bold text-white">
-              ✓
-            </span>
-            <p className="text-sm text-ink-700">{stat}</p>
-          </div>
-        ))}
+    <section className="bg-cream">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-12 md:px-10 md:py-28">
+        <div className="md:col-span-5">
+          <SectionHeading number="08" eyebrow={t.eyebrow} title={t.title} subtitle={t.paragraph} />
+        </div>
+        <ul className="grid gap-px self-center bg-ink-900/10 sm:grid-cols-2 md:col-span-6 md:col-start-7">
+          {t.stats.map((stat, index) => (
+            <li key={stat} className="bg-cream p-6">
+              <span className="font-display text-sm italic text-wine-700">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p className="mt-3 leading-relaxed text-ink-900">{stat}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

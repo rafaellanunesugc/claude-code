@@ -1,6 +1,6 @@
 import type { Locale, Translations } from "@/lib/i18n/translations";
 import { LanguageSwitcher } from "@/components/public/LanguageSwitcher";
-import { Star } from "@/components/ui/Star";
+import { SITE_NAME } from "@/lib/site";
 
 export function SiteHeader({
   t,
@@ -20,24 +20,23 @@ export function SiteHeader({
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-900/5 bg-white/85 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-        <a href="#topo" className="flex items-center gap-1.5 font-display text-2xl text-ink-900">
-          <Star className="h-4 w-4 flex-none text-brand-500" />
-          Júlia <span className="text-wine-700">Ilidia</span>
+    <header className="sticky top-0 z-40 border-b border-ink-900/10 bg-cream/90 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-10">
+        <a href="#topo" className="text-sm font-semibold uppercase tracking-[0.3em] text-ink-900">
+          {SITE_NAME}
         </a>
-        <nav className="hidden gap-6 text-sm font-medium text-ink-700 md:flex">
+        <nav className="hidden gap-8 text-xs uppercase tracking-[0.2em] text-ink-700 lg:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-brand-600">
+            <a key={link.href} href={link.href} className="transition hover:text-wine-700">
               {link.label}
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-5">
           <LanguageSwitcher locale={locale} onChange={onChangeLocale} />
           <a
             href="#contato"
-            className="hidden rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 sm:inline-block"
+            className="hidden border border-ink-900 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink-900 transition hover:bg-ink-900 hover:text-cream sm:inline-block"
           >
             {t.cta}
           </a>

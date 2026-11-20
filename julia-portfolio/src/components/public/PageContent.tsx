@@ -24,7 +24,7 @@ import { SiteFooter } from "@/components/public/SiteFooter";
 import { ContactPopup } from "@/components/public/ContactPopup";
 import { FloatingWhatsApp } from "@/components/public/FloatingWhatsApp";
 
-const STORAGE_KEY = "ugc_locale";
+const STORAGE_KEY = "julia_locale";
 
 export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
   const [locale, setLocale] = useState<Locale>("pt");
@@ -57,17 +57,17 @@ export function PageContent({ videos }: { videos: PortfolioVideo[] }) {
       <Hero t={t.hero} />
       <TagMarquee tags={t.marquee} />
       <Statement t={t.statement} />
-      <BrandLogos t={t.brandLogos} />
       <AboutMe t={t.about} />
       <Studio t={t.studio} />
-      <InfluencerSection t={t.influencer} followers={followersValue} />
-      <UGCSection t={t.ugc} />
-      <WorkWithMe t={t.work} />
       <Portfolio t={t.portfolio} videos={videos} />
+      <UGCSection t={t.ugc} />
+      <InfluencerSection t={t.influencer} followers={followersValue} />
+      <WorkWithMe t={t.work} />
+      <BrandLogos t={t.brandLogos} />
       <Photos t={t.photos} />
       <Feedbacks t={t.feedbacks} />
-      <FAQ t={t.faq} />
       <WhyUGC t={t.whyUgc} />
+      <FAQ t={t.faq} />
       <Contact t={t.contact} />
       <SiteFooter t={t.footer} />
       <ContactPopup t={t.popup} />

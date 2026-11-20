@@ -1,46 +1,50 @@
 import Image from "next/image";
 import { SITE_NAME } from "@/lib/site";
 import type { Translations } from "@/lib/i18n/translations";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Studio({ t }: { t: Translations["studio"] }) {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16">
-      <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-soft">
-          <Image
-            src="/images/portrait-2.jpg"
-            alt={`${SITE_NAME} gravando`}
-            fill
-            sizes="(max-width: 768px) 100vw, 35vw"
-            className="object-cover"
-          />
+    <section className="bg-cream">
+      <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:grid-cols-12 md:items-center md:px-10 md:py-28">
+        <div className="relative md:col-span-5">
+          <div className="absolute left-4 top-4 h-full w-full border border-wine-300" aria-hidden />
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Image
+              src="/images/portrait-2.jpg"
+              alt={`${SITE_NAME} gravando`}
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
-            {t.eyebrow}
-          </p>
-          <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>
+        <div className="md:col-span-7 md:pl-8">
+          <SectionHeading number="02" eyebrow={t.eyebrow} title={t.title} />
 
-          <div className="mt-6 space-y-5">
-            {t.items.map((item) => (
-              <div key={item.title}>
-                <p className="font-semibold text-ink-900">{item.title}</p>
-                <p className="mt-1 text-sm text-ink-700/80">{item.description}</p>
+          <div className="mt-10 divide-y divide-ink-900/10 border-y border-ink-900/10">
+            {t.items.map((item, index) => (
+              <div key={item.title} className="grid gap-2 py-6 sm:grid-cols-[3rem_1fr]">
+                <span className="font-display text-lg italic text-wine-700">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <p className="font-display text-xl text-ink-900">{item.title}</p>
+                  <p className="mt-2 leading-relaxed text-ink-700">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <ul className="mt-8 grid gap-x-8 gap-y-3 text-sm text-ink-900 sm:grid-cols-2">
             {t.gear.map((item) => (
-              <span
-                key={item}
-                className="rounded-full bg-brand-50 px-3.5 py-1.5 text-xs font-semibold text-brand-700"
-              >
+              <li key={item} className="flex items-center gap-3">
+                <span className="h-px w-4 bg-wine-500" aria-hidden />
                 {item}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>
