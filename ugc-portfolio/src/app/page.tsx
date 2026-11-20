@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Briefcase, Check, Send } from "lucide-react";
+import { ArrowDown, ArrowRight, Briefcase, Check, Send, ShoppingBag } from "lucide-react";
 import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { TagMarquee } from "@/components/public/TagMarquee";
 import { CouponCard } from "@/components/links/CouponCard";
+import { LinksTabs } from "@/components/links/LinksTabs";
 import {
   BRAND_LINKS,
   COUPONS,
@@ -12,6 +13,8 @@ import {
   LINKS_PROFILE,
   LINKS_SOCIALS,
   MENTORIA,
+  SETUP_INTRO,
+  SETUP_ITEMS,
   whatsappLink,
 } from "@/lib/data/links";
 
@@ -61,49 +64,8 @@ function SectionHeading({
 }
 
 export default function LinksPage() {
-  return (
-    <main className="min-h-screen bg-white text-ink-900">
-      {/* Topo */}
-      <section className="mx-auto max-w-md px-4 pb-10 pt-12 text-center">
-        <div className="relative mx-auto h-44 w-44">
-          <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-soft ring-2 ring-wine-300">
-            <Image src={LINKS_PROFILE.photo} alt={LINKS_PROFILE.name} fill sizes="176px" className="object-cover" priority />
-          </div>
-          <Star className="absolute -left-2 top-2 h-7 w-7 text-brand-400" />
-          <Star className="absolute -right-1 bottom-4 h-5 w-5 text-wine-400" />
-        </div>
-
-        <h1 className="mt-6 whitespace-nowrap font-signature text-5xl leading-tight text-ink-900">
-          {LINKS_PROFILE.name}
-        </h1>
-        <p className="mt-1 text-lg font-thin text-wine-700">{LINKS_PROFILE.role}</p>
-        <p className="mt-4 text-lg leading-relaxed text-ink-800">{LINKS_PROFILE.bio}</p>
-
-        <div className="mt-6 grid grid-cols-3 gap-2">
-          {LINKS_PROFILE.stats.map((stat) => (
-            <div key={stat.label} className="rounded-2xl border border-ink-900/10 px-3 py-3 text-left">
-              <p className="text-xl font-extrabold text-wine-700">{stat.value}</p>
-              <p className="text-xs uppercase tracking-wide text-ink-700/60">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-6 grid grid-cols-2 gap-3">
-          <a
-            href="#creator"
-            className="flex items-center justify-center gap-1.5 rounded-full bg-brand-600 px-4 py-3.5 font-semibold text-white transition hover:bg-brand-700"
-          >
-            Sou creator <ArrowDown className="h-4 w-4" />
-          </a>
-          <a
-            href="#marca"
-            className="flex items-center justify-center gap-1.5 rounded-full bg-ink-900 px-4 py-3.5 font-semibold text-white transition hover:bg-ink-800"
-          >
-            Sou marca <ArrowDown className="h-4 w-4" />
-          </a>
-        </div>
-      </section>
-
+  const linksContent = (
+    <>
       <TagMarquee tags={["UGC Creator", "Influenciadora", "Mentora de Creators", "Mentoria individual"]} />
 
       {/* Sou marca */}
@@ -289,10 +251,124 @@ export default function LinksPage() {
           </div>
         </section>
 
+      </div>
+    </>
+  );
+
+  return (
+    <main className="min-h-screen bg-white text-ink-900">
+      {/* Topo */}
+      <section className="mx-auto max-w-md px-4 pb-10 pt-12 text-center">
+        <div className="relative mx-auto h-44 w-44">
+          <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white shadow-soft ring-2 ring-wine-300">
+            <Image src={LINKS_PROFILE.photo} alt={LINKS_PROFILE.name} fill sizes="176px" className="object-cover" priority />
+          </div>
+          <Star className="absolute -left-2 top-2 h-7 w-7 text-brand-400" />
+          <Star className="absolute -right-1 bottom-4 h-5 w-5 text-wine-400" />
+        </div>
+
+        <h1 className="mt-6 whitespace-nowrap font-signature text-5xl leading-tight text-ink-900">
+          {LINKS_PROFILE.name}
+        </h1>
+        <p className="mt-1 text-lg font-thin text-wine-700">{LINKS_PROFILE.role}</p>
+        <p className="mt-4 text-lg leading-relaxed text-ink-800">{LINKS_PROFILE.bio}</p>
+
+        <div className="mt-6 grid grid-cols-3 gap-2">
+          {LINKS_PROFILE.stats.map((stat) => (
+            <div key={stat.label} className="rounded-2xl border border-ink-900/10 px-3 py-3 text-left">
+              <p className="text-xl font-extrabold text-wine-700">{stat.value}</p>
+              <p className="text-xs uppercase tracking-wide text-ink-700/60">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 grid grid-cols-2 gap-3">
+          <a
+            href="#creator"
+            className="flex items-center justify-center gap-1.5 rounded-full bg-brand-600 px-4 py-3.5 font-semibold text-white transition hover:bg-brand-700"
+          >
+            Sou creator <ArrowDown className="h-4 w-4" />
+          </a>
+          <a
+            href="#marca"
+            className="flex items-center justify-center gap-1.5 rounded-full bg-ink-900 px-4 py-3.5 font-semibold text-white transition hover:bg-ink-800"
+          >
+            Sou marca <ArrowDown className="h-4 w-4" />
+          </a>
+        </div>
+      </section>
+
+      {SETUP_ITEMS.length > 0 ? (
+        <LinksTabs links={linksContent} setup={<SetupTab />} setupCount={SETUP_ITEMS.length} />
+      ) : (
+        linksContent
+      )}
+
+      <div className="mx-auto max-w-md px-4">
         <footer className="py-10 text-center text-sm text-ink-700/60">
           © {new Date().getFullYear()} {LINKS_PROFILE.name} · Goiânia-GO
         </footer>
       </div>
     </main>
+  );
+}
+
+const STORE_BADGE: Record<string, string> = {
+  "Mercado Livre": "bg-[#ffe600] text-[#2d3277]",
+  Amazon: "bg-[#232f3e] text-white",
+  Shopee: "bg-[#ee4d2d] text-white",
+  Magalu: "bg-[#0086ff] text-white",
+};
+
+function SetupTab() {
+  return (
+    <div className="mx-auto max-w-md px-4">
+      <div className="overflow-hidden rounded-3xl bg-ink-900 text-center text-white">
+        {SETUP_INTRO.photo && (
+          <div className="relative aspect-square">
+            <Image src={SETUP_INTRO.photo} alt="Rafa Nunes gravando" fill sizes="448px" className="object-cover" />
+          </div>
+        )}
+        <div className="px-6 py-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-300">{SETUP_INTRO.eyebrow}</p>
+          <h2 className="mt-2 text-4xl font-extrabold leading-tight">
+            {SETUP_INTRO.title} <span className="block text-blush-300">{SETUP_INTRO.accent}</span>
+          </h2>
+          <p className="mt-3 text-white/80">{SETUP_INTRO.text}</p>
+        </div>
+      </div>
+
+      <div className="mt-3 grid grid-cols-2 gap-3">
+        {SETUP_ITEMS.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-ink-900/10 bg-white transition hover:-translate-y-0.5 hover:border-wine-300"
+          >
+            <span className="relative block aspect-square border-b border-ink-900/10 bg-white">
+              <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain p-3" />
+              <span
+                className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide ${
+                  STORE_BADGE[item.store] ?? "bg-ink-900 text-white"
+                }`}
+              >
+                {item.store}
+              </span>
+            </span>
+            <span className="flex flex-1 flex-col p-3">
+              <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-wine-600">{item.category}</span>
+              <span className="mt-0.5 flex-1 font-bold leading-snug text-ink-900">{item.name}</span>
+              <span className="mt-3 flex items-center justify-center gap-1.5 rounded-full bg-ink-900 px-3 py-2.5 text-xs font-bold uppercase tracking-wide text-white">
+                <ShoppingBag className="h-3.5 w-3.5" /> Ver produto
+              </span>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <p className="mt-4 text-center text-xs text-ink-700/70">{SETUP_INTRO.disclosure}</p>
+    </div>
   );
 }

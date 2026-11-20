@@ -113,3 +113,35 @@ export const COUPONS: Coupon[] = [
 ];
 
 export const LINKS_SOCIALS = SOCIAL_LINKS;
+
+// Aba "Meu setup": equipamentos com link de afiliada.
+// Para adicionar um item: coloque a foto em public/images/setup/ e preencha
+// categoria, nome, loja e o seu link de afiliada. Com a lista vazia, a aba some.
+export type SetupStore = "Mercado Livre" | "Amazon" | "Shopee" | "Magalu" | "Outra loja";
+
+export type SetupItem = {
+  category: string;
+  name: string;
+  image: string;
+  store: SetupStore;
+  href: string;
+};
+
+export const SETUP_INTRO: {
+  photo?: string;
+  eyebrow: string;
+  title: string;
+  accent: string;
+  text: string;
+  disclosure: string;
+} = {
+  // Foto opcional do topo da aba (ex.: você com a câmera). Sem foto, o cartão fica só com o texto.
+  photo: undefined,
+  eyebrow: "Indicações",
+  title: "O que eu uso",
+  accent: "pra gravar.",
+  text: "Os equipamentos da minha rotina de criação, testados no dia a dia.",
+  disclosure: "Alguns links são de afiliada: comprando por eles, você não paga nada a mais e me ajuda a continuar criando.",
+};
+
+export const SETUP_ITEMS: SetupItem[] = [];
