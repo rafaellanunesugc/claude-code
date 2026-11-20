@@ -127,7 +127,7 @@ export type SetupProduct = {
 };
 
 export const SETUP = {
-  photo: "/images/ugc-unboxing-bg.jpg",
+  photo: "/images/about.jpg",
   eyebrow: "Indicações",
   title: "Meu setup",
   accent: "de gravação.",
