@@ -513,5 +513,4 @@ export const PORTFOLIO_PHOTOS: PortfolioPhoto[] = [
   { src: "/images/fotos/foto-ox-nutre.jpg", alt: "Rafa Nunes aplicando o óleo nutritivo 3 em 1 da OX" },
   { src: "/images/fotos/foto-acuvue-oasys.jpg", alt: "Rafa Nunes com as lentes de contato Acuvue Oasys" },
   { src: "/images/fotos/foto-serum-skincare.jpg", alt: "Rafa Nunes com um sérum de skincare" },
-  { src: "/images/fotos/foto-popozuda.jpg", alt: "Rafa Nunes com o hidratante corporal Popozuda" },
 ];

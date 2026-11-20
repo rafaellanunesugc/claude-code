@@ -354,6 +354,11 @@ export const translations: Record<Locale, Translations> = {
             "Consultoria de estratégia UGC pra creators: como iniciar no UGC, criação de portfólio, abordagem de marcas, profissionalização, equipamentos e como escalar.",
         },
         {
+          title: "UGC Canvas",
+          description:
+            "Criativos estáticos no estilo UGC montados no Canva: prints, depoimentos e fotos de produto combinados num layout pronto pra rodar em anúncio.",
+        },
+        {
           title: "Stories",
           description:
             "Divulgação de produtos ou serviços nos stories, com audiência de até 1.000 visualizadores e comunidade engajada.",
@@ -723,6 +728,11 @@ export const translations: Record<Locale, Translations> = {
           title: "UGC Strategy & Consulting",
           description:
             "Strategy consulting for creators: how to start in UGC, building a portfolio, approaching brands, professionalizing, equipment, and how to scale.",
+        },
+        {
+          title: "UGC Canvas",
+          description:
+            "Static UGC-style ad creatives built in Canva: screenshots, testimonials and product photos combined into a layout ready to run as an ad.",
         },
         {
           title: "Stories",
