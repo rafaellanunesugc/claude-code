@@ -276,7 +276,7 @@ export default function LinksPage() {
               alt={LINKS_PROFILE.name}
               fill
               sizes="448px"
-              className="object-cover object-[center_30%]"
+              className="object-cover object-[center_25%]"
               priority
             />
           </div>

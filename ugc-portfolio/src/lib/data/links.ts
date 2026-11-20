@@ -13,7 +13,7 @@ export const LINKS_PROFILE = {
   name: "Rafa Nunes",
   role: "UGC Creator · Influenciadora · Mentora de Creators",
   bio: "Crio vídeos UGC e conteúdo de influência que fazem as marcas serem lembradas. E ensino quem tá começando a transformar conteúdo em parceria paga.",
-  photo: "/images/foto-capa.jpg",
+  photo: "/images/fotos/foto-estudio-bege.jpg",
   stats: [
     { value: "+60", label: "marcas atendidas" },
     { value: "25K", label: "seguidores" },
