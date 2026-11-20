@@ -59,7 +59,7 @@ export function SetupSection() {
     <section className="mx-auto max-w-md px-4 pt-6">
       <div className="overflow-hidden rounded-3xl bg-blush-100">
         <div className="relative aspect-[4/3]">
-          <Image src={SETUP.photo} alt="Rafa Nunes gravando" fill sizes="448px" className="object-cover object-bottom" />
+          <Image src={SETUP.photo} alt="Rafa Nunes" fill sizes="448px" className="object-cover object-[center_15%]" />
         </div>
         <div className="px-6 py-7 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-wine-700">{SETUP.eyebrow}</p>
