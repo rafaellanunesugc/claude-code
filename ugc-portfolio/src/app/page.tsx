@@ -207,6 +207,9 @@ export default function LinksPage() {
                   {MENTORIA.cta} <ArrowRight className="h-5 w-5" />
                 </a>
                 <p className="mt-2 text-xs text-ink-700/70">Você fala direto comigo no WhatsApp.</p>
+                <a href="/mentoria" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:underline">
+                  Ver todos os detalhes da mentoria <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
