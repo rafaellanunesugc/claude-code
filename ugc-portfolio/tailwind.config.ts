@@ -64,7 +64,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "serif"],
+        display: ["var(--font-display)", "sans-serif"],
         signature: ["var(--font-signature)", "cursive"],
       },
       boxShadow: {
