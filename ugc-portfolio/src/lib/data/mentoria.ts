@@ -45,6 +45,29 @@ export const MENTORIA_LP = {
     ],
   },
 
+  // Depoimentos de alunas. Textos como elas escreveram.
+  // `context` aparece embaixo do nome (ex.: de qual turma/produto ela foi aluna).
+  testimonials: [
+    {
+      name: "Lidiane",
+      context: "Aluna do CRIA",
+      highlight: "Um divisor de águas na minha trajetória como UGC Creator!",
+      text: "Obrigada por tanto conhecimento, dedicação e por compartilharem tudo com a gente. Ainda estou tentando absorver tanta informação! A forma como vocês conduziram o curso foi excepcional, e o método mão na massa me tirou da zona de conforto e me fez enxergar novas possibilidades. Saio com muito aprendizado, inspiração e ainda mais vontade de crescer nessa jornada. Que venham os próximos capítulos! 🩷✨",
+    },
+    {
+      name: "Isabella Júlia",
+      context: "Aluna do CRIA",
+      highlight: "Antes achava que sabia exatamente o que estava fazendo, mas vi que não sabia nem metade!",
+      text: "O CRIA foi muito importante na minha trajetória como UGC e para me tornar uma influ futuramente também. Foi muito rico todo o conhecimento que eu tive: entender como precificar meu trabalho, como negociar, como fazer a abordagem que realmente converte e profissionalizar a minha criação. Só tenho a agradecer por todo ensinamento ❤️",
+    },
+    {
+      name: "Letycia Borges",
+      context: "Aluna do CRIA",
+      highlight: "Achei tudo muito bem explicado, com orientações claras e bastante aprendizado.",
+      text: "Gostei bastante do curso! Não conseguia participar das aulas ao vivo, mas sempre assistia as gravações e consegui acompanhar muito bem o conteúdo. Foi uma experiência muito positiva. ❤️",
+    },
+  ],
+
   includes: [
     "4 encontros individuais ao vivo, comigo",
     "Análise completa do seu perfil",

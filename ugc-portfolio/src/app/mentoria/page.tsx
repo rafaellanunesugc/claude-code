@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Quote, Sparkles } from "lucide-react";
 import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { TagMarquee } from "@/components/public/TagMarquee";
@@ -211,6 +211,36 @@ export default function MentoriaPage() {
             <Link href="/portfolio" className="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-700 hover:underline">
               Ver meu portfólio <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Depoimentos */}
+      <section className="bg-ink-900 py-16 text-white md:py-20">
+        <div className="mx-auto max-w-5xl px-5">
+          <div className="text-center">
+            <Eyebrow dark>Feedback das alunas</Eyebrow>
+            <Heading title="Quem já aprendeu" accent="comigo." dark />
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {MENTORIA_LP.testimonials.map((t) => (
+              <figure key={t.name} className="flex flex-col rounded-3xl bg-white p-6 text-ink-900">
+                <Quote className="h-8 w-8 text-wine-300" />
+                <blockquote className="mt-3 flex-1">
+                  <p className="font-display text-xl italic leading-snug text-wine-700">{t.highlight}</p>
+                  <p className="mt-3 leading-relaxed text-ink-800">{t.text}</p>
+                </blockquote>
+                <figcaption className="mt-5 flex items-center gap-3 border-t border-ink-900/10 pt-4">
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-blush-200 font-bold text-wine-800">
+                    {t.name.charAt(0)}
+                  </span>
+                  <span>
+                    <span className="block font-semibold">{t.name}</span>
+                    <span className="block text-sm text-ink-700/70">{t.context}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
