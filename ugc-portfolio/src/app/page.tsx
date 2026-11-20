@@ -71,9 +71,9 @@ function SectionHeading({
   );
 }
 
-// Cores do cartão da mentoria: as mesmas do cartão de mentora no portfólio.
-const MENTORIA_BG = "bg-[#3c405b]";
-const MENTORIA_ACCENT = "bg-[#f2e05a] text-[#3c405b]";
+// Cores do cartão da mentoria: as mesmas do cartão de mentora no portfólio (café + terracota).
+const MENTORIA_BG = "bg-coffee-800";
+const MENTORIA_ACCENT = "bg-terracotta-500 text-coffee-900";
 
 export default function LinksPage() {
   const linksContent = (
@@ -124,32 +124,32 @@ export default function LinksPage() {
       </section>
 
       {/* Sou creator */}
-      <section id="creator" className="scroll-mt-20 bg-cream py-14">
+      <section id="creator" className="scroll-mt-20 bg-sage py-14">
         <div className="mx-auto max-w-md px-5">
           <SectionHeading eyebrow="Para creators" title="Do zero à" accent="primeira parceria paga." />
 
-          <div className={`overflow-hidden rounded-2xl ${MENTORIA_BG} text-white shadow-soft`}>
+          <div className={`overflow-hidden rounded-2xl ${MENTORIA_BG} text-cream shadow-soft`}>
             <div className="relative aspect-square">
               <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-center" />
-              <span className={`absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${MENTORIA_ACCENT}`}>
+              <span className="absolute left-4 top-4 rounded-full bg-cream px-3 py-1 text-xs font-bold uppercase tracking-wide text-coffee-900">
                 {MENTORIA.tag}
               </span>
             </div>
             <div className="p-6">
               <h3 className="text-4xl font-extrabold uppercase tracking-tight">{MENTORIA.title}</h3>
-              <p className="mt-1 text-xl font-bold italic text-[#f2e05a]">{MENTORIA.slogan}</p>
-              <p className="mt-4 leading-relaxed text-[#f3f0e0]/85">{MENTORIA.pitch}</p>
+              <p className="mt-1 text-xl font-bold italic text-terracotta-500">{MENTORIA.slogan}</p>
+              <p className="mt-4 leading-relaxed text-cream/85">{MENTORIA.pitch}</p>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
                 {MENTORIA.proof.map((item) => (
                   <div key={item.label} className="rounded-xl bg-white/10 px-4 py-3">
                     <p className="text-3xl font-extrabold">{item.value}</p>
-                    <p className="text-sm text-[#f3f0e0]/75">{item.label}</p>
+                    <p className="text-sm text-cream/75">{item.label}</p>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-[#f2e05a]">Os 4 encontros</p>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-terracotta-500">Os 4 encontros</p>
               <ol className="mt-3 space-y-3">
                 {MENTORIA.steps.map((step, i) => (
                   <li key={step.title} className="flex gap-3">
@@ -158,20 +158,20 @@ export default function LinksPage() {
                     </span>
                     <span>
                       <span className="block font-bold">{step.title}</span>
-                      <span className="block text-sm text-[#f3f0e0]/75">{step.text}</span>
+                      <span className="block text-sm text-cream/75">{step.text}</span>
                     </span>
                   </li>
                 ))}
               </ol>
-              <p className="mt-4 flex gap-2 text-sm text-[#f3f0e0]/85">
-                <Check className="mt-0.5 h-4 w-4 flex-none text-[#f2e05a]" />
+              <p className="mt-4 flex gap-2 text-sm text-cream/85">
+                <Check className="mt-0.5 h-4 w-4 flex-none text-terracotta-500" />
                 {MENTORIA.bonus}
               </p>
 
               <div className="mt-6 rounded-xl bg-white/10 p-5 text-center">
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#f3f0e0]/75">Investimento</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-cream/75">Investimento</p>
                 <p className="mt-1 text-4xl font-extrabold">{MENTORIA.price}</p>
-                <p className="mt-1 text-sm text-[#f3f0e0]/75">{MENTORIA.priceNote}</p>
+                <p className="mt-1 text-sm text-cream/75">{MENTORIA.priceNote}</p>
                 <a
                   href={MENTORIA.href}
                   {...linkProps(MENTORIA.href)}
@@ -179,7 +179,7 @@ export default function LinksPage() {
                 >
                   {MENTORIA.cta} <ArrowRight className="h-5 w-5" />
                 </a>
-                <p className="mt-2 text-xs text-[#f3f0e0]/70">Você fala direto comigo no WhatsApp.</p>
+                <p className="mt-2 text-xs text-cream/70">Você fala direto comigo no WhatsApp.</p>
               </div>
             </div>
           </div>
@@ -266,11 +266,11 @@ export default function LinksPage() {
   );
 
   return (
-    <main className="min-h-screen bg-white text-ink-900">
+    <main className="min-h-screen bg-cream text-ink-900">
       {/* Topo: mesmo estilo do topo do portfólio */}
       <section className="mx-auto max-w-md px-5 pb-8 pt-8">
         <div className="relative">
-          <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl bg-cream shadow-soft">
+          <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl bg-sage shadow-soft">
             <Image
               src={LINKS_PROFILE.photo}
               alt={LINKS_PROFILE.name}

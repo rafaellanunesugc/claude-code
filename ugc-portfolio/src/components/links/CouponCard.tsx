@@ -46,7 +46,7 @@ export function CouponCard({ brand, code, logo, discount, href }: Coupon) {
       <button
         type="button"
         onClick={copy}
-        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-dashed border-ink-900/25 bg-cream/60 px-4 py-2.5 font-mono text-sm font-semibold text-ink-900 transition hover:border-brand-500"
+        className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-dashed border-ink-900/25 bg-cream px-4 py-2.5 font-mono text-sm font-semibold text-ink-900 transition hover:border-brand-500"
         aria-label={`Copiar cupom ${code}`}
       >
         {code}
