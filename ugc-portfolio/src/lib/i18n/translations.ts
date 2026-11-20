@@ -90,6 +90,14 @@ export type Translations = {
     formats: WorkFormat[];
     deliveryLabels: { prazoPadrao: string; prazoExpress: string; nota: string };
     delivery: { prazoPadrao: string; prazoExpress: string; emiteNota: string };
+    mentoria: {
+      tag: string;
+      title: string;
+      description: string;
+      price: string;
+      cta: string;
+      whatsappMessage: string;
+    };
   };
   portfolio: {
     title: string;
@@ -224,13 +232,13 @@ export const translations: Record<Locale, Translations> = {
       ],
       commitment:
         "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
-      chips: ["UGC Creator", "Influenciadora", "Videomaker", "Mentora de Creators"],
+      chips: ["UGC Creator", "Influenciadora", "Videomaker", "Mentora de Creators", "Especialista em Tráfego Pago"],
       criaBadge:
         "Idealizadora do método CRIA — mentoria pra creators que querem profissionalizar o conteúdo.",
       stats: [
         { value: "25 anos", label: "Idade" },
         { value: "Goiânia-GO", label: "Base" },
-        { value: "6 anos", label: "De experiência" },
+        { value: "8 anos", label: "De experiência" },
         { value: "25K", label: "Seguidores" },
       ],
     },
@@ -381,6 +389,15 @@ export const translations: Record<Locale, Translations> = {
         prazoExpress: "48h úteis (sob consulta, com taxa adicional)",
         emiteNota: "Sim, emito nota fiscal como profissional autônoma (MEI).",
       },
+      mentoria: {
+        tag: "Mentora de Creators",
+        title: "Também ensino quem está começando.",
+        description:
+          "Além de atender marcas, sou mentora de creators: 30 dias comigo, 4 encontros individuais, do posicionamento até você fechar sua primeira parceria paga.",
+        price: "R$ 998",
+        cta: "Quero minha vaga na mentoria",
+        whatsappMessage: "Oi, Rafa! Quero garantir minha vaga na mentoria.",
+      },
     },
     portfolio: {
       title: "Portfólio",
@@ -457,6 +474,11 @@ export const translations: Record<Locale, Translations> = {
           question: "Qual o tempo de entrega?",
           answer:
             "Os conteúdos são entregues em até 7 dias após o produto chegar na minha casa.",
+        },
+        {
+          question: "Você também é mentora de creators?",
+          answer:
+            "Sim! Além de atender marcas, sou mentora de creators — ensino quem está começando a transformar conteúdo em parceria paga através da minha mentoria individual. Manda mensagem no WhatsApp que te conto mais.",
         },
       ],
     },
@@ -581,13 +603,13 @@ export const translations: Record<Locale, Translations> = {
       ],
       commitment:
         "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
-      chips: ["UGC Creator", "Influencer", "Videomaker", "Creator Mentor"],
+      chips: ["UGC Creator", "Influencer", "Videomaker", "Creator Mentor", "Paid Traffic Ads Specialist"],
       criaBadge:
         "Creator of the CRIA method — mentoring creators who want to professionalize their content.",
       stats: [
         { value: "25 years old", label: "Age" },
         { value: "Goiânia, Brazil", label: "Based in" },
-        { value: "6 years", label: "Of experience" },
+        { value: "8 years", label: "Of experience" },
         { value: "25K", label: "Followers" },
       ],
     },
@@ -738,6 +760,15 @@ export const translations: Record<Locale, Translations> = {
         prazoExpress: "48 business hours (on request, with an extra fee)",
         emiteNota: "Yes, I issue invoices as a registered self-employed professional (MEI).",
       },
+      mentoria: {
+        tag: "Creator Mentor",
+        title: "I also teach creators just starting out.",
+        description:
+          "Besides working with brands, I'm a creator mentor: 30 days with me, 4 one-on-one sessions, from positioning all the way to closing your first paid partnership.",
+        price: "R$ 998",
+        cta: "Get my mentoring spot",
+        whatsappMessage: "Hi, Rafa! I'd like to secure my spot in the mentoring program.",
+      },
     },
     portfolio: {
       title: "Portfolio",
@@ -814,6 +845,11 @@ export const translations: Record<Locale, Translations> = {
           question: "What's the turnaround time?",
           answer:
             "Content is delivered within 7 days after the product arrives at my home.",
+        },
+        {
+          question: "Are you also a creator mentor?",
+          answer:
+            "Yes! Besides working with brands, I'm a creator mentor — I teach creators who are just starting out how to turn content into paid partnerships through my 1:1 mentoring. Message me on WhatsApp to learn more.",
         },
       ],
     },

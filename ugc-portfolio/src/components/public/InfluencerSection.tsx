@@ -1,5 +1,8 @@
-import { SOCIAL_HANDLES } from "@/lib/data/placeholders";
+import { SOCIAL_LINKS } from "@/lib/data/placeholders";
 import type { Translations } from "@/lib/i18n/translations";
+
+const instagramLink = SOCIAL_LINKS.find((link) => link.icon === "instagram");
+const tiktokLink = SOCIAL_LINKS.find((link) => link.icon === "tiktok");
 
 export function InfluencerSection({
   t,
@@ -19,12 +22,26 @@ export function InfluencerSection({
       <p className="mt-3 max-w-2xl text-ink-700">{t.subtitle}</p>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <span className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm">
-          Instagram · {SOCIAL_HANDLES.instagram}
-        </span>
-        <span className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm">
-          TikTok · {SOCIAL_HANDLES.tiktok}
-        </span>
+        {instagramLink && (
+          <a
+            href={instagramLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm transition hover:border-brand-400 hover:text-brand-700"
+          >
+            Instagram · {instagramLink.handle}
+          </a>
+        )}
+        {tiktokLink && (
+          <a
+            href={tiktokLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-ink-900/10 bg-white px-4 py-2 text-sm font-medium text-ink-900 shadow-sm transition hover:border-brand-400 hover:text-brand-700"
+          >
+            TikTok · {tiktokLink.handle}
+          </a>
+        )}
         <span className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm">
           {followers} {t.followersSuffix}
         </span>
