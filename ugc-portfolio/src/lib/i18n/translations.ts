@@ -414,8 +414,8 @@ export const translations: Record<Locale, Translations> = {
         {
           caption:
             "Print de resultado de reels orgânico, no meu perfil. O objetivo do vídeo era apresentar o serviço da minha cabeleireira de corte de cabelo. Mas isso prova o quanto é importante um bom storytelling no conteúdo, porque foi a partir disso que eu consegui fazer a retenção e a viralização desse conteúdo: linguagem simples, resultado, vídeo dinâmico, com uma boa história que conectava com o meu público.",
-          footnote: "80,4 mil visualizações · 155 novos seguidores · colab. com @jaqueilumina",
-          image: "/images/resultado-reel-corte-cabelo.jpg",
+          footnote: "152,8 mil visualizações · 236 novos seguidores · colab. com @jaqueilumina",
+          image: "/images/resultado-reel-corte-cabelo-2.png",
         },
         {
           caption:
@@ -771,8 +771,8 @@ export const translations: Record<Locale, Translations> = {
         {
           caption:
             "Result screenshot from an organic reel on my own profile. The video's goal was to promote my hairdresser's haircut service. But it proves how important good storytelling is in content, because that's what drove the retention and virality of this piece: simple language, a clear payoff, dynamic editing, and a story that connected with my audience.",
-          footnote: "80.4K views · 155 new followers · collab with @jaqueilumina",
-          image: "/images/resultado-reel-corte-cabelo.jpg",
+          footnote: "152.8K views · 236 new followers · collab with @jaqueilumina",
+          image: "/images/resultado-reel-corte-cabelo-2.png",
         },
         {
           caption:
