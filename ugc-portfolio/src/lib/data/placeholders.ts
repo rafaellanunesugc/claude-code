@@ -124,6 +124,15 @@ export const PORTFOLIO_VIDEOS: PortfolioVideo[] = [
 // exibição no portfólio, e os mais recentes devem aparecer primeiro.
 export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
   {
+    id: "ugc-skincare-organico",
+    category: "ugc",
+    niche: "Beleza",
+    youtubeId: "JPZnVicxNf4",
+    gradient: "from-brand-500 via-ink-800 to-brand-300",
+    title: "Skincare",
+    format: "orgânico",
+  },
+  {
     id: "ugc-don-cream",
     category: "ugc",
     niche: "Alimentação",
