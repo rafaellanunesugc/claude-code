@@ -3,20 +3,10 @@ import Image from "next/image";
 import {
   ArrowDown,
   ArrowRight,
-  BatteryCharging,
   Briefcase,
-  Camera,
   Check,
-  Flashlight,
-  Lightbulb,
-  Magnet,
-  Mic,
-  Palette,
   Send,
   ShoppingBag,
-  Smartphone,
-  Sparkles,
-  TabletSmartphone,
 } from "lucide-react";
 import { Star } from "@/components/ui/Star";
 import { SocialIcon } from "@/components/ui/SocialIcon";
@@ -338,31 +328,22 @@ const STORE_BADGE: Record<string, string> = {
   "TikTok Shop": "bg-black text-white",
 };
 
-const SETUP_ICONS = {
-  celular: Smartphone,
-  microfone: Mic,
-  luz: Lightbulb,
-  lanterna: Flashlight,
-  tripe: Camera,
-  rgb: Palette,
-  rebatedor: Sparkles,
-  suporte: TabletSmartphone,
-  bateria: BatteryCharging,
-  ima: Magnet,
-};
-
-function SetupIconTile({ icon }: { icon: keyof typeof SETUP_ICONS }) {
-  const Icon = SETUP_ICONS[icon];
+function StoreBadge({ store, className = "" }: { store: string; className?: string }) {
   return (
-    <span className="absolute inset-0 flex items-center justify-center bg-blush-50">
-      <span className="flex h-20 w-20 items-center justify-center rounded-full bg-ink-900 text-white">
-        <Icon className="h-9 w-9" strokeWidth={1.75} />
-      </span>
+    <span
+      className={`flex-none rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide ${
+        STORE_BADGE[store] ?? "bg-ink-900 text-white"
+      } ${className}`}
+    >
+      {store}
     </span>
   );
 }
 
 function SetupTab() {
+  const withPhoto = SETUP_ITEMS.filter((item) => item.image);
+  const textOnly = SETUP_ITEMS.filter((item) => !item.image);
+
   return (
     <div className="mx-auto max-w-md px-4">
       <div className="overflow-hidden rounded-3xl bg-ink-900 text-center text-white">
@@ -381,7 +362,7 @@ function SetupTab() {
       </div>
 
       <div className="mt-3 grid grid-cols-2 gap-3">
-        {SETUP_ITEMS.map((item) => (
+        {withPhoto.map((item) => (
           <a
             key={item.name}
             href={item.href}
@@ -390,18 +371,8 @@ function SetupTab() {
             className="group flex flex-col overflow-hidden rounded-2xl border border-ink-900/10 bg-white transition hover:-translate-y-0.5 hover:border-wine-300"
           >
             <span className="relative block aspect-square border-b border-ink-900/10 bg-white">
-              {item.image ? (
-                <Image src={item.image} alt={item.name} fill sizes="200px" className="object-contain px-3 pb-3 pt-10" />
-              ) : (
-                <SetupIconTile icon={item.icon} />
-              )}
-              <span
-                className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide ${
-                  STORE_BADGE[item.store] ?? "bg-ink-900 text-white"
-                }`}
-              >
-                {item.store}
-              </span>
+              <Image src={item.image!} alt={item.name} fill sizes="200px" className="object-contain px-3 pb-3 pt-10" />
+              <StoreBadge store={item.store} className="absolute left-2 top-2" />
             </span>
             <span className="flex flex-1 flex-col p-3">
               <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-wine-600">{item.category}</span>
@@ -413,6 +384,27 @@ function SetupTab() {
           </a>
         ))}
       </div>
+
+      {textOnly.length > 0 && (
+        <div className="mt-3 space-y-2">
+          {textOnly.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="group flex items-center gap-3 rounded-2xl border border-ink-900/10 bg-white px-4 py-3.5 transition hover:-translate-y-0.5 hover:border-wine-300"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-wine-600">{item.category}</span>
+                <span className="block font-bold leading-snug text-ink-900">{item.name}</span>
+              </span>
+              <StoreBadge store={item.store} />
+              <ArrowRight className="h-4 w-4 flex-none text-ink-700 transition group-hover:translate-x-1" />
+            </a>
+          ))}
+        </div>
+      )}
 
       <p className="mt-4 text-center text-xs text-ink-700/70">{SETUP_INTRO.disclosure}</p>
     </div>

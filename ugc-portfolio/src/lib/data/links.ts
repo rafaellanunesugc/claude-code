@@ -119,15 +119,12 @@ export const LINKS_SOCIALS = SOCIAL_LINKS;
 // categoria, nome, loja e o seu link de afiliada. Com a lista vazia, a aba some.
 export type SetupStore = "Mercado Livre" | "Amazon" | "Shopee" | "Magalu" | "TikTok Shop" | "Outra loja";
 
-// Ícone mostrado quando o item ainda não tem foto.
-export type SetupIcon = "celular" | "microfone" | "luz" | "lanterna" | "tripe" | "rgb" | "rebatedor" | "suporte" | "bateria" | "ima";
-
 export type SetupItem = {
   category: string;
   name: string;
   store: SetupStore;
   href: string;
-  icon: SetupIcon;
+  // Foto do produto em public/images/setup/. Sem foto, o item aparece só com o texto.
   image?: string;
 };
 
@@ -150,36 +147,33 @@ export const SETUP_INTRO: {
 };
 
 export const SETUP_ITEMS: SetupItem[] = [
-  { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", icon: "celular", image: "/images/setup/iphone-17-pro-max.jpg" },
-  { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", icon: "microfone", image: "/images/setup/hollyland-lark-a1.jpg" },
+  { category: "Celular", name: "iPhone 17 Pro Max", store: "Mercado Livre", href: "https://meli.la/11ST6KG", image: "/images/setup/iphone-17-pro-max.jpg" },
+  { category: "Microfone", name: "Hollyland Lark A1", store: "Mercado Livre", href: "https://meli.la/2hMvGEC", image: "/images/setup/hollyland-lark-a1.jpg" },
   {
     category: "Iluminação",
     name: "Ring Light LED Braço Duplo 45W + Tripé + Bolsa",
     store: "Mercado Livre",
     href: "https://meli.la/2mVWp7Z",
-    icon: "luz",
     image: "/images/setup/ring-light-braco-duplo.jpg",
   },
-  { category: "Acessório", name: "Tela Magnética", store: "Mercado Livre", href: "https://meli.la/1u75Lyu", icon: "ima" },
+  { category: "Acessório", name: "Tela Magnética", store: "Mercado Livre", href: "https://meli.la/1u75Lyu" },
   {
     category: "Iluminação",
     name: "Lanterna VEDO",
     store: "TikTok Shop",
     href: "https://shop.tiktok.com/br/pdp/1737082375400490939?_t=ZS-99yRzLJfFiS",
-    icon: "lanterna",
     image: "/images/setup/lanterna-vedo.jpg",
   },
-  { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", icon: "tripe", image: "/images/setup/tripe-magnetico-tt88.jpg" },
-  { category: "Iluminação", name: "Luz de Preenchimento RGB Tomate", store: "Shopee", href: "https://s.shopee.com.br/4fwRaDg4am", icon: "rgb" },
+  { category: "Tripé", name: "Tripé Magnético TT88", store: "Shopee", href: "https://s.shopee.com.br/AAHO8RVdxN", image: "/images/setup/tripe-magnetico-tt88.jpg" },
+  { category: "Iluminação", name: "Luz de Preenchimento RGB Tomate", store: "Shopee", href: "https://s.shopee.com.br/4fwRaDg4am" },
   {
     category: "Iluminação",
     name: "Bastão de Luz Ulanzi UA20",
     store: "Shopee",
     href: "https://s.shopee.com.br/9Kjl3C1asN",
-    icon: "luz",
     image: "/images/setup/bastao-luz-ulanzi-ua20.jpg",
   },
-  { category: "Iluminação", name: "Rebatedor Fotográfico", store: "Shopee", href: "https://s.shopee.com.br/5VVYZUjV5t", icon: "rebatedor" },
-  { category: "Suporte", name: "Suporte de Celular com Ventosa", store: "Shopee", href: "https://s.shopee.com.br/1qcGCpmVG9", icon: "suporte" },
-  { category: "Bateria", name: "Power Bank", store: "Shopee", href: "https://s.shopee.com.br/7AdmYiv7BE", icon: "bateria" },
+  { category: "Iluminação", name: "Rebatedor Fotográfico", store: "Shopee", href: "https://s.shopee.com.br/5VVYZUjV5t" },
+  { category: "Suporte", name: "Suporte de Celular com Ventosa", store: "Shopee", href: "https://s.shopee.com.br/1qcGCpmVG9" },
+  { category: "Bateria", name: "Power Bank", store: "Shopee", href: "https://s.shopee.com.br/7AdmYiv7BE" },
 ];
