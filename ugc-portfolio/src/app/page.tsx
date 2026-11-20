@@ -156,8 +156,8 @@ export default function LinksPage() {
 
           {/* Mentoria: o principal produto pra creators */}
           <div className="overflow-hidden rounded-3xl bg-ink-900 text-white shadow-soft">
-            <div className="relative aspect-[4/3]">
-              <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-top" />
+            <div className="relative aspect-square">
+              <Image src={MENTORIA.photo} alt="Rafa Nunes, mentora" fill sizes="448px" className="object-cover object-center" />
               <span className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink-900">
                 {MENTORIA.tag}
               </span>
