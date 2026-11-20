@@ -17,7 +17,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
               <Star className="h-8 w-8 flex-none text-brand-500 md:h-10 md:w-10 lg:h-12 lg:w-12" />
               Rafa Nunes
             </h1>
-            <p className="mt-2 text-xl font-thin text-wine-700">{t.tagline}</p>
+            <p className="mt-2 text-xl font-thin text-brand-700">{t.tagline}</p>
 
             <div className="mt-5 flex flex-wrap gap-6">
               {t.stats.map((stat) => (
@@ -56,7 +56,7 @@ export function Hero({ t }: { t: Translations["hero"] }) {
               />
             </div>
             <Star className="pointer-events-none absolute -left-3 -top-3 h-8 w-8 text-brand-400 md:-left-5 md:-top-5 md:h-10 md:w-10" />
-            <Star className="pointer-events-none absolute -bottom-2 -right-2 h-5 w-5 text-wine-400 md:h-6 md:w-6" />
+            <Star className="pointer-events-none absolute -bottom-2 -right-2 h-5 w-5 text-brand-400 md:h-6 md:w-6" />
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ export function Studio({ t }: { t: Translations["studio"] }) {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
+            <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
               {t.eyebrow}
             </p>
             <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>

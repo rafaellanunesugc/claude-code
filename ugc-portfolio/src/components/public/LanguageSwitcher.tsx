@@ -19,7 +19,7 @@ export function LanguageSwitcher({
           className={cn(
             "flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold transition",
             locale === key
-              ? "bg-wine-600 text-white"
+              ? "bg-brand-600 text-white"
               : "text-ink-700 hover:bg-ink-900/5"
           )}
         >

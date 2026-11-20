@@ -21,7 +21,7 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
       <div className="mx-auto max-w-4xl px-5">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
+            <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
               {t.eyebrow}
             </p>
             <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">{t.title}</h2>

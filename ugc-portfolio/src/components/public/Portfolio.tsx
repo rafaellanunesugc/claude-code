@@ -88,7 +88,7 @@ export function Portfolio({
               className={cn(
                 "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition",
                 niche === ALL_NICHES
-                  ? "border-wine-600 bg-wine-600 text-white"
+                  ? "border-brand-600 bg-brand-600 text-white"
                   : "border-ink-900/15 bg-white text-ink-700 hover:bg-ink-900/5"
               )}
             >
@@ -101,7 +101,7 @@ export function Portfolio({
                 className={cn(
                   "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition",
                   niche === item
-                    ? "border-wine-600 bg-wine-600 text-white"
+                    ? "border-brand-600 bg-brand-600 text-white"
                     : "border-ink-900/15 bg-white text-ink-700 hover:bg-ink-900/5"
                 )}
               >

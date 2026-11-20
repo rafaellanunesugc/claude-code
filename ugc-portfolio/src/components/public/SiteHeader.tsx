@@ -24,7 +24,7 @@ export function SiteHeader({
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
         <a href="#topo" className="flex items-center gap-1.5 font-name text-2xl font-extrabold tracking-tight text-ink-900">
           <Star className="h-4 w-4 flex-none text-brand-500" />
-          Rafa <span className="text-wine-700">Nunes</span>
+          Rafa <span className="text-brand-700">Nunes</span>
         </a>
         <nav className="hidden gap-6 text-sm font-medium text-ink-700 md:flex">
           {links.map((link) => (

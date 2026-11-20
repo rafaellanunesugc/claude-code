@@ -7,7 +7,7 @@ export function Statement({ t }: { t: Translations["statement"] }) {
         <p className="text-2xl font-extrabold uppercase tracking-tight text-ink-900 md:text-4xl">
           {t.line1}
         </p>
-        <p className="mt-1 font-display text-2xl italic text-wine-700 md:text-4xl">
+        <p className="mt-1 font-display text-2xl italic text-brand-700 md:text-4xl">
           {t.line2}
         </p>
       </div>

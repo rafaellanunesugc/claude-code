@@ -7,7 +7,7 @@ function RichText({ text }: { text: string }) {
     <>
       {parts.map((part, index) =>
         index % 2 === 1 ? (
-          <strong key={index} className="font-bold text-wine-700">
+          <strong key={index} className="font-bold text-brand-700">
             {part}
           </strong>
         ) : (
@@ -22,7 +22,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
   return (
     <section id="sobre" className="bg-cream py-16">
       <div className="mx-auto max-w-6xl px-5">
-        <p className="text-xs font-semibold uppercase tracking-wide text-wine-700">
+        <p className="text-xs font-semibold uppercase tracking-wide text-brand-700">
           {t.eyebrow}
         </p>
         <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
@@ -46,7 +46,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
                   key={stat.label}
                   className="rounded-xl border border-ink-900/10 bg-white p-3 shadow-sm"
                 >
-                  <p className="font-bold text-wine-700">{stat.value}</p>
+                  <p className="font-bold text-brand-700">{stat.value}</p>
                   <p className="text-xs uppercase tracking-wide text-ink-700/60">
                     {stat.label}
                   </p>
@@ -64,7 +64,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
               ))}
             </div>
 
-            <p className="mt-6 border-l-2 border-wine-600 pl-4 text-xl italic leading-relaxed text-wine-700">
+            <p className="mt-6 border-l-2 border-brand-600 pl-4 text-xl italic leading-relaxed text-brand-700">
               {t.commitment}
             </p>
 
@@ -72,7 +72,7 @@ export function AboutMe({ t }: { t: Translations["about"] }) {
               {t.chips.map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full bg-white px-4 py-2 text-center text-sm font-semibold text-wine-700"
+                  className="rounded-full bg-white px-4 py-2 text-center text-sm font-semibold text-brand-700"
                 >
                   {chip}
                 </span>

@@ -48,7 +48,7 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
           {t.eyebrow}
         </p>
         <h2 className="mt-2 text-2xl font-bold text-ink-900 md:text-3xl">
-          {t.formats.length} <em className="text-wine-700">{t.titleSuffix}</em>
+          {t.formats.length} <em className="text-brand-700">{t.titleSuffix}</em>
         </h2>
         <p className="mt-2 max-w-2xl text-sm text-ink-700">{t.scrollHint}</p>
         <p className="mt-1 max-w-2xl text-sm text-ink-700/70">{t.localNote}</p>
@@ -90,7 +90,7 @@ export function WorkWithMe({ t }: { t: Translations["work"] }) {
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <span className="rounded-full bg-wine-50 px-2 py-0.5 text-xs font-bold text-wine-700">
+                  <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-bold text-brand-700">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>

@@ -12,38 +12,30 @@ const config: Config = {
         },
         // Creme quente — fundo principal das seções
         cream: "#FBF4E9",
-        // Terracota clarinho — fundo alternado das seções
-        sage: "#F2DECB",
-        // Terracota — acento (badges, detalhes, mentoria)
-        terracotta: {
-          500: "#C1623A",
-          600: "#A8502E",
-          700: "#8A3F22",
-        },
         // Café — acento escuro (cards de destaque, mentoria)
         coffee: {
           700: "#4A3222",
           800: "#3A2819",
           900: "#2B1D12",
         },
-        // Forest green — cor de ação (botões, CTAs, links, elementos interativos)
+        // Marrom — cor de ação (botões, CTAs, links, elementos interativos)
         brand: {
-          50: "#f1f4f0",
-          100: "#d7e1d5",
-          200: "#bccfb8",
-          300: "#a1be9b",
-          400: "#85ad7d",
-          500: "#64a557",
-          600: "#518747",
-          700: "#3f6837",
-          800: "#2d4a27",
-          900: "#1a2c17",
+          50: "#F4ECE2",
+          100: "#E8D6C0",
+          200: "#D4B690",
+          300: "#BE9568",
+          400: "#A97A4A",
+          500: "#8F6238",
+          600: "#6E4A2A",
+          700: "#573A1F",
+          800: "#3F2916",
+          900: "#2B1D12",
         },
-        // Dark green — texto principal, headers, rodapé
+        // Marrom escuro — texto principal, headers, rodapé
         ink: {
-          900: "#152827",
-          800: "#1e3a38",
-          700: "#264b49",
+          900: "#2B1D12",
+          800: "#3A2819",
+          700: "#4A3222",
         },
         // Bordô — cor de autoridade (títulos de destaque, elementos de marca)
         wine: {
@@ -58,18 +50,18 @@ const config: Config = {
           800: "#520f22",
           900: "#370c19",
         },
-        // Forest green claro/sage — cor orgânica (ícones, tags de categoria)
+        // Marrom claro — badges e detalhes suaves
         olive: {
-          50: "#eff1ee",
-          100: "#d8e0d7",
-          200: "#c1d0be",
-          300: "#a9c0a5",
-          400: "#91b18b",
-          500: "#79a370",
-          600: "#648f5c",
-          700: "#53764c",
-          800: "#415d3c",
-          900: "#30442c",
+          50: "#F1E7DA",
+          100: "#E2CFB8",
+          200: "#CBAD8C",
+          300: "#B18D68",
+          400: "#96714E",
+          500: "#7C5A3D",
+          600: "#664A33",
+          700: "#53392A",
+          800: "#3F2A1E",
+          900: "#2C1D14",
         },
         // Pink claro — acento suave (uso moderado)
         blush: {
