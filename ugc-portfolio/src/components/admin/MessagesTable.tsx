@@ -22,7 +22,7 @@ export function MessagesTable({ submissions }: { submissions: ContactSubmission[
               <p className="font-semibold text-ink-900">
                 {submission.name}
                 {submission.brand && (
-                  <span className="font-normal text-ink-700/60"> — {submission.brand}</span>
+                  <span className="font-normal text-ink-700/60"> · {submission.brand}</span>
                 )}
               </p>
               <p className="text-xs text-ink-700/60">

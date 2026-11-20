@@ -138,7 +138,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     niche: "Tecnologia",
     youtubeId: "MMxeHitAygg",
     gradient: "from-brand-500 via-ink-900 to-brand-700",
-    title: "Novo Mundo — Black Friday",
+    title: "Novo Mundo: Black Friday",
     format: "anúncio",
   },
   {
@@ -156,7 +156,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     niche: "Tecnologia",
     youtubeId: "7FOnq5q0wDg",
     gradient: "from-brand-300 via-brand-500 to-ink-800",
-    title: "Novo Mundo — Black Friday",
+    title: "Novo Mundo: Black Friday",
     format: "anúncio",
   },
   {
@@ -165,7 +165,7 @@ export const REAL_PORTFOLIO_VIDEOS: PortfolioVideo[] = [
     niche: "Tecnologia",
     youtubeId: "ApHKr1IFer4",
     gradient: "from-brand-600 via-ink-800 to-ink-900",
-    title: "Novo Mundo — Black Friday",
+    title: "Novo Mundo: Black Friday",
     format: "anúncio",
   },
   {

@@ -164,7 +164,7 @@ export type Translations = {
 export const translations: Record<Locale, Translations> = {
   pt: {
     blackFridayBanner: {
-      text: "🎄 As festas de fim de ano estão chegando e sua marca ainda não tem conteúdo pra aproveitar essa época — vamos criar agora?",
+      text: "🎄 As festas de fim de ano estão chegando e sua marca ainda não tem conteúdo pra aproveitar essa época, vamos criar agora?",
       cta: "Solicitar orçamento",
     },
     nav: {
@@ -210,7 +210,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Equipamento pensado pra conversão",
           description:
-            "Gravo em iPhone 17 Pro Max com estabilização Hollyland, iluminação Tomate e acessórios Ulanzi, em estúdio próprio — imagem nítida, áudio limpo e luz consistente, prontos pra rodar em anúncio sem precisar de ajuste extra.",
+            "Gravo em iPhone 17 Pro Max com estabilização Hollyland, iluminação Tomate e acessórios Ulanzi, em estúdio próprio: imagem nítida, áudio limpo e luz consistente, prontos pra rodar em anúncio sem precisar de ajuste extra.",
         },
         {
           title: "Estratégia de marketing",
@@ -228,13 +228,13 @@ export const translations: Record<Locale, Translations> = {
         "Antes de criar conteúdo, passei 5 anos no mercado corporativo, incluindo uma passagem pela Amcham Brasil, fui líder das áreas de eventos, onde saí como sênior da área comercial. Fui maquiadora por mais de 10 anos. **Sempre fui a pessoa que enxerga estratégia em tudo**: num evento bem planejado, numa campanha de marca, num vídeo que vende sem parecer que está vendendo. Foi esse olhar que me trouxe pra criação de conteúdo.",
         "**Hoje transformei isso em profissão**. Já criei conteúdo sobre produtos da Nivea com mais de **435 mil visualizações no orgânico**, **conteúdo educativo para a E-lens com 337 mil visualizações**, conteúdo orgânico para a **L'Oréal Paris com 243 mil visualizações**, e um **criativo de tráfego pago para a Peça Rara alcançando quase 92 mil contas**. Atuo principalmente nos nichos de beleza e saúde e bem-estar.",
         "Não penso só no vídeo bonito. **Penso em roteiro pensado pra conversão, edição alinhada com o algoritmo e estratégia de marca por trás de cada entrega.** A faculdade me deu a base, os 5 anos de corporativo me deram visão comercial, e a prática me deu o repertório.",
-        "Hoje também sou **mentora de creators**: criei o método CRIA, onde ensino quem está começando a transformar conteúdo em parceria paga. Isso me deixa ainda mais afiada do lado das marcas — porque entendo os dois lados da mesa.",
+        "Hoje também sou **mentora de creators**: criei o método CRIA, onde ensino quem está começando a transformar conteúdo em parceria paga. Isso me deixa ainda mais afiada do lado das marcas, porque entendo os dois lados da mesa.",
       ],
       commitment:
         "Meu compromisso: entregar conteúdo que faça sentido pra marca, pro público e pro resultado. Sempre.",
       chips: ["UGC Creator", "Influenciadora", "Videomaker", "Mentora de Creators", "Especialista em Tráfego Pago"],
       criaBadge:
-        "Idealizadora do método CRIA — mentoria pra creators que querem profissionalizar o conteúdo.",
+        "Idealizadora do método CRIA: mentoria pra creators que querem profissionalizar o conteúdo.",
       stats: [
         { value: "25 anos", label: "Idade" },
         { value: "Goiânia-GO", label: "Base" },
@@ -246,7 +246,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Como influenciadora",
       title: "Converso de perto com o público feminino, todos os dias.",
       subtitle:
-        "Minha audiência confia no que eu recomendo porque a relação é próxima e diária — não é publicidade genérica, é conversa de verdade sobre beleza, saúde e rotina.",
+        "Minha audiência confia no que eu recomendo porque a relação é próxima e diária: não é publicidade genérica, é conversa de verdade sobre beleza, saúde e rotina.",
       followersSuffix: "seguidores",
       profileTopicsTitle: "O que você vai encontrar no meu perfil",
       topics: [
@@ -329,7 +329,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Como podemos trabalhar juntos",
       titleSuffix: "formas de trabalhar comigo",
       localNote:
-        "Atendimento presencial em Goiânia-GO e Jataí-GO — datas a combinar conforme disponibilidade na região.",
+        "Atendimento presencial em Goiânia-GO e Jataí-GO, datas a combinar conforme disponibilidade na região.",
       scrollHint: "Arraste pro lado pra ver tudo · cada serviço abre no WhatsApp.",
       ctaLabel: "Solicitar orçamento",
       formats: [
@@ -371,7 +371,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Videomaker",
           description:
-            "Captação e edição de vídeos em eventos, consultórios, lojas e outros espaços — do registro bruto à entrega final editada.",
+            "Captação e edição de vídeos em eventos, consultórios, lojas e outros espaços, do registro bruto à entrega final editada.",
         },
         {
           title: "Calendário de Conteúdos",
@@ -441,7 +441,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           caption:
-            "“Rafa o vídeo que você produziu foi muito bom para nossas campanhas! Deu um ar menos propaganda e mais comunidade, eu sempre falo o que funciona no orgânico tende a funcionar no pago, vai ser um vídeo atemporal e ainda irei usar muito.” — Fernanda Carneiro, Gestora de Tráfego Pago do Peça Rara",
+            "“Rafa o vídeo que você produziu foi muito bom para nossas campanhas! Deu um ar menos propaganda e mais comunidade, eu sempre falo o que funciona no orgânico tende a funcionar no pago, vai ser um vídeo atemporal e ainda irei usar muito.” (Fernanda Carneiro, Gestora de Tráfego Pago do Peça Rara)",
           footnote: "Depoimento",
         },
         {
@@ -463,7 +463,7 @@ export const translations: Record<Locale, Translations> = {
         {
           question: "Por quanto tempo?",
           answer:
-            "Uso vitalício para redes sociais, e um prazo de alguns meses para uso em tráfego pago — a combinar conforme a campanha.",
+            "Uso vitalício para redes sociais, e um prazo de alguns meses para uso em tráfego pago, a combinar conforme a campanha.",
         },
         {
           question: "Tem exclusividade?",
@@ -478,7 +478,7 @@ export const translations: Record<Locale, Translations> = {
         {
           question: "Você também é mentora de creators?",
           answer:
-            "Sim! Além de atender marcas, sou mentora de creators — ensino quem está começando a transformar conteúdo em parceria paga através da minha mentoria individual. Manda mensagem no WhatsApp que te conto mais.",
+            "Sim! Além de atender marcas, sou mentora de creators: ensino quem está começando a transformar conteúdo em parceria paga através da minha mentoria individual. Manda mensagem no WhatsApp que te conto mais.",
         },
       ],
     },
@@ -486,17 +486,17 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "Sobre o UGC",
       title: "Por que investir em UGC agora",
       paragraph:
-        "User Generated Content (UGC) é conteúdo criado por pessoas reais — vídeos, fotos e reviews — no lugar de anúncios tradicionais. É autêntico, criativo e aumenta a confiança e o engajamento dos consumidores.",
+        "User Generated Content (UGC) é conteúdo criado por pessoas reais (vídeos, fotos e reviews) no lugar de anúncios tradicionais. É autêntico, criativo e aumenta a confiança e o engajamento dos consumidores.",
       stats: [
         "Conteúdo autêntico que gera confiança",
         "Até 7x mais vendas que a publicidade tradicional",
         "Melhora o SEO da marca",
-        "Terceirização eficiente de conteúdo — sem precisar de equipe interna",
+        "Terceirização eficiente de conteúdo, sem precisar de equipe interna",
       ],
     },
     contact: {
       title: "Vamos transformar a sua marca.",
-      subtitle: "Conta o que sua marca precisa — eu volto com uma proposta.",
+      subtitle: "Conta o que sua marca precisa, eu volto com uma proposta.",
       fields: {
         name: "Seu nome",
         brand: "Marca",
@@ -535,7 +535,7 @@ export const translations: Record<Locale, Translations> = {
   },
   en: {
     blackFridayBanner: {
-      text: "🎄 The holiday season is almost here and your brand still doesn't have content ready for it — let's create it now?",
+      text: "🎄 The holiday season is almost here and your brand still doesn't have content ready for it, let's create it now?",
       cta: "Request a quote",
     },
     nav: {
@@ -581,12 +581,12 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Gear built for conversion",
           description:
-            "I shoot on an iPhone 17 Pro Max with Hollyland stabilization, Tomate lighting and Ulanzi accessories, in my own studio — sharp image, clean audio and consistent light, ready to run as an ad with no extra tweaking.",
+            "I shoot on an iPhone 17 Pro Max with Hollyland stabilization, Tomate lighting and Ulanzi accessories, in my own studio: sharp image, clean audio and consistent light, ready to run as an ad with no extra tweaking.",
         },
         {
           title: "Marketing strategy",
           description:
-            "5 years in corporate events and sales bring a strategic view to every video, so it sells — not just looks good.",
+            "5 years in corporate events and sales bring a strategic view to every video, so it sells, not just looks good.",
         },
       ],
       gear: ["iPhone 17 Pro Max", "Hollyland", "Tomate", "Ulanzi", "Private studio"],
@@ -596,16 +596,16 @@ export const translations: Record<Locale, Translations> = {
       title: "Much more than a creator.",
       paragraphs: [
         "I'm Rafa Nunes, I'm 25 years old, finishing my Marketing degree at Universidade Católica de Brasília, and I live in Goiânia, Brazil.",
-        "Before creating content, I spent 5 years in the corporate world, including a stint at Amcham Brasil, where I led events teams and left as a senior commercial professional. I was also a makeup artist for over 10 years. **I've always been the person who sees strategy in everything** — in a well-planned event, in a brand campaign, in a video that sells without looking like it's selling. That perspective is what brought me into content creation.",
+        "Before creating content, I spent 5 years in the corporate world, including a stint at Amcham Brasil, where I led events teams and left as a senior commercial professional. I was also a makeup artist for over 10 years. **I've always been the person who sees strategy in everything**: in a well-planned event, in a brand campaign, in a video that sells without looking like it's selling. That perspective is what brought me into content creation.",
         "**Today I've turned that into a career.** I've created content for Nivea with over **435,000 organic views**, **educational content for E-lens with 337,000 views**, organic content for **L'Oréal Paris with 243,000 views**, and a **paid traffic creative for Peça Rara that reached almost 92,000 accounts**. I mainly work in the beauty and health & wellness niches.",
         "I don't just think about a pretty video. **I think about a script built for conversion, editing aligned with the algorithm, and brand strategy behind every delivery.** College gave me the foundation, 5 years in corporate gave me business vision, and practice gave me the repertoire.",
-        "Today I'm also a **creator mentor**: I created the CRIA method, where I teach creators who are just starting out how to turn content into paid partnerships. That keeps me even sharper on the brand side — because I understand both sides of the table.",
+        "Today I'm also a **creator mentor**: I created the CRIA method, where I teach creators who are just starting out how to turn content into paid partnerships. That keeps me even sharper on the brand side, because I understand both sides of the table.",
       ],
       commitment:
         "My commitment: deliver content that makes sense for the brand, the audience, and the result. Always.",
       chips: ["UGC Creator", "Influencer", "Videomaker", "Creator Mentor", "Paid Traffic Ads Specialist"],
       criaBadge:
-        "Creator of the CRIA method — mentoring creators who want to professionalize their content.",
+        "Creator of the CRIA method: mentoring creators who want to professionalize their content.",
       stats: [
         { value: "25 years old", label: "Age" },
         { value: "Goiânia, Brazil", label: "Based in" },
@@ -617,7 +617,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "As an influencer",
       title: "I talk closely with a female audience, every single day.",
       subtitle:
-        "My audience trusts what I recommend because the relationship is close and daily — it's not generic advertising, it's a real conversation about beauty, health and routine.",
+        "My audience trusts what I recommend because the relationship is close and daily: it's not generic advertising, it's a real conversation about beauty, health and routine.",
       followersSuffix: "followers",
       profileTopicsTitle: "What you'll find on my profile",
       topics: [
@@ -700,7 +700,7 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "How we can work together",
       titleSuffix: "ways to work with me",
       localNote:
-        "In-person services available in Goiânia-GO and Jataí-GO, Brazil — dates to be arranged based on availability in the region.",
+        "In-person services available in Goiânia-GO and Jataí-GO, Brazil, dates to be arranged based on availability in the region.",
       scrollHint: "Scroll sideways to see it all · each service opens on WhatsApp.",
       ctaLabel: "Request a quote",
       formats: [
@@ -742,7 +742,7 @@ export const translations: Record<Locale, Translations> = {
         {
           title: "Videomaker",
           description:
-            "Filming and editing videos at events, clinics, stores and other venues — from raw footage to the final edited delivery.",
+            "Filming and editing videos at events, clinics, stores and other venues, from raw footage to the final edited delivery.",
         },
         {
           title: "Content Calendar",
@@ -812,7 +812,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           caption:
-            "“Rafa, the video you produced was great for our campaigns! It felt less like an ad and more like community — what works organically tends to work paid too. It's a timeless video and I'll keep using it a lot.” — Fernanda Carneiro, Paid Traffic Manager at Peça Rara",
+            "“Rafa, the video you produced was great for our campaigns! It felt less like an ad and more like community, what works organically tends to work paid too. It's a timeless video and I'll keep using it a lot.” (Fernanda Carneiro, Paid Traffic Manager at Peça Rara)",
           footnote: "Testimonial",
         },
         {
@@ -834,7 +834,7 @@ export const translations: Record<Locale, Translations> = {
         {
           question: "For how long?",
           answer:
-            "Lifetime use for social media, and a few months for paid traffic use — to be agreed based on the campaign.",
+            "Lifetime use for social media, and a few months for paid traffic use, to be agreed based on the campaign.",
         },
         {
           question: "Is there exclusivity?",
@@ -849,7 +849,7 @@ export const translations: Record<Locale, Translations> = {
         {
           question: "Are you also a creator mentor?",
           answer:
-            "Yes! Besides working with brands, I'm a creator mentor — I teach creators who are just starting out how to turn content into paid partnerships through my 1:1 mentoring. Message me on WhatsApp to learn more.",
+            "Yes! Besides working with brands, I'm a creator mentor: I teach creators who are just starting out how to turn content into paid partnerships through my 1:1 mentoring. Message me on WhatsApp to learn more.",
         },
       ],
     },
@@ -857,17 +857,17 @@ export const translations: Record<Locale, Translations> = {
       eyebrow: "About UGC",
       title: "Why invest in UGC now",
       paragraph:
-        "User Generated Content (UGC) is content created by real people — videos, photos and reviews — instead of traditional ads. It's authentic, creative, and increases consumer trust and engagement.",
+        "User Generated Content (UGC) is content created by real people (videos, photos and reviews) instead of traditional ads. It's authentic, creative, and increases consumer trust and engagement.",
       stats: [
         "Authentic content that builds trust",
         "Up to 7x more sales than traditional advertising",
         "Improves brand SEO",
-        "Efficient content outsourcing — no need for an in-house team",
+        "Efficient content outsourcing, no need for an in-house team",
       ],
     },
     contact: {
       title: "Let's transform your brand.",
-      subtitle: "Tell me what your brand needs — I'll get back with a proposal.",
+      subtitle: "Tell me what your brand needs, I'll get back with a proposal.",
       fields: {
         name: "Your name",
         brand: "Brand",

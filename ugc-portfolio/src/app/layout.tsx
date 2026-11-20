@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Rafa Nunes | UGC Creator, Videomaker e Influenciadora",
   description:
-    "Vídeos que conectam e vendem — UGC, conteúdo de influenciadora e produção audiovisual para marcas de Goiânia e de todo o Brasil.",
+    "Vídeos que conectam e vendem: UGC, conteúdo de influenciadora e produção audiovisual para marcas de Goiânia e de todo o Brasil.",
 };
 
 export default function RootLayout({

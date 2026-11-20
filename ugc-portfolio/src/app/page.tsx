@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   // Prévia ao mandar o link (WhatsApp, Instagram etc.). A imagem vem de app/opengraph-image.png.
   openGraph: {
     title: "Rafa Nunes | UGC Creator",
-    description: "Portfólio, mentoria, cupons e contato — tudo num link só.",
+    description: "Portfólio, mentoria, cupons e contato: tudo num link só.",
     siteName: "Rafa Nunes",
     locale: "pt_BR",
     type: "website",
@@ -277,7 +277,7 @@ export default function LinksPage() {
             <h2 className="text-2xl font-bold">
               Ficou com <span className="font-display italic font-normal text-blush-200">alguma dúvida?</span>
             </h2>
-            <p className="mt-2 text-white/90">Me manda uma mensagem — quem responde sou eu.</p>
+            <p className="mt-2 text-white/90">Me manda uma mensagem, quem responde sou eu.</p>
             <a
               href={whatsappLink("Oi, Rafa! Vim pelo seu link da bio e fiquei com uma dúvida.")}
               target="_blank"

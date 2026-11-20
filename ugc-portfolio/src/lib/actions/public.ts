@@ -26,7 +26,7 @@ async function notifyNewSubmission(data: {
       from: "Portfólio Rafa Nunes <onboarding@resend.dev>",
       to: NOTIFICATION_EMAIL,
       replyTo: data.email || undefined,
-      subject: `Novo pedido de orçamento — ${data.brand || data.name}`,
+      subject: `Novo pedido de orçamento: ${data.brand || data.name}`,
       text: [
         `Nome: ${data.name}`,
         `Marca: ${data.brand || "-"}`,

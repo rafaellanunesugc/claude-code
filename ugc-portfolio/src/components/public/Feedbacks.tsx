@@ -89,7 +89,7 @@ export function Feedbacks({ t }: { t: Translations["feedbacks"] }) {
       </div>
 
       <div className="mt-4 text-sm font-medium text-ink-700/60">
-        {String(index + 1).padStart(2, "0")} — {String(total).padStart(2, "0")}
+        {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
       </div>
     </section>
   );
