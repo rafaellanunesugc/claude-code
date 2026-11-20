@@ -514,5 +514,4 @@ export const PORTFOLIO_PHOTOS: PortfolioPhoto[] = [
   { src: "/images/fotos/foto-acuvue-oasys.jpg", alt: "Rafa Nunes com as lentes de contato Acuvue Oasys" },
   { src: "/images/fotos/foto-serum-skincare.jpg", alt: "Rafa Nunes com um sérum de skincare" },
   { src: "/images/fotos/foto-popozuda.jpg", alt: "Rafa Nunes com o hidratante corporal Popozuda" },
-  { src: "/images/fotos/foto-novo-mundo-loja.jpg", alt: "Rafa Nunes na frente de uma loja Novo Mundo" },
 ];
