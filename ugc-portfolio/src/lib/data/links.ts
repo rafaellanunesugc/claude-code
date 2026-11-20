@@ -45,7 +45,7 @@ export const MENTORIA = {
   tag: "Mentoria individual · vagas limitadas",
   title: "Mentoria",
   slogan: "Transformando conteúdo em profissão.",
-  photo: "/images/portrait-2.jpg",
+  photo: "/images/about.jpg",
   pitch:
     "30 dias comigo, só você e eu. Nada de aula genérica: tudo pensado pro seu perfil, o seu nicho e o seu momento, até você fechar com marcas.",
   proof: [
